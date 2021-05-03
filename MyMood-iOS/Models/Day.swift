@@ -17,8 +17,24 @@ enum Mood: String, Codable {
     var id: String { self.rawValue }
 }
 
+enum Feeling: String, Codable {
+    // negatives
+    case anxious
+    case angry
+    case insecure
+    case tired
+    // positives
+    case confident
+    case proud
+    case relaxed
+    case loving
+    
+    var id: String { self.rawValue }
+}
+
 struct Day: Codable {
     var date: Date
     var mood: Mood
-    var answer: String
+    var answers: [String]
+    var feelings: [Feeling]
 }
