@@ -13,9 +13,9 @@ class DatabaseManager {
     
     private init(){}
     
-    func store(mood: Mood, answer: String){
+    func store(mood: Mood, answers: [String], feelings: [Feeling]){
         var data = self.load()
-        let day = Day(date: Date(), mood: mood, answer: answer)
+        let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
         data.append(day)
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(data) {
