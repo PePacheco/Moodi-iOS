@@ -58,6 +58,7 @@
 		6DBA3A7D264076FC00383620 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DEDABB12640749C006CCDA8 /* Assets.xcassets */,
 				6DBA3A832640778700383620 /* Extensions.swift */,
 			);
 			path = Resources;
@@ -95,7 +96,6 @@
 				6DBA3A7D264076FC00383620 /* Resources */,
 				6DBA3A7C264076F500383620 /* Managers */,
 				6DBA3A7B264076EC00383620 /* Models */,
-				6DEDABB12640749C006CCDA8 /* Assets.xcassets */,
 				6DEDABB62640749C006CCDA8 /* Info.plist */,
 				6DEDABB32640749C006CCDA8 /* Preview Content */,
 			);
