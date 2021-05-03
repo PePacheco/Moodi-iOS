@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  MyMood-iOS
+
+  Created by Lucca Molon on 03/05/21.
+  
+*/
+"ContentView_Label_Hello" = "Hola Mundo";
