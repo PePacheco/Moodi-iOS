@@ -14,6 +14,7 @@
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
 		6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB12640749C006CCDA8 /* Assets.xcassets */; };
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
+		DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87265126408CC800C27E74 /* NotificationManager.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		6DEDABB12640749C006CCDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE87265126408CC800C27E74 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		EC81A5AD2640886D00042FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBA3A812640776500383620 /* DatabaseManager.swift */,
+				DE87265126408CC800C27E74 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */,
 				6DBA3A842640778700383620 /* Extensions.swift in Sources */,
 				6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */,
 				6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */,
