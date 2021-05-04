@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(NSLocalizedString("ContentView_Label_Hello", comment: ""))
-            .padding()
+//        Text(NSLocalizedString("ContentView_Label_Hello", comment: ""))
+//            .padding()
+        TabMainView()
     }
 }
 
