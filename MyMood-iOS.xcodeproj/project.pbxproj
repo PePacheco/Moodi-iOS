@@ -14,6 +14,11 @@
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
 		6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB12640749C006CCDA8 /* Assets.xcassets */; };
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
+		6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAD2641B56B000C320F /* TabMainView.swift */; };
+		6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAF2641B7A1000C320F /* DayMainView.swift */; };
+		6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB12641B809000C320F /* WeekSummaryView.swift */; };
+		6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */; };
+		6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB52641C3A9000C320F /* DaySummaryView.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		6DEDABB12640749C006CCDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF40DAD2641B56B000C320F /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
+		6DF40DAF2641B7A1000C320F /* DayMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainView.swift; sourceTree = "<group>"; };
+		6DF40DB12641B809000C320F /* WeekSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSummaryView.swift; sourceTree = "<group>"; };
+		6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesView.swift; sourceTree = "<group>"; };
+		6DF40DB52641C3A9000C320F /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
 		EC81A5AD2640886D00042FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -72,6 +82,10 @@
 		6DBA3A7E2640770300383620 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6DF40DB82641C748000C320F /* ConfigurationsView */,
+				6DF40DB72641C716000C320F /* SummaryViews */,
+				6DF40DAC2641B51A000C320F /* DayViews */,
+				6DF40DAD2641B56B000C320F /* TabMainView.swift */,
 				6DEDABAF2640749B006CCDA8 /* ContentView.swift */,
 			);
 			path = Views;
@@ -113,6 +127,31 @@
 				6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6DF40DAC2641B51A000C320F /* DayViews */ = {
+			isa = PBXGroup;
+			children = (
+				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
+				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
+				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
+				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
+			);
+			path = DayViews;
+			sourceTree = "<group>";
+		};
+		6DF40DB72641C716000C320F /* SummaryViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SummaryViews;
+			sourceTree = "<group>";
+		};
+		6DF40DB82641C748000C320F /* ConfigurationsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConfigurationsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */,
 				6DBA3A842640778700383620 /* Extensions.swift in Sources */,
 				6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */,
 				6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */,
+				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,
 				6DEDABAE2640749B006CCDA8 /* MyMood_iOSApp.swift in Sources */,
+				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
+				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
+				6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +383,7 @@
 				DEVELOPMENT_TEAM = 3XP27NL574;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MyMood-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.MyMood-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -361,7 +405,7 @@
 				DEVELOPMENT_TEAM = 3XP27NL574;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MyMood-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.MyMood-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -6,3 +6,10 @@
   
 */
 "ContentView_Label_Hello" = "Hola Mundo";
+"WeekSummaryLabel" = "Tu semana";
+"WeekSummaryDay" = "días";
+"DailyQuotesTipLabel" = "Consejo del día";
+"DailyQuotesObjectiveLabel" = "Meta del día";
+"DaySummaryLabel" = "Resumo do dia";
+"DaySummaryMakeReflection" = "Fazer reflexão do día";
+
