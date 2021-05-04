@@ -10,20 +10,24 @@ import SwiftUI
 struct DayMainView: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
     var body: some View {
-        VStack {
-            WeekSummaryView(screenSize: screenSize)
-                .padding(.bottom, screenSize.height*0.04)
+        NavigationView {
+            VStack {
+                WeekSummaryView(screenSize: screenSize)
+                    .padding(.bottom, screenSize.height*0.04)
+                
+                DailyQuotesView(screenSize: screenSize)
+                    .padding(.bottom, screenSize.height*0.08)
+                
+                DaySummaryView(screenSize: screenSize)
+                
+                Spacer()
+            }
+            .navigationBarTitle(NSLocalizedString("DayMainViewNavBarTitle", comment: ""), displayMode: .inline)
             
-            DailyQuotesView(screenSize: screenSize)
-                .padding(.bottom, screenSize.height*0.08)
-            
-            DaySummaryView(screenSize: screenSize)
-            
-            Spacer()
         }
-        .edgesIgnoringSafeArea([.top])
         
     }
+    
 }
 
 struct DayMainView_Previews: PreviewProvider {
