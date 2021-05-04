@@ -11,6 +11,11 @@ import SwiftUI
 struct TabMainView: View {
     @State private var selection = 2
     
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.label
+        UITabBar.appearance().backgroundColor = UIColor.secondaryLabel
+    }
+    
     var body: some View {
         TabView(selection: $selection) {
             Text("Summary")
@@ -21,7 +26,7 @@ struct TabMainView: View {
             
             DayMainView()
                 .tabItem {
-                    Label("Day", systemImage: "person.circle")
+                    Label(NSLocalizedString("DayMainViewNavBarTitle", comment: ""), systemImage: "person.circle")
                 }
                 .tag(2)
             
@@ -31,6 +36,7 @@ struct TabMainView: View {
                 }
                 .tag(3)
         }
+        .accentColor(Color(UIColor.systemPurple))
     }
 }
 

@@ -11,21 +11,24 @@ class DatabaseManager {
     
     static let shared: DatabaseManager = DatabaseManager()
     
-    private init(){}
+    private (set) var days: [Day]
+    
+    private init(){
+        days = Self.load()
+    }
     
     func store(mood: Mood, answers: [String], feelings: [Feeling]){
-        var data = self.load()
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
-        data.append(day)
+        self.days.append(day)
         let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(data) {
+        if let encoded = try? encoder.encode(days) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
-            print(data)
+            print(days)
         }
     }
     
-    func load() -> [Day] {
+    static func load() -> [Day] {
         if let savedDay = UserDefaults.standard.data(forKey: "days") {
             let decoder = JSONDecoder()
             if let loadedDay = try? decoder.decode([Day].self, from: savedDay) {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Mood: String, Codable {
+enum Mood: String, CaseIterable, Codable {
     case veryHappy
     case happy
     case neutral
@@ -17,17 +17,10 @@ enum Mood: String, Codable {
     var id: String { self.rawValue }
 }
 
-enum Feeling: String, Codable {
-    // negatives
-    case anxious
-    case angry
-    case insecure
-    case tired
-    // positives
-    case confident
-    case proud
-    case relaxed
-    case loving
+enum Feeling: String, CaseIterable, Codable {
+    case anxious, angry, insecure, tired
+    
+    case confident, proud, relaxed, loving
     
     var id: String { self.rawValue }
 }
