@@ -13,7 +13,7 @@ struct TabMainView: View {
     
     init() {
         UITabBar.appearance().barTintColor = UIColor.label
-        UITabBar.appearance().backgroundColor = UIColor.secondaryLabel
+        UITabBar.appearance().backgroundColor = UIColor.secondarySystemBackground
     }
     
     var body: some View {
@@ -36,7 +36,7 @@ struct TabMainView: View {
                 }
                 .tag(3)
         }
-        .accentColor(Color(UIColor.systemPurple))
+        .accentColor(Color(UIColor.systemGreen))
     }
 }
 
