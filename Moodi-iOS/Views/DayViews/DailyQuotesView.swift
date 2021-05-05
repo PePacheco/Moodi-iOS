@@ -41,7 +41,7 @@ struct SentenceOfTheDay: View {
                 .multilineTextAlignment(.center)
                 .font(.system(size: screenSize.height*0.02, weight: .medium))
                 .padding(.horizontal, screenSize.width * 0.06)
-                .padding(.bottom, screenSize.width * 0.06)
+                .padding(.bottom, screenSize.height * 0.04)
         }
     }
 }
