@@ -11,9 +11,9 @@ struct WeekSummaryView: View {
     let screenSize: CGSize
     
     var body: some View {
-        ZStack {
-            Color(hex: 0xCCCDC6)
-            VStack(alignment: .leading) {
+        ZStack (alignment: .leading){
+            Color(UIColor.quaternaryLabel)
+            VStack {
 //                Text(NSLocalizedString("WeekSummaryLabel", comment: ""))
 //                    .font(.system(size: 21, weight: .semibold))
 //                HStack {
@@ -24,14 +24,14 @@ struct WeekSummaryView: View {
                 HStack {
                     Rectangle()
                         .frame(width: 20, height: 20)
-                        .foregroundColor(Color(UIColor.systemGray))
+                        .foregroundColor(Color(UIColor.secondaryLabel))
                     Text("Streak: 14 \(NSLocalizedString("WeekSummaryDay", comment: ""))")
-                        .foregroundColor(Color(UIColor.systemGray))
+                        .font(.system(size: screenSize.height*0.02, weight: .light))
+                        .foregroundColor(Color(UIColor.secondaryLabel))
                 }
                 
             }
-            .frame(width: screenSize.width)
-            .padding(.leading, -screenSize.width/2)
+            .padding(.leading)
         }
         .frame(height: screenSize.height*0.06)
     }

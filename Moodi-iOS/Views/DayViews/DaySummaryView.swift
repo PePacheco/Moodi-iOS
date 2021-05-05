@@ -13,14 +13,14 @@ struct DaySummaryView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("DaySummaryLabel", comment: ""))
-                .foregroundColor(Color(UIColor.systemGray))
-                .font(.system(size: 20, weight: .semibold))
+                .foregroundColor(Color(UIColor.secondaryLabel))
+                .font(.system(size: screenSize.height*0.025, weight: .semibold))
             
             ZStack {
-                Color(hex: 0xCCCDC6)
+                Color(UIColor.tertiaryLabel)
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
-                    .foregroundColor(Color(UIColor.systemGray))
-                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .font(.system(size: screenSize.height*0.025, weight: .semibold))
             }
             .frame(width: screenSize.width*0.8, height: screenSize.height * 0.13, alignment: .center)
         }
