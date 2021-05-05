@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DEDABA92640749B006CCDA8"
-               BuildableName = "MyMood-iOS.app"
-               BlueprintName = "MyMood-iOS"
-               ReferencedContainer = "container:MyMood-iOS.xcodeproj">
+               BuildableName = "Moodi-iOS.app"
+               BlueprintName = "Moodi-iOS"
+               ReferencedContainer = "container:Moodi-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DEDABA92640749B006CCDA8"
-            BuildableName = "MyMood-iOS.app"
-            BlueprintName = "MyMood-iOS"
-            ReferencedContainer = "container:MyMood-iOS.xcodeproj">
+            BuildableName = "Moodi-iOS.app"
+            BlueprintName = "Moodi-iOS"
+            ReferencedContainer = "container:Moodi-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DEDABA92640749B006CCDA8"
-            BuildableName = "MyMood-iOS.app"
-            BlueprintName = "MyMood-iOS"
-            ReferencedContainer = "container:MyMood-iOS.xcodeproj">
+            BuildableName = "Moodi-iOS.app"
+            BlueprintName = "Moodi-iOS"
+            ReferencedContainer = "container:Moodi-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
