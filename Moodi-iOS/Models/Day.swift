@@ -23,11 +23,12 @@ enum Feeling: String, CaseIterable, Codable {
     case confident, proud, relaxed, loving
     
     var id: String { self.rawValue }
+    
 }
 
 struct Day: Codable {
     var date: Date
     var mood: Mood
     var answers: [String]
-    var feelings: [Feeling]
+    var feelings: Set<Feeling>
 }
