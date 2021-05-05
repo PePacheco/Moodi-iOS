@@ -13,3 +13,16 @@
 "DaySummaryLabel" = "Resumo do dia";
 "DaySummaryMakeReflection" = "Fazer reflexão do dia";
 "DayMainViewNavBarTitle" = "Dia";
+"SummaryPageViewTitle" = "Resumo do dia";
+"SummaryPageTodayMoodTitle" = "Humor de hoje";
+"SummaryPageTodayFeelingsTitle" = "Sentimentos:";
+"veryHappy" = "Muito Feliz";
+"happy" = "Feliz";
+"neutral" = "Neutro";
+"sad" = "Triste";
+"verySad" = "Muito Triste";
+"SummaryTodayQuestionTitle" = "Perguntas";
+"FirstDailyQuestion" = "O que eu fiz certo?";
+"SecondDailyQuestion" = "O que eu poderia ter feito melhor?";
+"ThirdDailyQuestion" = "O que posso fazer para ser melhor amanhã?";
+"ButtonDoneText" = "Finalizar";

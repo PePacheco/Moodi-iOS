@@ -24,6 +24,9 @@
 		DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87265126408CC800C27E74 /* NotificationManager.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
+		EC81A5B72643062A00042FBC /* SummaryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B62643062A00042FBC /* SummaryPageView.swift */; };
+		EC81A5B92643085B00042FBC /* SummaryPageTodayMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */; };
+		EC81A5BB26431B7300042FBC /* SummaryTodayQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B12641E27E00042FBC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EC81A5B62643062A00042FBC /* SummaryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPageView.swift; sourceTree = "<group>"; };
+		EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPageTodayMoodView.swift; sourceTree = "<group>"; };
+		EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTodayQuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6DF40DB82641C748000C320F /* ConfigurationsView */,
-				6DF40DB72641C716000C320F /* SummaryViews */,
+				6DF40DB72641C716000C320F /* SummaryWeekViews */,
 				B2F266292641E004008B110B /* SpeechViews */,
 				6DF40DAC2641B51A000C320F /* DayViews */,
 				6DF40DAD2641B56B000C320F /* TabMainView.swift */,
@@ -144,6 +150,7 @@
 		6DF40DAC2641B51A000C320F /* DayViews */ = {
 			isa = PBXGroup;
 			children = (
+				EC81A5B32643054E00042FBC /* SummaryViews */,
 				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
 				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
 				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
@@ -152,11 +159,11 @@
 			path = DayViews;
 			sourceTree = "<group>";
 		};
-		6DF40DB72641C716000C320F /* SummaryViews */ = {
+		6DF40DB72641C716000C320F /* SummaryWeekViews */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SummaryViews;
+			path = SummaryWeekViews;
 			sourceTree = "<group>";
 		};
 		6DF40DB82641C748000C320F /* ConfigurationsView */ = {
@@ -172,6 +179,16 @@
 				B2F2662A2641E02F008B110B /* SpeechMainView.swift */,
 			);
 			path = SpeechViews;
+			sourceTree = "<group>";
+		};
+		EC81A5B32643054E00042FBC /* SummaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				EC81A5B62643062A00042FBC /* SummaryPageView.swift */,
+				EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */,
+				EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */,
+			);
+			path = SummaryViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +277,9 @@
 				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
 				6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */,
+				EC81A5B72643062A00042FBC /* SummaryPageView.swift in Sources */,
+				EC81A5BB26431B7300042FBC /* SummaryTodayQuestionsView.swift in Sources */,
+				EC81A5B92643085B00042FBC /* SummaryPageTodayMoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
