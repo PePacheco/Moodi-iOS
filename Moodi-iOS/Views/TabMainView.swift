@@ -12,8 +12,7 @@ struct TabMainView: View {
     @State private var selection = 2
     
     init() {
-        UITabBar.appearance().barTintColor = UIColor.label
-        UITabBar.appearance().backgroundColor = UIColor.secondarySystemBackground
+        UITabBar.appearance().backgroundColor = UIColor.label
     }
     
     var body: some View {
@@ -36,7 +35,7 @@ struct TabMainView: View {
                 }
                 .tag(3)
         }
-        .accentColor(Color(UIColor.systemGreen))
+        .accentColor(Color(UIColor.label))
     }
 }
 

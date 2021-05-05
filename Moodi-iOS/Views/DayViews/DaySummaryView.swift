@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct DaySummaryView: View {
+    
     let screenSize: CGSize
+    
+    @State private var isPresentedAddingNewDay: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,9 +21,22 @@ struct DaySummaryView: View {
             
             ZStack {
                 Color(UIColor.tertiaryLabel)
-                Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
-                    .foregroundColor(Color(UIColor.secondaryLabel))
-                    .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                HStack {
+                    Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                    Button {
+                        self.isPresentedAddingNewDay = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .frame(width: screenSize.height*0.04, height: screenSize.height*0.04)
+                            .foregroundColor(Color(UIColor.label))
+                    }
+                    .fullScreenCover(isPresented: $isPresentedAddingNewDay) {
+                        QuizMainView()
+                    }
+                }
             }
             .frame(width: screenSize.width*0.8, height: screenSize.height * 0.13, alignment: .center)
         }

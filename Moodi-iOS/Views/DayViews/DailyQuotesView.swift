@@ -35,7 +35,7 @@ struct SentenceOfTheDay: View {
             Text(self.sentence)
                 .foregroundColor(Color(UIColor.secondaryLabel))
                 .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                .padding(.bottom, 18)
+                .padding(.bottom,  screenSize.height * 0.02)
             Text("Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
                 .foregroundColor(Color(UIColor.secondaryLabel))
                 .multilineTextAlignment(.center)
