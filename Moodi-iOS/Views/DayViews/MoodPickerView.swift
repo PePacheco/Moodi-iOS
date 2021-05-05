@@ -25,18 +25,19 @@ struct MoodPickerView: View {
                             self.selectedMood = mood
                         } label: {
                             Rectangle()
-                                .foregroundColor(Color(UIColor.tertiaryLabel))
+                                .foregroundColor(self.selectedMood == mood ? Color(UIColor.systemGreen) : Color(UIColor.tertiaryLabel))
                                 .frame(width: screenSize.width*0.12, height: screenSize.width*0.12)
                         }
                         
                         Text(mood.id)
                             .foregroundColor(Color(UIColor.secondaryLabel))
-                            .font(.system(size: screenSize.height*0.016, weight: .thin))
+                            .font(.system(size: screenSize.height*0.016, weight: .regular))
                     }
                     .padding(.horizontal, screenSize.width*0.008)
                 }
-            }.frame(height: screenSize.width*0.16)
-            Text("Selected mood: \(selectedMood.id)")
+            }
+            .padding(.vertical)
+            .frame(height: screenSize.width*0.16)
         }
     }
 }

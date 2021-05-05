@@ -18,7 +18,7 @@ enum Mood: String, CaseIterable, Codable {
 }
 
 enum Feeling: String, CaseIterable, Codable {
-    case anxious, angry, insecure, tired
+    case anxiety, angry, insecure, tired
     
     case confident, proud, relaxed, loving
     

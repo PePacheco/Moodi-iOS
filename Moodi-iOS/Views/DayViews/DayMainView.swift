@@ -23,7 +23,6 @@ struct DayMainView: View {
                 Spacer()
             }
             .navigationBarTitle(NSLocalizedString("DayMainViewNavBarTitle", comment: ""), displayMode: .inline)
-            
         }
         
     }

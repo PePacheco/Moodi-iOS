@@ -99,8 +99,6 @@
 		6DBA3A7E2640770300383620 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6DF40DB82641C748000C320F /* ConfigurationsView */,
-				6DF40DB72641C716000C320F /* SummaryViews */,
 				B2F266292641E004008B110B /* SpeechViews */,
 				6DF40DAC2641B51A000C320F /* DayViews */,
 				6DF40DAD2641B56B000C320F /* TabMainView.swift */,
@@ -147,30 +145,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6DF0F53326432832002213C3 /* DailyMainViews */ = {
+			isa = PBXGroup;
+			children = (
+				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
+				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
+				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
+				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
+			);
+			name = DailyMainViews;
+			sourceTree = "<group>";
+		};
 		6DF40DAC2641B51A000C320F /* DayViews */ = {
 			isa = PBXGroup;
 			children = (
+				6DF0F53326432832002213C3 /* DailyMainViews */,
 				DE872676264305E900C27E74 /* DailyQuizViews */,
-				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
-				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
-				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
-				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
 			);
 			path = DayViews;
-			sourceTree = "<group>";
-		};
-		6DF40DB72641C716000C320F /* SummaryViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SummaryViews;
-			sourceTree = "<group>";
-		};
-		6DF40DB82641C748000C320F /* ConfigurationsView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ConfigurationsView;
 			sourceTree = "<group>";
 		};
 		B2F266292641E004008B110B /* SpeechViews */ = {

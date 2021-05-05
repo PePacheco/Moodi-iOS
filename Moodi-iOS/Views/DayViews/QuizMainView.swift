@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct QuizMainView: View {
+    @Environment(\.presentationMode) private var presentationMode
+    @State private var selectedFeelings: Set<Feeling> = []
     @State private var selectedMood: Mood = .neutral
+    @State private var answers: [String] = []
+    
+    private let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
-        VStack {
-            MoodPickerView(screenSize: UIScreen.main.bounds.size, selectedMood: $selectedMood) 
+        NavigationView {
+            VStack(spacing: 80) {
+                MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
+                
+                FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
+            }
+            .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(LocalizedStringKey("Next")) {
+                        print("Add tapped!")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(LocalizedStringKey("Close")) {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }
         }
     }
 }
