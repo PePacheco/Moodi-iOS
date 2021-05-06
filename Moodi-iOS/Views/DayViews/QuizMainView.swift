@@ -23,11 +23,11 @@ struct QuizMainView: View {
                 FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
                 
                 NavigationLink(
-                    destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood),
-                            isActive: $showNewView
-                        ) {
-                            EmptyView()
-                        }.isDetailLink(false)
+                    destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize),
+                    isActive: $showNewView
+                ) {
+                    EmptyView()
+                }.isDetailLink(false)
             }
             .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
             .toolbar {
