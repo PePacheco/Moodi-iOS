@@ -22,11 +22,11 @@
 		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
 		B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2662A2641E02F008B110B /* SpeechMainView.swift */; };
 		DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87265126408CC800C27E74 /* NotificationManager.swift */; };
+		EC75D1B32644652200449765 /* SummaryModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75D1B22644652200449765 /* SummaryModalView.swift */; };
+		EC75D1B526446D1100449765 /* SummaryDayMoodModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75D1B426446D1100449765 /* SummaryDayMoodModalView.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 		EC81A5B72643062A00042FBC /* SummaryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B62643062A00042FBC /* SummaryPageView.swift */; };
-		EC81A5B92643085B00042FBC /* SummaryPageTodayMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */; };
-		EC81A5BB26431B7300042FBC /* SummaryTodayQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +47,13 @@
 		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		B2F2662A2641E02F008B110B /* SpeechMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMainView.swift; sourceTree = "<group>"; };
 		DE87265126408CC800C27E74 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		EC75D1B22644652200449765 /* SummaryModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryModalView.swift; sourceTree = "<group>"; };
+		EC75D1B426446D1100449765 /* SummaryDayMoodModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDayMoodModalView.swift; sourceTree = "<group>"; };
 		EC81A5AD2640886D00042FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B12641E27E00042FBC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EC81A5B62643062A00042FBC /* SummaryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPageView.swift; sourceTree = "<group>"; };
-		EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPageTodayMoodView.swift; sourceTree = "<group>"; };
-		EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTodayQuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				EC81A5B62643062A00042FBC /* SummaryPageView.swift */,
-				EC81A5B82643085B00042FBC /* SummaryPageTodayMoodView.swift */,
-				EC81A5BA26431B7200042FBC /* SummaryTodayQuestionsView.swift */,
+				EC75D1B22644652200449765 /* SummaryModalView.swift */,
+				EC75D1B426446D1100449765 /* SummaryDayMoodModalView.swift */,
 			);
 			path = SummaryViews;
 			sourceTree = "<group>";
@@ -272,14 +272,14 @@
 				B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */,
 				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,
 				EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */,
+				EC75D1B32644652200449765 /* SummaryModalView.swift in Sources */,
 				6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */,
+				EC75D1B526446D1100449765 /* SummaryDayMoodModalView.swift in Sources */,
 				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
 				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
 				6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */,
 				EC81A5B72643062A00042FBC /* SummaryPageView.swift in Sources */,
-				EC81A5BB26431B7300042FBC /* SummaryTodayQuestionsView.swift in Sources */,
-				EC81A5B92643085B00042FBC /* SummaryPageTodayMoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 3XP27NL574;
+				DEVELOPMENT_TEAM = 9VK68KN5GR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
