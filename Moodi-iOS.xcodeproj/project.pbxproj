@@ -67,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D396899264352A500FD5FFD /* DailyMenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
+				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
+				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
+				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
+			);
+			name = DailyMenuViews;
+			sourceTree = "<group>";
+		};
 		6DBA3A7B264076EC00383620 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,21 +156,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6DF0F53326432832002213C3 /* DailyMainViews */ = {
-			isa = PBXGroup;
-			children = (
-				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
-				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
-				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
-				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
-			);
-			name = DailyMainViews;
-			sourceTree = "<group>";
-		};
 		6DF40DAC2641B51A000C320F /* DayViews */ = {
 			isa = PBXGroup;
 			children = (
-				6DF0F53326432832002213C3 /* DailyMainViews */,
+				6D396899264352A500FD5FFD /* DailyMenuViews */,
 				DE872676264305E900C27E74 /* DailyQuizViews */,
 			);
 			path = DayViews;
