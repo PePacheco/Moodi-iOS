@@ -71,7 +71,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D396899264352A500FD5FFD /* DailyMenuViews */ = {
+		6D396899264352A500FD5FFD /* Daily Menu Views */ = {
 			isa = PBXGroup;
 			children = (
 				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
@@ -79,7 +79,7 @@
 				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
 				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
 			);
-			name = DailyMenuViews;
+			name = "Daily Menu Views";
 			sourceTree = "<group>";
 		};
 		6DBA3A7B264076EC00383620 /* Models */ = {
@@ -114,8 +114,8 @@
 		6DBA3A7E2640770300383620 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B2F266292641E004008B110B /* SpeechViews */,
-				6DF40DAC2641B51A000C320F /* DayViews */,
+				B2F266292641E004008B110B /* Speech Views */,
+				6DF40DAC2641B51A000C320F /* Day Views */,
 				6DF40DAD2641B56B000C320F /* TabMainView.swift */,
 				6DEDABAF2640749B006CCDA8 /* ContentView.swift */,
 			);
@@ -160,24 +160,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6DF40DAC2641B51A000C320F /* DayViews */ = {
+		6DF40DAC2641B51A000C320F /* Day Views */ = {
 			isa = PBXGroup;
 			children = (
-				6D396899264352A500FD5FFD /* DailyMenuViews */,
-				DE872676264305E900C27E74 /* DailyQuizViews */,
+				6D396899264352A500FD5FFD /* Daily Menu Views */,
+				DE872676264305E900C27E74 /* Daily Quiz Views */,
 			);
-			path = DayViews;
+			path = "Day Views";
 			sourceTree = "<group>";
 		};
-		B2F266292641E004008B110B /* SpeechViews */ = {
+		B2F266292641E004008B110B /* Speech Views */ = {
 			isa = PBXGroup;
 			children = (
 				B2F2662A2641E02F008B110B /* SpeechMainView.swift */,
 			);
-			path = SpeechViews;
+			path = "Speech Views";
 			sourceTree = "<group>";
 		};
-		DE872676264305E900C27E74 /* DailyQuizViews */ = {
+		DE872676264305E900C27E74 /* Daily Quiz Views */ = {
 			isa = PBXGroup;
 			children = (
 				DE8726772643061500C27E74 /* QuizMainView.swift */,
@@ -186,7 +186,7 @@
 				DE87267E2643066100C27E74 /* FeelingSelectView.swift */,
 				6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */,
 			);
-			name = DailyQuizViews;
+			name = "Daily Quiz Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

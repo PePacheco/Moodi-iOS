@@ -13,6 +13,12 @@ class DatabaseManager {
     
     private (set) var days: [Day]
     
+    var hasToday: Bool {
+        self.days.contains { day in
+            return Date().hasSame(.day, as: day.date)
+        }
+    }
+    
     private init(){
         days = Self.load()
     }
@@ -24,8 +30,7 @@ class DatabaseManager {
         if let encoded = try? encoder.encode(days) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
-            print(days)
-            
+            print(self.days.count)
             return true
         }
         

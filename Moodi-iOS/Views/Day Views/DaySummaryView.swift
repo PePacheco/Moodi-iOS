@@ -25,16 +25,18 @@ struct DaySummaryView: View {
                     Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                    Button {
-                        self.isPresentedAddingNewDay = true
-                    } label: {
-                        Image(systemName: "plus.circle")
-                            .resizable()
-                            .frame(width: screenSize.height*0.04, height: screenSize.height*0.04)
-                            .foregroundColor(Color(UIColor.label))
-                    }
-                    .fullScreenCover(isPresented: $isPresentedAddingNewDay) {
-                        QuizMainView()
+                    if true || !DatabaseManager.shared.hasToday {
+                        Button {
+                            self.isPresentedAddingNewDay = true
+                        } label: {
+                            Image(systemName: "plus.circle")
+                                .resizable()
+                                .frame(width: screenSize.height*0.04, height: screenSize.height*0.04)
+                                .foregroundColor(Color(UIColor.label))
+                        }
+                        .fullScreenCover(isPresented: $isPresentedAddingNewDay) {
+                            QuizMainView()
+                        }
                     }
                 }
             }
