@@ -17,7 +17,7 @@ class DatabaseManager {
         days = Self.load()
     }
     
-    func store(mood: Mood, answers: [String], feelings: Set<Feeling>){
+    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool{
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
         self.days.append(day)
         let encoder = JSONEncoder()
@@ -25,7 +25,11 @@ class DatabaseManager {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
             print(days)
+            
+            return true
         }
+        
+        return false
     }
     
     static func load() -> [Day] {

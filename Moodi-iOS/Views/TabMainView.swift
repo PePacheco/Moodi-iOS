@@ -17,21 +17,21 @@ struct TabMainView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            Text("Summary")
+            Text(LocalizedStringKey("Statistics"))
                 .tabItem {
-                    Label("Summary", systemImage: "list.bullet")
+                    Label(LocalizedStringKey("Statistics"), systemImage: "chart.bar.xaxis")
                 }
                 .tag(1)
             
             DayMainView()
                 .tabItem {
-                    Label(NSLocalizedString("DayMainViewNavBarTitle", comment: ""), systemImage: "person.circle")
+                    Label(LocalizedStringKey("DayMainViewNavBarTitle"), systemImage: "doc.plaintext.fill")
                 }
                 .tag(2)
             
-            Text("Configurations")
+            Text(LocalizedStringKey("Configurations"))
                 .tabItem {
-                    Label("Configurations", systemImage: "gearshape")
+                    Label(LocalizedStringKey("Configurations"), systemImage: "gearshape.fill")
                 }
                 .tag(3)
         }

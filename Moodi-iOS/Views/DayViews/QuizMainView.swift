@@ -11,7 +11,7 @@ struct QuizMainView: View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var selectedFeelings: Set<Feeling> = []
     @State private var selectedMood: Mood = .neutral
-    @State private var answers: [String] = []
+    @State var showNewView = false
     
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
@@ -21,12 +21,19 @@ struct QuizMainView: View {
                 MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
                 
                 FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
+                
+                NavigationLink(
+                    destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood),
+                            isActive: $showNewView
+                        ) {
+                            EmptyView()
+                        }.isDetailLink(false)
             }
             .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(LocalizedStringKey("Next")) {
-                        print("Add tapped!")
+                        self.showNewView = true
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {

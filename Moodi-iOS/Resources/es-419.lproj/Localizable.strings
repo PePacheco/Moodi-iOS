@@ -12,10 +12,13 @@
 "DailyQuotesObjectiveLabel" = "Meta del día";
 "DaySummaryLabel" = "Resumo do dia";
 "DaySummaryMakeReflection" = "Fazer reflexão do día";
-"DayMainViewNavBarTitle" = "Día";
+"DayMainViewNavBarTitle" = "Hoy";
 "PickYourMood" = "Elija tu humor";
 "PickYourFeelings" = "Qué senstiste hoy";
 "anxious" = "Ansiedad";
 "AddingNewDayMainLabel" = "Agregando un nuevo día";
 "Close" = "Cerrar";
 "Next" = "Próximo";
+"Statistics" = "Estadísticas";
+"Configurations" = "Ajustes";
+"Save" = "Ahorrar";
