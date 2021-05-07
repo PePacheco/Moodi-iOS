@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SummaryPageView: View {
-    @Environment(\.presentationMode) var presentation
+    @State private var isShowingFullscreen: Bool = false
     let screenSize: CGSize = UIScreen.main.bounds.size
     let day: Day
     
@@ -26,13 +26,17 @@ struct SummaryPageView: View {
                 RectangleBox(question: "Question3", answer: day.answers[2])
             }
         }
-        .navigationBarBackButtonHidden(true)
+       //.navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(LocalizedStringKey("Close")) {
-                    //
+                Button(LocalizedStringKey("Save")) {
+                    let _ = DatabaseManager.shared.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
+                    self.isShowingFullscreen.toggle()
                 }
             }
+        }
+        .fullScreenCover(isPresented: $isShowingFullscreen) {
+            TabMainView()
         }
     }
 }

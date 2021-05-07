@@ -30,8 +30,8 @@
 "Configurations" = "Configurations";
 "Save" = "Save";
 "Question1" = "What I did right?";
-"Question2" = "What I could have done better?";
-"Question3" = "What I can change to be better tomorrow?";
+"Question2" = "What could I have done better?";
+"Question3" = "What can I do to be better tomorrow?";
 "AddingNewDayQuestionsQuestion" = "How was your day?";
 "AddingNewDayQuestionsPlaceholder" = "Writte here";
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";

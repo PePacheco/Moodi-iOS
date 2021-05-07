@@ -12,7 +12,8 @@ struct SummaryModalView: View {
     var body: some View {
         Button("Show Modal") {
                   self.showModal.toggle()
-               }.sheet(isPresented: $showModal) {
+               }
+            .sheet(isPresented: $showModal) {
                 ModalView(showModal: self.$showModal, day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud, .relaxed, .tired]))
                }
     }

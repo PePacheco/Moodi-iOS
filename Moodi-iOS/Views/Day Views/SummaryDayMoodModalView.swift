@@ -69,7 +69,7 @@ struct TagCloudView: View {
 
         return ZStack(alignment: .topLeading) {
             ForEach(self.tags, id: \.self) { tag in
-                self.item(for: tag.rawValue)
+                self.item(for: tag.rawValue.localized(withComment: ""))
                     .padding([.horizontal, .vertical], 4)
                     .alignmentGuide(.leading, computeValue: { d in
                         if (abs(width - d.width) + 30 > g.size.width)
@@ -93,7 +93,8 @@ struct TagCloudView: View {
                         return result
                     })
             }
-        }.background(viewHeightReader($totalHeight))
+        }
+        .background(viewHeightReader($totalHeight))
     }
 
     private func item(for text: String) -> some View {

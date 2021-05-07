@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct QuizMainView: View {
-    @Environment(\.presentationMode) private var presentationMode
     @State private var selectedFeelings: Set<Feeling> = []
     @State private var selectedMood: Mood = .neutral
-    @State var showNewView = false
+    @State private var answers: [String] = ["", "", ""]
     
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
@@ -24,7 +23,7 @@ struct QuizMainView: View {
         .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize)) {
+                NavigationLink(destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize, answers: $answers)) {
                     Text(LocalizedStringKey("Next"))
                 }
             }

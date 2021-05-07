@@ -15,7 +15,7 @@
 "DayMainViewNavBarTitle" = "Hoy";
 "PickYourMood" = "Elija tu humor";
 "PickYourFeelings" = "Qué senstiste hoy";
-"anxious" = "Ansiedad";
+"anxiety" = "Ansiedad";
 "insecure" = "Inseguridad";
 "confident" = "Seguro";
 "relaxed" = "Relajado";
@@ -31,7 +31,7 @@
 "Save" = "Ahorrar";
 "Question1" = "¿Que hice bien?";
 "Question2" = "¿Que podría hacer mejor?";
-"Question3" = "¿Que podría cambiar para ser mejor mañana?";
+"Question3" = "¿Que puedo mejorar para mañana?";
 "AddingNewDayQuestionsQuestion" = "¿Como fué tu día?";
 "AddingNewDayQuestionsPlaceholder" = "Escribe aqui";
 "AddingNewDayQuestionsBadAlert" = "Hubo un error";

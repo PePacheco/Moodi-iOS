@@ -17,7 +17,7 @@ struct DailyQuizTextInput: View {
         if question == LocalizedStringKey("Question3") {
             return screenSize.height * 0.06
         }
-        return screenSize.height * 0.045
+        return screenSize.height * 0.05
     }
     
     var textFieldHeight: CGFloat {
