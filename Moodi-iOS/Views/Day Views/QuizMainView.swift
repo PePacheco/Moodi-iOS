@@ -16,30 +16,16 @@ struct QuizMainView: View {
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 80) {
-                MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
-                
-                FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
-                
-                NavigationLink(
-                    destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize),
-                    isActive: $showNewView
-                ) {
-                    EmptyView()
-                }.isDetailLink(false)
-            }
-            .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(LocalizedStringKey("Next")) {
-                        self.showNewView = true
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(LocalizedStringKey("Close")) {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }
+        VStack(spacing: 80) {
+            MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
+            
+            FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
+        }
+        .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize)) {
+                    Text(LocalizedStringKey("Next"))
                 }
             }
         }
@@ -47,6 +33,7 @@ struct QuizMainView: View {
 }
 
 struct QuizMainView_Previews: PreviewProvider {
+    @State static var mockBinding: Bool = true
     static var previews: some View {
         QuizMainView()
     }

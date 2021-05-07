@@ -43,9 +43,9 @@ struct ModalView: View {
                 }
                     SummaryDayMoodModalView(day: day)
                         .padding(.bottom)
-                    RectangleBox(question: "FirstDailyQuestion", answer: day.answers[0])
-                    RectangleBox(question: "SecondDailyQuestion", answer: day.answers[1])
-                    RectangleBox(question: "ThirdDailyQuestion", answer: day.answers[2])
+                    RectangleBox(question: "Question1", answer: day.answers[0])
+                    RectangleBox(question: "Question2", answer: day.answers[1])
+                    RectangleBox(question: "Question3", answer: day.answers[2])
             }
         }
     }

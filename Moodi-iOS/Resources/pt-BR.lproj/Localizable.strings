@@ -36,3 +36,13 @@
 "AddingNewDayQuestionsPlaceholder" = "Escreva aqui";
 "AddingNewDayQuestionsBadAlert" = "Ocorreu algum erro";
 "AddingNewDayQuestionsGoodAlert" = "Seu dia foi salvo com sucesso!";
+"SummaryPageTodayFeelingsTitle" = "Sentimentos:";
+"veryHappy" = "Muito Feliz";
+"happy" = "Feliz";
+"neutral" = "Neutro";
+"sad" = "Triste";
+"verySad" = "Muito Triste";
+"SummaryTodayQuestionTitle" = "Perguntas";
+"ButtonDoneText" = "Finalizar";
+"SummaryPageTodayMoodTitle" = "Humor de hoje";
+"SummaryPageViewTitle" = "Resumo do dia";

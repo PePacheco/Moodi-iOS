@@ -11,8 +11,7 @@ struct DailyQuestionsView: View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var answers: [String] = ["", "", ""]
     @State private var textHeight: [CGFloat] = [0, 0, 0]
-    @State private var showAlert: Bool = false
-    @State private var alertText: LocalizedStringKey = LocalizedStringKey("AddingNewDayQuestionsBadAlert")
+    @State var showNewView = false
     let selectedFeelings: Set<Feeling>
     let selectedMood: Mood
     let screenSize: CGSize
@@ -30,23 +29,30 @@ struct DailyQuestionsView: View {
             ForEach(0..<3) { id in
                 DailyQuizTextInput(text: $answers[id], textHeight: $textHeight[id], question: questions[id])
             }
+            NavigationLink(
+                destination: SummaryPageView(day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings)),
+                isActive: $showNewView
+            ) {
+                EmptyView()
+            }.isDetailLink(false)
+                
         }
         .padding()
         .navigationBarTitle(LocalizedStringKey("AddingNewDayQuestionsQuestion"), displayMode: .inline)
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text(alertText), message: Text("" + ""))
-        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(LocalizedStringKey("Save")) {
-                    let response = DatabaseManager.shared.store(mood: selectedMood, answers: answers, feelings: selectedFeelings)
-                    if response {
-                        alertText = LocalizedStringKey("AddingNewDayQuestionsGoodAlert")
-                    }
-                    self.showAlert = true
+                    let _ = DatabaseManager.shared.store(mood: selectedMood, answers: self.answers, feelings: selectedFeelings)
+                    self.showNewView.toggle()
                 }
             }
-            
         }
+    }
+}
+
+struct DailyQuestionsView_Previews: PreviewProvider {
+    @State static var mockBinding: Bool = true
+    static var previews: some View {
+        DailyQuestionsView(selectedFeelings: Set([.angry]), selectedMood: .happy, screenSize: UIScreen.main.bounds.size)
     }
 }

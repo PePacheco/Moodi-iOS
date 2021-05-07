@@ -8,31 +8,33 @@
 import SwiftUI
 
 struct SummaryPageView: View {
+    @Environment(\.presentationMode) var presentation
     let screenSize: CGSize = UIScreen.main.bounds.size
     let day: Day
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack (alignment: .leading){
-                    Text(LocalizedStringKey("SummaryPageViewTitle"))
-                        .font(.system(size: screenSize.width*0.08, weight: .semibold))
-                        .foregroundColor(Color(UIColor.label))
-                        .padding(.leading, screenSize.width*0.06)
-                        .padding(.bottom, screenSize.height*0.02)
-                    SummaryDayMoodModalView(day: day)
-                    RectangleBox(question: "FirstDailyQuestion", answer: day.answers[0])
-                    RectangleBox(question: "SecondDailyQuestion", answer: day.answers[1])
-                    RectangleBox(question: "ThirdDailyQuestion", answer: day.answers[2])
-                Button(LocalizedStringKey("ButtonDoneText"), action: {
-                    
-                })
-                .frame(width: screenSize.width*0.4, height: screenSize.height*0.06)
-                .background(Color(UIColor.tertiaryLabel))
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .padding(.leading, screenSize.width*0.56)
-                .padding(.bottom, screenSize.height*0.02)
+                Text(LocalizedStringKey("SummaryPageViewTitle"))
+                    .font(.system(size: screenSize.width*0.08, weight: .semibold))
+                    .foregroundColor(Color(UIColor.label))
+                    .padding(.leading, screenSize.width*0.06)
+                    .padding(.bottom, screenSize.height*0.02)
+                SummaryDayMoodModalView(day: day)
+                RectangleBox(question: "Question1", answer: day.answers[0])
+                RectangleBox(question: "Question2", answer: day.answers[1])
+                RectangleBox(question: "Question3", answer: day.answers[2])
             }
         }
-     }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(LocalizedStringKey("Close")) {
+                    //
+                }
+            }
+        }
+    }
 }
 
 struct RectangleBox: View {
@@ -59,6 +61,7 @@ struct RectangleBox: View {
 }
 
 struct SummaryPageView_Previews: PreviewProvider {
+    @State static var mockBinding: Bool = true
     static var previews: some View {
         SummaryPageView(day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud,.loving, .relaxed]))
     }

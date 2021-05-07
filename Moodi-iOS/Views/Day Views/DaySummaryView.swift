@@ -11,8 +11,6 @@ struct DaySummaryView: View {
     
     let screenSize: CGSize
     
-    @State private var isPresentedAddingNewDay: Bool = false
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("DaySummaryLabel", comment: ""))
@@ -26,16 +24,11 @@ struct DaySummaryView: View {
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .font(.system(size: screenSize.height*0.025, weight: .semibold))
                     if true || !DatabaseManager.shared.hasToday {
-                        Button {
-                            self.isPresentedAddingNewDay = true
-                        } label: {
+                        NavigationLink(destination:QuizMainView()) {
                             Image(systemName: "plus.circle")
                                 .resizable()
                                 .frame(width: screenSize.height*0.04, height: screenSize.height*0.04)
                                 .foregroundColor(Color(UIColor.label))
-                        }
-                        .fullScreenCover(isPresented: $isPresentedAddingNewDay) {
-                            QuizMainView()
                         }
                     }
                 }
