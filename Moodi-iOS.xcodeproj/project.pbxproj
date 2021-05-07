@@ -7,25 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5FC7242644782E004D8C04 /* DailyQuizTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */; };
 		6DBA3A802640774700383620 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A7F2640774700383620 /* Day.swift */; };
 		6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A812640776500383620 /* DatabaseManager.swift */; };
 		6DBA3A842640778700383620 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A832640778700383620 /* Extensions.swift */; };
-		6DEDABAE2640749B006CCDA8 /* MyMood_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAD2640749B006CCDA8 /* MyMood_iOSApp.swift */; };
+		6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */; };
+		6DBCE2762645AD95006B55BE /* SummaryModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2752645AD95006B55BE /* SummaryModalView.swift */; };
+		6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */; };
+		6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */; };
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
 		6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB12640749C006CCDA8 /* Assets.xcassets */; };
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
+		6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAD2641B56B000C320F /* TabMainView.swift */; };
+		6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAF2641B7A1000C320F /* DayMainView.swift */; };
+		6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB12641B809000C320F /* WeekSummaryView.swift */; };
+		6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */; };
+		6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB52641C3A9000C320F /* DaySummaryView.swift */; };
+		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
+		B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2662A2641E02F008B110B /* SpeechMainView.swift */; };
+		DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36968B26445A100087A696 /* DailyQuestionsView.swift */; };
+		DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87265126408CC800C27E74 /* NotificationManager.swift */; };
+		DE8726782643061500C27E74 /* QuizMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8726772643061500C27E74 /* QuizMainView.swift */; };
+		DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87267B2643064A00C27E74 /* MoodPickerView.swift */; };
+		DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87267E2643066100C27E74 /* FeelingSelectView.swift */; };
+		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
+		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuizTextInput.swift; sourceTree = "<group>"; };
 		6DBA3A7F2640774700383620 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6DBA3A812640776500383620 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		6DBA3A832640778700383620 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		6DEDABAA2640749B006CCDA8 /* MyMood-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMood-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DEDABAD2640749B006CCDA8 /* MyMood_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMood_iOSApp.swift; sourceTree = "<group>"; };
+		6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryDayMoodModalView.swift; sourceTree = "<group>"; };
+		6DBCE2752645AD95006B55BE /* SummaryModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryModalView.swift; sourceTree = "<group>"; };
+		6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryPageView.swift; sourceTree = "<group>"; };
+		6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodi-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moodi_iOSApp.swift; sourceTree = "<group>"; };
 		6DEDABAF2640749B006CCDA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DEDABB12640749C006CCDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF40DAD2641B56B000C320F /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
+		6DF40DAF2641B7A1000C320F /* DayMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainView.swift; sourceTree = "<group>"; };
+		6DF40DB12641B809000C320F /* WeekSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSummaryView.swift; sourceTree = "<group>"; };
+		6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesView.swift; sourceTree = "<group>"; };
+		6DF40DB52641C3A9000C320F /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
+		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		B2F2662A2641E02F008B110B /* SpeechMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMainView.swift; sourceTree = "<group>"; };
+		DE36968B26445A100087A696 /* DailyQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionsView.swift; sourceTree = "<group>"; };
+		DE87265126408CC800C27E74 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DE8726772643061500C27E74 /* QuizMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMainView.swift; sourceTree = "<group>"; };
+		DE87267B2643064A00C27E74 /* MoodPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
+		DE87267E2643066100C27E74 /* FeelingSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingSelectView.swift; sourceTree = "<group>"; };
+		EC81A5AD2640886D00042FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EC81A5B12641E27E00042FBC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D396899264352A500FD5FFD /* Daily Menu Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
+				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
+				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
+				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
+			);
+			name = "Daily Menu Views";
+			sourceTree = "<group>";
+		};
 		6DBA3A7B264076EC00383620 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2F266262641DBA7008B110B /* SpeechRecognizer.swift */,
 				6DBA3A7F2640774700383620 /* Day.swift */,
 			);
 			path = Models;
@@ -51,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBA3A812640776500383620 /* DatabaseManager.swift */,
+				DE87265126408CC800C27E74 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -58,7 +109,10 @@
 		6DBA3A7D264076FC00383620 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DEDABB12640749C006CCDA8 /* Assets.xcassets */,
 				6DBA3A832640778700383620 /* Extensions.swift */,
+				EC81A5AE2640886D00042FBC /* Localizable.strings */,
+				EC81A5B12641E27E00042FBC /* Utilities.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -66,15 +120,28 @@
 		6DBA3A7E2640770300383620 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2F266292641E004008B110B /* Speech Views */,
+				6DF40DAC2641B51A000C320F /* Day Views */,
+				6DF40DAD2641B56B000C320F /* TabMainView.swift */,
 				6DEDABAF2640749B006CCDA8 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6DBCE2722645AD6C006B55BE /* Summary Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */,
+				6DBCE2752645AD95006B55BE /* SummaryModalView.swift */,
+				6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */,
+			);
+			name = "Summary Views";
+			sourceTree = "<group>";
+		};
 		6DEDABA12640749B006CCDA8 = {
 			isa = PBXGroup;
 			children = (
-				6DEDABAC2640749B006CCDA8 /* MyMood-iOS */,
+				6DEDABAC2640749B006CCDA8 /* Moodi-iOS */,
 				6DEDABAB2640749B006CCDA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,24 +149,23 @@
 		6DEDABAB2640749B006CCDA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DEDABAA2640749B006CCDA8 /* MyMood-iOS.app */,
+				6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DEDABAC2640749B006CCDA8 /* MyMood-iOS */ = {
+		6DEDABAC2640749B006CCDA8 /* Moodi-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6DEDABAD2640749B006CCDA8 /* MyMood_iOSApp.swift */,
+				6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */,
 				6DBA3A7E2640770300383620 /* Views */,
 				6DBA3A7D264076FC00383620 /* Resources */,
 				6DBA3A7C264076F500383620 /* Managers */,
 				6DBA3A7B264076EC00383620 /* Models */,
-				6DEDABB12640749C006CCDA8 /* Assets.xcassets */,
 				6DEDABB62640749C006CCDA8 /* Info.plist */,
 				6DEDABB32640749C006CCDA8 /* Preview Content */,
 			);
-			path = "MyMood-iOS";
+			path = "Moodi-iOS";
 			sourceTree = "<group>";
 		};
 		6DEDABB32640749C006CCDA8 /* Preview Content */ = {
@@ -110,12 +176,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6DF40DAC2641B51A000C320F /* Day Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DBCE2722645AD6C006B55BE /* Summary Views */,
+				6D396899264352A500FD5FFD /* Daily Menu Views */,
+				DE872676264305E900C27E74 /* Daily Quiz Views */,
+			);
+			path = "Day Views";
+			sourceTree = "<group>";
+		};
+		B2F266292641E004008B110B /* Speech Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2F2662A2641E02F008B110B /* SpeechMainView.swift */,
+			);
+			path = "Speech Views";
+			sourceTree = "<group>";
+		};
+		DE872676264305E900C27E74 /* Daily Quiz Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8726772643061500C27E74 /* QuizMainView.swift */,
+				DE36968B26445A100087A696 /* DailyQuestionsView.swift */,
+				DE87267B2643064A00C27E74 /* MoodPickerView.swift */,
+				DE87267E2643066100C27E74 /* FeelingSelectView.swift */,
+				6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */,
+			);
+			name = "Daily Quiz Views";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DEDABA92640749B006CCDA8 /* MyMood-iOS */ = {
+		6DEDABA92640749B006CCDA8 /* Moodi-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DEDABB92640749C006CCDA8 /* Build configuration list for PBXNativeTarget "MyMood-iOS" */;
+			buildConfigurationList = 6DEDABB92640749C006CCDA8 /* Build configuration list for PBXNativeTarget "Moodi-iOS" */;
 			buildPhases = (
 				6DEDABA62640749B006CCDA8 /* Sources */,
 				6DEDABA72640749B006CCDA8 /* Frameworks */,
@@ -125,9 +221,9 @@
 			);
 			dependencies = (
 			);
-			name = "MyMood-iOS";
+			name = "Moodi-iOS";
 			productName = "MyMood-iOS";
-			productReference = 6DEDABAA2640749B006CCDA8 /* MyMood-iOS.app */;
+			productReference = 6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,20 +240,22 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DEDABA52640749B006CCDA8 /* Build configuration list for PBXProject "MyMood-iOS" */;
+			buildConfigurationList = 6DEDABA52640749B006CCDA8 /* Build configuration list for PBXProject "Moodi-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				"es-419",
 			);
 			mainGroup = 6DEDABA12640749B006CCDA8;
 			productRefGroup = 6DEDABAB2640749B006CCDA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DEDABA92640749B006CCDA8 /* MyMood-iOS */,
+				6DEDABA92640749B006CCDA8 /* Moodi-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */,
+				EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */,
 				6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,21 +278,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */,
+				B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */,
+				DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */,
 				6DBA3A842640778700383620 /* Extensions.swift in Sources */,
 				6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */,
 				6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */,
-				6DEDABAE2640749B006CCDA8 /* MyMood_iOSApp.swift in Sources */,
+				6DBCE2762645AD95006B55BE /* SummaryModalView.swift in Sources */,
+				B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */,
+				DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */,
+				DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */,
+				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,
+				EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */,
+				6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */,
+				6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */,
+				6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */,
+				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
+				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
+				DE8726782643061500C27E74 /* QuizMainView.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
+				DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */,
+				6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */,
+				6D5FC7242644782E004D8C04 /* DailyQuizTextInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC81A5AE2640886D00042FBC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC81A5AD2640886D00042FBC /* en */,
+				EC81A5AF264088B000042FBC /* pt-BR */,
+				EC81A5B0264088BD00042FBC /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6DEDABB72640749C006CCDA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -255,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -312,19 +443,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MyMood-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3XP27NL574;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "MyMood-iOS/Info.plist";
+				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.MyMood-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.Moodi-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,26 +465,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MyMood-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3XP27NL574;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "MyMood-iOS/Info.plist";
+				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.MyMood-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.Moodi-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DEDABA52640749B006CCDA8 /* Build configuration list for PBXProject "MyMood-iOS" */ = {
+		6DEDABA52640749B006CCDA8 /* Build configuration list for PBXProject "Moodi-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DEDABB72640749C006CCDA8 /* Debug */,
@@ -362,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DEDABB92640749C006CCDA8 /* Build configuration list for PBXNativeTarget "MyMood-iOS" */ = {
+		6DEDABB92640749C006CCDA8 /* Build configuration list for PBXNativeTarget "Moodi-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DEDABBA2640749C006CCDA8 /* Debug */,

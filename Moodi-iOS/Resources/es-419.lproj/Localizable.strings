@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  MyMood-iOS
+
+  Created by Lucca Molon on 03/05/21.
+  
+*/
+"ContentView_Label_Hello" = "Hola Mundo";
+"WeekSummaryLabel" = "Tu semana";
+"WeekSummaryDay" = "días";
+"DailyQuotesTipLabel" = "Consejo del día";
+"DailyQuotesObjectiveLabel" = "Meta del día";
+"DaySummaryLabel" = "Resumo do dia";
+"DaySummaryMakeReflection" = "Fazer reflexão do día";
+"DayMainViewNavBarTitle" = "Hoy";
+"PickYourMood" = "Elija tu humor";
+"PickYourFeelings" = "Qué senstiste hoy";
+"anxiety" = "Ansiedad";
+"insecure" = "Inseguridad";
+"confident" = "Seguro";
+"relaxed" = "Relajado";
+"angry" = "Enojado";
+"tired" = "Cansado";
+"proud" = "Orgullo";
+"loving" = "Cariño";
+"AddingNewDayMainLabel" = "¿Como se siente hoy?";
+"Close" = "Cerrar";
+"Next" = "Próximo";
+"Statistics" = "Estadísticas";
+"Configurations" = "Ajustes";
+"Save" = "Ahorrar";
+"Question1" = "¿Que hice bien?";
+"Question2" = "¿Que podría hacer mejor?";
+"Question3" = "¿Que puedo mejorar para mañana?";
+"AddingNewDayQuestionsQuestion" = "¿Como fué tu día?";
+"AddingNewDayQuestionsPlaceholder" = "Escribe aqui";
+"AddingNewDayQuestionsBadAlert" = "Hubo un error";
+"AddingNewDayQuestionsGoodAlert" = "Tu día fué salvo con éxito";
+"SummaryPageTodayMoodTitle" = "El humor de hoy";
+"SummaryPageTodayFeelingsTitle" = "Sentimientos:";
+"veryHappy" = "Muy Feliz";
+"happy" = "Feliz";
+"neutral" = "Neutral";
+"sad" = "Triste";
+"verySad" = "Muy Triste";
+"SummaryTodayQuestionTitle" = "Preguntas";
+"ButtonDoneText" = "Terminar";
+"SummaryPageViewTitle" = "Resumen del día";

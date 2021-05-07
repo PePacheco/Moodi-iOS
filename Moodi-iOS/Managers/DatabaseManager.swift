@@ -11,21 +11,33 @@ class DatabaseManager {
     
     static let shared: DatabaseManager = DatabaseManager()
     
-    private init(){}
+    private (set) var days: [Day]
     
-    func store(mood: Mood, answer: String){
-        var data = self.load()
-        let day = Day(date: Date(), mood: mood, answer: answer)
-        data.append(day)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(data) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "days")
-            print(data)
+    var hasToday: Bool {
+        self.days.contains { day in
+            return Date().hasSame(.day, as: day.date)
         }
     }
     
-    func load() -> [Day] {
+    private init(){
+        days = Self.load()
+    }
+    
+    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool{
+        let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
+        self.days.append(day)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(days) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "days")
+            print(self.days.count)
+            return true
+        }
+        
+        return false
+    }
+    
+    static func load() -> [Day] {
         if let savedDay = UserDefaults.standard.data(forKey: "days") {
             let decoder = JSONDecoder()
             if let loadedDay = try? decoder.decode([Day].self, from: savedDay) {
