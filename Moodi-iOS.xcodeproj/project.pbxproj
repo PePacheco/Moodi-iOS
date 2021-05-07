@@ -11,6 +11,9 @@
 		6DBA3A802640774700383620 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A7F2640774700383620 /* Day.swift */; };
 		6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A812640776500383620 /* DatabaseManager.swift */; };
 		6DBA3A842640778700383620 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A832640778700383620 /* Extensions.swift */; };
+		6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */; };
+		6DBCE2762645AD95006B55BE /* SummaryModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2752645AD95006B55BE /* SummaryModalView.swift */; };
+		6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */; };
 		6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */; };
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
 		6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB12640749C006CCDA8 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		6DBA3A7F2640774700383620 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6DBA3A812640776500383620 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		6DBA3A832640778700383620 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryDayMoodModalView.swift; sourceTree = "<group>"; };
+		6DBCE2752645AD95006B55BE /* SummaryModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryModalView.swift; sourceTree = "<group>"; };
+		6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryPageView.swift; sourceTree = "<group>"; };
 		6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodi-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moodi_iOSApp.swift; sourceTree = "<group>"; };
 		6DEDABAF2640749B006CCDA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6DBCE2722645AD6C006B55BE /* Summary Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */,
+				6DBCE2752645AD95006B55BE /* SummaryModalView.swift */,
+				6DBCE2732645AD8F006B55BE /* SummaryDayMoodModalView.swift */,
+			);
+			name = "Summary Views";
+			sourceTree = "<group>";
+		};
 		6DEDABA12640749B006CCDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +179,7 @@
 		6DF40DAC2641B51A000C320F /* Day Views */ = {
 			isa = PBXGroup;
 			children = (
+				6DBCE2722645AD6C006B55BE /* Summary Views */,
 				6D396899264352A500FD5FFD /* Daily Menu Views */,
 				DE872676264305E900C27E74 /* Daily Quiz Views */,
 			);
@@ -267,11 +284,14 @@
 				6DBA3A842640778700383620 /* Extensions.swift in Sources */,
 				6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */,
 				6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */,
+				6DBCE2762645AD95006B55BE /* SummaryModalView.swift in Sources */,
 				B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */,
 				DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */,
 				DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */,
 				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,
 				EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */,
+				6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */,
+				6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */,
 				6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */,
 				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
 				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
