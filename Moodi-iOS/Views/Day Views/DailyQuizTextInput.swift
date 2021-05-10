@@ -15,7 +15,7 @@ struct DailyQuizTextInput: View {
     
     var paddingTop: CGFloat {
         if question == LocalizedStringKey("Question3") {
-            return screenSize.height * 0.06
+            return screenSize.height * 0.055
         }
         return screenSize.height * 0.05
     }
@@ -45,7 +45,7 @@ struct DailyQuizTextInput: View {
             if text.isEmpty {
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
                     .foregroundColor(Color("secondaryText"))
-                    .font(.system(size: screenSize.height*0.025, weight: .regular))
+                    .font(.system(size: screenSize.height*0.015, weight: .regular))
                     .padding(.top, paddingTop)
                     .padding(.leading, screenSize.width*0.03)
             }
