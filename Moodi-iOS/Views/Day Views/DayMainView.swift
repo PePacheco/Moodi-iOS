@@ -12,7 +12,7 @@ struct DayMainView: View {
     var body: some View {
         NavigationView {
             VStack {
-                WeekSummaryView(screenSize: screenSize)
+                StreakView(screenSize: screenSize)
                     .padding(.bottom, screenSize.height*0.04)
                 
                 DailyQuotesView(screenSize: screenSize)

@@ -12,7 +12,7 @@ struct TabMainView: View {
     @State private var selection = 2
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.label
+        UITabBar.appearance().backgroundColor = UIColor(Color("card"))
     }
     
     var body: some View {
@@ -35,7 +35,7 @@ struct TabMainView: View {
                 }
                 .tag(3)
         }
-        .accentColor(Color(UIColor.label))
+        .accentColor(Color("callToAction"))
     }
 }
 

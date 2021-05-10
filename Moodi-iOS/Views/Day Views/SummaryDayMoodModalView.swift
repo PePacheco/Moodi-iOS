@@ -5,30 +5,23 @@ struct SummaryDayMoodModalView: View {
     let day: Day
     var body: some View {
         VStack (alignment: .leading){
-            Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .font(.system(size: screenSize.width*0.05, weight: .semibold))
             HStack {
-                Circle()
+                day.mood.getMoodImage()
+                    .resizable()
                     .frame(width: screenSize.width*0.06, height: screenSize.width*0.06)
-                    .foregroundColor(Color(UIColor.tertiaryLabel))
+                
                 Text(LocalizedStringKey(day.mood.id))
                     .font(.system(size: screenSize.width*0.04, weight: .semibold))
             }
             
-                Text(LocalizedStringKey("SummaryPageTodayFeelingsTitle"))
-                    .foregroundColor(Color(UIColor.secondaryLabel))
-                    .font(.system(size: screenSize.width*0.05, weight: .semibold))
-//            HStack {
-//                ForEach(day.feelings, id: \.self) { feeling in
-//                    DaySummaryFeelingModalView(text: feeling.rawValue)
-//                        .foregroundColor(Color(UIColor.tertiaryLabel))
-//                }
-//            }
+            Text(LocalizedStringKey("SummaryPageTodayFeelingsTitle"))
+                .foregroundColor(Color("primaryText"))
+                .font(.system(size: screenSize.width*0.05, weight: .semibold))
             TagCloudView(tags: Array(day.feelings))
         }
-        .frame(width: screenSize.width, alignment: .leading)
-        .padding(.leading, screenSize.width*0.06)
+        .padding(.leading, screenSize.width*0.02)
+        .frame(width: screenSize.width*0.9, height: screenSize.height*0.2, alignment: .leading)
+        .asCard()
     }
 }
 
@@ -49,9 +42,7 @@ struct DaySummaryFeelingModalView: View {
 struct TagCloudView: View {
     var tags: [Feeling]
 
-    @State private var totalHeight
-          = CGFloat.zero       // << variant for ScrollView/List
-    //    = CGFloat.infinity   // << variant for VStack
+    @State private var totalHeight = CGFloat.zero
 
     var body: some View {
         VStack {
@@ -59,8 +50,7 @@ struct TagCloudView: View {
                 self.generateContent(in: geometry)
             }
         }
-        .frame(height: totalHeight)// << variant for ScrollView/List
-        //.frame(maxHeight: totalHeight) // << variant for VStack
+        .frame(height: totalHeight)
     }
 
     private func generateContent(in g: GeometryProxy) -> some View {
@@ -69,7 +59,7 @@ struct TagCloudView: View {
 
         return ZStack(alignment: .topLeading) {
             ForEach(self.tags, id: \.self) { tag in
-                self.item(for: tag.rawValue.localized(withComment: ""))
+                self.item(for: tag.rawValue.localized(withComment: ""), with: tag.getFeelingColor())
                     .padding([.horizontal, .vertical], 4)
                     .alignmentGuide(.leading, computeValue: { d in
                         if (abs(width - d.width) + 30 > g.size.width)
@@ -97,13 +87,12 @@ struct TagCloudView: View {
         .background(viewHeightReader($totalHeight))
     }
 
-    private func item(for text: String) -> some View {
-        
+    private func item(for text: String, with color: Color) -> some View {
         Text(text)
             .padding(.vertical, 3)
             .padding(.horizontal, 8)
             .font(.body)
-            .background(Color(UIColor.secondaryLabel))
+            .background(color)
             .foregroundColor(Color.white)
             .cornerRadius(20)
     }

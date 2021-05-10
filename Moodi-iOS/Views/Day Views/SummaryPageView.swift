@@ -14,19 +14,23 @@ struct SummaryPageView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack (alignment: .leading){
-                Text(LocalizedStringKey("SummaryPageViewTitle"))
-                    .font(.system(size: screenSize.width*0.08, weight: .semibold))
-                    .foregroundColor(Color(UIColor.label))
-                    .padding(.leading, screenSize.width*0.06)
-                    .padding(.bottom, screenSize.height*0.02)
+            VStack (alignment: .center, spacing: 20){
+                Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
+                    .foregroundColor(Color("primaryText"))
+                    .font(.system(size: screenSize.width*0.05, weight: .bold))
+                    .padding(.top)
+                    .padding(.trailing, screenSize.width/1.8)
                 SummaryDayMoodModalView(day: day)
+                Text(LocalizedStringKey("reflexion"))
+                    .foregroundColor(Color("primaryText"))
+                    .font(.system(size: screenSize.width*0.05, weight: .bold))
+                    .padding(.top)
+                    .padding(.trailing, screenSize.width/1.6)
                 RectangleBox(question: "Question1", answer: day.answers[0])
                 RectangleBox(question: "Question2", answer: day.answers[1])
                 RectangleBox(question: "Question3", answer: day.answers[2])
             }
         }
-       //.navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(LocalizedStringKey("Save")) {
@@ -38,6 +42,7 @@ struct SummaryPageView: View {
         .fullScreenCover(isPresented: $isShowingFullscreen) {
             TabMainView()
         }
+        .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .large)
     }
 }
 
@@ -47,19 +52,21 @@ struct RectangleBox: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
     var body: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(Color(UIColor.quaternaryLabel))
-            VStack {
+            VStack(alignment: .leading) {
                 Text(LocalizedStringKey(question))
-                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .foregroundColor(Color("primaryText"))
+                    .font(.system(size: screenSize.height*0.02, weight: .bold))
                 Divider()
                 Text(answer)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(UIColor.tertiaryLabel))
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(Color("secondaryText"))
+                    .font(.system(size: screenSize.height*0.016, weight: .regular))
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding()
         }
+        .frame(width: screenSize.width * 0.9)
+        .asCard()
         .padding(.horizontal, screenSize.width*0.048)
     }
 }
