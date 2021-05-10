@@ -21,6 +21,7 @@ struct SummaryPageView: View {
                     .padding(.top)
                     .padding(.trailing, screenSize.width/1.8)
                 SummaryDayMoodModalView(day: day)
+                    .asCard()
                 Text(LocalizedStringKey("reflexion"))
                     .foregroundColor(Color("primaryText"))
                     .font(.system(size: screenSize.width*0.05, weight: .bold))
@@ -42,7 +43,7 @@ struct SummaryPageView: View {
         .fullScreenCover(isPresented: $isShowingFullscreen) {
             TabMainView()
         }
-        .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .large)
+        .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .inline)
     }
 }
 

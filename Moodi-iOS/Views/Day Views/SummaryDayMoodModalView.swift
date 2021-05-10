@@ -21,7 +21,6 @@ struct SummaryDayMoodModalView: View {
         }
         .padding(.leading, screenSize.width*0.02)
         .frame(width: screenSize.width*0.9, height: screenSize.height*0.2, alignment: .leading)
-        .asCard()
     }
 }
 

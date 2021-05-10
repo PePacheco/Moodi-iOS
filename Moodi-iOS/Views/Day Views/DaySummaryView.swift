@@ -21,13 +21,15 @@ struct DaySummaryView: View {
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
                     .foregroundColor(Color("callToAction"))
                     .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                if true || !DatabaseManager.shared.hasToday {
+                if !DatabaseManager.shared.hasToday {
                     NavigationLink(destination:QuizMainView()) {
                         Image(systemName: "plus")
                             .resizable()
                             .frame(width: screenSize.height*0.03, height: screenSize.height*0.03)
                             .foregroundColor(Color("callToAction"))
                     }
+                } else {
+                    SummaryDayMoodModalView(day: DatabaseManager.shared.today!)
                 }
             }
             .frame(width: screenSize.width*0.9, height: screenSize.height * 0.13, alignment: .center)

@@ -19,6 +19,12 @@ class DatabaseManager {
         }
     }
     
+    var today: Day? {
+        self.days.first { day in
+            return Date().hasSame(.day, as: day.date)
+        }
+    }
+    
     private init(){
         days = Self.load()
     }
