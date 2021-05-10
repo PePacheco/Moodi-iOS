@@ -24,14 +24,8 @@ struct MoodPickerView: View {
                         Button{
                             self.selectedMood = mood
                         } label: {
-                            Rectangle()
-                                .foregroundColor(self.selectedMood == mood ? Color(UIColor.systemGreen) : Color(UIColor.tertiaryLabel))
-                                .frame(width: screenSize.width*0.12, height: screenSize.width*0.12)
+                            self.getMoodImage(mood: mood)
                         }
-                        
-                        Text(mood.id)
-                            .foregroundColor(Color(UIColor.secondaryLabel))
-                            .font(.system(size: screenSize.height*0.016, weight: .regular))
                     }
                     .padding(.horizontal, screenSize.width*0.008)
                 }
@@ -39,6 +33,15 @@ struct MoodPickerView: View {
             .padding(.vertical)
             .frame(height: screenSize.width*0.16)
         }
+    }
+    
+    func getMoodImage(mood: Mood) -> some View {
+        mood.getMoodImage()
+            .overlay(
+                Circle()
+                    .stroke(self.selectedMood == mood ? Color("callToAction") : Color.clear, lineWidth: 4)
+            )
+            .frame(width: screenSize.width*0.12, height: screenSize.width*0.12)
     }
 }
 
