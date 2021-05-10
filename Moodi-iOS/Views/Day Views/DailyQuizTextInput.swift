@@ -36,14 +36,16 @@ struct DailyQuizTextInput: View {
     
     var body: some View{
         ZStack(alignment: .topLeading) {
-            Color(UIColor.secondarySystemBackground)
             Text(question)
                 .padding(.horizontal, screenSize.width*0.03)
                 .padding(.top, screenSize.height*0.015)
+                .foregroundColor(Color("primaryText"))
+                .font(.system(size: screenSize.height*0.02, weight: .bold))
             
             if text.isEmpty {
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
-                    .foregroundColor(Color(UIColor.placeholderText))
+                    .foregroundColor(Color("secondaryText"))
+                    .font(.system(size: screenSize.height*0.025, weight: .regular))
                     .padding(.top, paddingTop)
                     .padding(.leading, screenSize.width*0.03)
             }
@@ -54,6 +56,7 @@ struct DailyQuizTextInput: View {
             
         }
         .frame(width: screenSize.width*0.9, height: textFieldHeight)
+        .asCard()
     }
 }
 

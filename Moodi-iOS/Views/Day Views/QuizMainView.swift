@@ -15,12 +15,12 @@ struct QuizMainView: View {
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
-        VStack(spacing: 80) {
+        VStack(spacing: 40) {
             MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
             
             FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
         }
-        .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: DailyQuestionsView(selectedFeelings: selectedFeelings,selectedMood: selectedMood, screenSize: screenSize, answers: $answers)) {
@@ -32,7 +32,6 @@ struct QuizMainView: View {
 }
 
 struct QuizMainView_Previews: PreviewProvider {
-    @State static var mockBinding: Bool = true
     static var previews: some View {
         QuizMainView()
     }

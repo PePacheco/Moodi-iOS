@@ -25,13 +25,13 @@ struct DailyQuestionsView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             ForEach(0..<3) { id in
                 DailyQuizTextInput(text: $answers[id], textHeight: $textHeight[id], question: questions[id])
             }
         }
         .padding()
-        .navigationBarTitle(LocalizedStringKey("AddingNewDayQuestionsQuestion"), displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("AddingNewDayQuestionsQuestion"), displayMode: .large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: SummaryPageView(day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings)), tag: id ?? UUID(), selection: $id) {

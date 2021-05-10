@@ -20,7 +20,7 @@
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
 		6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAD2641B56B000C320F /* TabMainView.swift */; };
 		6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAF2641B7A1000C320F /* DayMainView.swift */; };
-		6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB12641B809000C320F /* WeekSummaryView.swift */; };
+		6DF40DB22641B809000C320F /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB12641B809000C320F /* StreakView.swift */; };
 		6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */; };
 		6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB52641C3A9000C320F /* DaySummaryView.swift */; };
 		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
@@ -50,7 +50,7 @@
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF40DAD2641B56B000C320F /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
 		6DF40DAF2641B7A1000C320F /* DayMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainView.swift; sourceTree = "<group>"; };
-		6DF40DB12641B809000C320F /* WeekSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSummaryView.swift; sourceTree = "<group>"; };
+		6DF40DB12641B809000C320F /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 		6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesView.swift; sourceTree = "<group>"; };
 		6DF40DB52641C3A9000C320F /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
 		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			children = (
 				6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */,
 				6DF40DB52641C3A9000C320F /* DaySummaryView.swift */,
-				6DF40DB12641B809000C320F /* WeekSummaryView.swift */,
+				6DF40DB12641B809000C320F /* StreakView.swift */,
 				6DF40DAF2641B7A1000C320F /* DayMainView.swift */,
 			);
 			name = "Daily Menu Views";
@@ -294,7 +294,7 @@
 				6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */,
 				6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */,
 				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
-				6DF40DB22641B809000C320F /* WeekSummaryView.swift in Sources */,
+				6DF40DB22641B809000C320F /* StreakView.swift in Sources */,
 				DE8726782643061500C27E74 /* QuizMainView.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
 				DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */,

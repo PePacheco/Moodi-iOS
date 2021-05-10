@@ -42,3 +42,18 @@ extension Date {
         distance(from: date, only: component) == 0
     }
 }
+
+extension View {
+    func asCard() -> some View {
+        self
+            .cornerRadius(16)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color("divider"), lineWidth: 0.5)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color("card"))
+                    )
+            )
+    }
+}
