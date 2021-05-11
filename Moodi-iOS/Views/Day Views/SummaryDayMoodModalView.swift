@@ -8,15 +8,15 @@ struct SummaryDayMoodModalView: View {
             HStack {
                 day.mood.getMoodImage()
                     .resizable()
-                    .frame(width: screenSize.width*0.06, height: screenSize.width*0.06)
+                    .frame(width: screenSize.width*0.08, height: screenSize.width*0.08)
                 
                 Text(LocalizedStringKey(day.mood.id))
-                    .font(.system(size: screenSize.width*0.04, weight: .semibold))
+                    .font(.system(size: screenSize.width*0.06, weight: .semibold))
             }
             
             Text(LocalizedStringKey("SummaryPageTodayFeelingsTitle"))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.width*0.05, weight: .semibold))
+                .font(.system(size: screenSize.width*0.05, weight: .regular))
             TagCloudView(tags: Array(day.feelings))
         }
         .padding(.leading, screenSize.width*0.02)
