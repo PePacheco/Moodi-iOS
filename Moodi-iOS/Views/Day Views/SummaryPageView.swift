@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SummaryPageView: View {
-    @State private var isShowingFullscreen: Bool = false
-    let screenSize: CGSize = UIScreen.main.bounds.size
+    @EnvironmentObject private var preferences: PreferencesStore
+    @Binding var isPresentingDayMainView: Bool
     let day: Day
+    let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -36,12 +37,9 @@ struct SummaryPageView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(LocalizedStringKey("Save")) {
                     let _ = DatabaseManager.shared.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
-                    self.isShowingFullscreen.toggle()
+                    self.isPresentingDayMainView.toggle()
                 }
             }
-        }
-        .fullScreenCover(isPresented: $isShowingFullscreen) {
-            TabMainView()
         }
         .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .inline)
     }
@@ -75,6 +73,6 @@ struct RectangleBox: View {
 struct SummaryPageView_Previews: PreviewProvider {
     @State static var mockBinding: Bool = true
     static var previews: some View {
-        SummaryPageView(day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud,.loving, .relaxed]))
+        SummaryPageView(isPresentingDayMainView: .constant(false), day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud,.loving, .relaxed]))
     }
 }

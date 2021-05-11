@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-public enum InternalColorScheme {
-    case initial, auto, light, dark
+public enum InternalColorScheme: String {
+    case light, dark, auto
     init(code:Int) {
         if code == 0 {
             self = .auto
@@ -19,9 +19,7 @@ public enum InternalColorScheme {
         }
     }
     public func systemColorScheme() -> ColorScheme {
-        if self == .auto || self == .initial {
-            return PreferencesStore.deviceColorScheme
-        } else if self == .light {
+        if self == .light {
             return .light
         } else {
             return .dark

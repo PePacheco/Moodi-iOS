@@ -7,29 +7,33 @@
 import SwiftUI
 
 class PreferencesStore: ObservableObject {
-    @AppStorage(wrappedValue: 2, "colorScheme") public var appColorScheme:Int
-    @Published public var colorScheme:InternalColorScheme = .initial
-
-    public static var deviceColorScheme:ColorScheme = .light
-
-    init() {
-        self.colorScheme = InternalColorScheme(code: appColorScheme)
+    @AppStorage(wrappedValue: 0, "colorScheme") public var appColorScheme: Int
+    
+    static var appColorSchemeStatic: InternalColorScheme {
+        return InternalColorScheme(code: UserDefaults.standard.integer(forKey: "colorScheme"))
     }
-    public func updateStoredColorScheme(colorScheme: InternalColorScheme) {
-        if colorScheme == .auto {
-            appColorScheme = 0
-            if PreferencesStore.deviceColorScheme == .light {
-                self.colorScheme = .light
-            } else {
-                self.colorScheme = .dark
-            }
-        } else if colorScheme == .light {
-            appColorScheme = 1
-            self.colorScheme = .light
+    
+    public func getStoredColorScheme() -> InternalColorScheme {
+        if appColorScheme == 0 {
+            return .auto
+        } else if appColorScheme == 1 {
+            return .light
         } else {
-            appColorScheme = 2
-            self.colorScheme = .dark
+            return .dark
         }
+    }
+    
+    public func updateStoredColorScheme(colorScheme: InternalColorScheme) {
+        objectWillChange.send()
+        switch colorScheme {
+        case .light:
+            appColorScheme = 1
+        case .dark:
+            appColorScheme = 2
+        case .auto:
+            appColorScheme = 0
+        }
+        print("\(appColorScheme)")
     }
 }
 

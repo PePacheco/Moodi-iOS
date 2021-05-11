@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct DarkModeView: View {
-    @State private var isSystemPreferencesOn = false
-    @State private var isNightModeOn = false
     @EnvironmentObject private var preferences: PreferencesStore
-
+    @State private var mode: InternalColorScheme = PreferencesStore.appColorSchemeStatic
     let screenSize: CGSize
 
     var body: some View {
@@ -20,38 +18,14 @@ struct DarkModeView: View {
                 .foregroundColor(Color("primaryText"))
                 .font(.system(size: screenSize.height*0.025, weight: .bold))
             VStack {
-                Toggle(isOn: $isSystemPreferencesOn) {
-                    Text(NSLocalizedString("Following System", comment: ""))
-                        .font(.system(size: screenSize.height*0.02))
-                        .foregroundColor(Color("secondaryText"))
+                Picker(selection: $mode, label: Text("Which mode do you want to choose?")) {
+                    Text("System").tag(InternalColorScheme.auto)
+                    Text("Dark Mode").tag(InternalColorScheme.dark)
+                    Text("Light Mode").tag(InternalColorScheme.light)
                 }
-                .onChange(of: isSystemPreferencesOn, perform: { value in
-                    if value {
-                        preferences.updateStoredColorScheme(colorScheme: .auto)
-                    } else {
-                        if isNightModeOn {
-                            preferences.updateStoredColorScheme(colorScheme: .dark)
-                        } else {
-                            preferences.updateStoredColorScheme(colorScheme: .light)
-                        }
-                    }
-                })
-                
-                Divider()
-                
-                Toggle(isOn: $isNightModeOn) {
-                    Text(NSLocalizedString("Night Mode", comment: ""))
-                        .font(.system(size: screenSize.height*0.02))
-                        .foregroundColor(Color("secondaryText"))
-                }
-                .onChange(of: isNightModeOn, perform: { value in
-                    if !isSystemPreferencesOn {
-                        if value {
-                            preferences.updateStoredColorScheme(colorScheme: .dark)
-                        } else {
-                            preferences.updateStoredColorScheme(colorScheme: .light)
-                        }
-                    }
+                .pickerStyle(SegmentedPickerStyle())
+                .onChange(of: mode, perform: { value in
+                    preferences.updateStoredColorScheme(colorScheme: value)
                 })
             }
             .padding()

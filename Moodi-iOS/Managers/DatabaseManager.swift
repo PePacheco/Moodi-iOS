@@ -15,7 +15,7 @@ class DatabaseManager {
     
     var hasToday: Bool {
         self.days.contains { day in
-            return Date().hasSame(.day, as: day.date)
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
         }
     }
     

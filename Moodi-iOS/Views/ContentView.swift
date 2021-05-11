@@ -12,11 +12,12 @@ struct ContentView: View {
     @EnvironmentObject private var preferences: PreferencesStore
     
     var body: some View {
-        TabMainView()
-            .colorScheme(preferences.colorScheme.systemColorScheme())
-            .onAppear {
-                preferences.updateStoredColorScheme(colorScheme: .auto)
-            }
+        if preferences.getStoredColorScheme() == .auto {
+            TabMainView()
+        } else {
+            TabMainView()
+                .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+        }
     }
 }
 

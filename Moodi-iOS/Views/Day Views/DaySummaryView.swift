@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DaySummaryView: View {
-    
+    @State private var isPresentingDayMainView: Bool = false
     let screenSize: CGSize
     
     var body: some View {
@@ -22,12 +22,15 @@ struct DaySummaryView: View {
                     .foregroundColor(Color("callToAction"))
                     .font(.system(size: screenSize.height*0.025, weight: .semibold))
                 if !DatabaseManager.shared.hasToday {
-                    NavigationLink(destination:QuizMainView()) {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: screenSize.height*0.03, height: screenSize.height*0.03)
-                            .foregroundColor(Color("callToAction"))
-                    }
+                    NavigationLink.init(
+                        destination: QuizMainView(isPresentingDayMainView: $isPresentingDayMainView),
+                        isActive: $isPresentingDayMainView,
+                        label: {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: screenSize.height*0.03, height: screenSize.height*0.03)
+                                .foregroundColor(Color("callToAction"))
+                        })
                 } else {
                     SummaryDayMoodModalView(day: DatabaseManager.shared.today!)
                 }

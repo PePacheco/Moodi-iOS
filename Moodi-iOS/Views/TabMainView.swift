@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct TabMainView: View {
-    @State private var selection = 2
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
     init() {
@@ -17,7 +16,7 @@ struct TabMainView: View {
     }
     
     var body: some View {
-        TabView(selection: $selection) {
+        TabView {
             Text(LocalizedStringKey("Statistics"))
                 .tabItem {
                     Label(LocalizedStringKey("Statistics"), systemImage: "chart.bar.xaxis")

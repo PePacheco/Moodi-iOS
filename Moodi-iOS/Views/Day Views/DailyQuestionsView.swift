@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct DailyQuestionsView: View {
-    @State var id: UUID?
+    @State private var id: UUID?
     @State private var textHeight: [CGFloat] = [0, 0, 0]
     @Binding var answers: [String]
+    @Binding var isPresentingDayMainView: Bool
     let selectedFeelings: Set<Feeling>
     let selectedMood: Mood
     let screenSize: CGSize
     
-    private var questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
+    private let questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
     
-    init(selectedFeelings: Set<Feeling>, selectedMood: Mood, screenSize: CGSize, answers: Binding<[String]>) {
-        self.selectedFeelings = selectedFeelings
-        self.selectedMood = selectedMood
-        self.screenSize = screenSize
-        self._answers = answers
-    }
+//    init(selectedFeelings: Set<Feeling>, selectedMood: Mood, screenSize: CGSize, answers: Binding<[String]>) {
+//        self.selectedFeelings = selectedFeelings
+//        self.selectedMood = selectedMood
+//        self.screenSize = screenSize
+//        self._answers = answers
+//
+//    }
     
     var body: some View {
         VStack(spacing: 30) {
@@ -34,7 +36,7 @@ struct DailyQuestionsView: View {
         .navigationBarTitle(LocalizedStringKey("AddingNewDayQuestionsQuestion"), displayMode: .large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: SummaryPageView(day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings)), tag: id ?? UUID(), selection: $id) {
+                NavigationLink(destination: SummaryPageView(isPresentingDayMainView: $isPresentingDayMainView, day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings)), tag: id ?? UUID(), selection: $id) {
                     Text(LocalizedStringKey("Next"))
                 }
             }
@@ -46,6 +48,6 @@ struct DailyQuestionsView_Previews: PreviewProvider {
     @State static var answers: [String] = ["", "", ""]
     @State static var mockBinding: Bool = true
     static var previews: some View {
-        DailyQuestionsView(selectedFeelings: Set([.angry]), selectedMood: .happy, screenSize: UIScreen.main.bounds.size, answers: $answers)
+        DailyQuestionsView(answers: $answers, isPresentingDayMainView: .constant(false), selectedFeelings: Set([.angry]), selectedMood: .happy, screenSize: UIScreen.main.bounds.size)
     }
 }
