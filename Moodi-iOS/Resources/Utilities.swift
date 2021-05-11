@@ -6,11 +6,30 @@
 //
 import SwiftUI
 
-struct Utilities {
-    static let screenSize: CGSize = UIScreen.main.bounds.size
-    
-    static func responsiveFont(size: CGFloat) -> CGFloat{
-        return Self.screenSize.height*0.001175*size
+class PreferencesStore: ObservableObject {
+    @AppStorage(wrappedValue: 2, "colorScheme") public var appColorScheme:Int
+    @Published public var colorScheme:InternalColorScheme = .initial
+
+    public static var deviceColorScheme:ColorScheme = .light
+
+    init() {
+        self.colorScheme = InternalColorScheme(code: appColorScheme)
+    }
+    public func updateStoredColorScheme(colorScheme: InternalColorScheme) {
+        if colorScheme == .auto {
+            appColorScheme = 0
+            if PreferencesStore.deviceColorScheme == .light {
+                self.colorScheme = .light
+            } else {
+                self.colorScheme = .dark
+            }
+        } else if colorScheme == .light {
+            appColorScheme = 1
+            self.colorScheme = .light
+        } else {
+            appColorScheme = 2
+            self.colorScheme = .dark
+        }
     }
 }
 
