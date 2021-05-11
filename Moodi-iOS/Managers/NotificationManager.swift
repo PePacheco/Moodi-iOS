@@ -10,6 +10,8 @@ import UserNotifications
 
 struct NotificationManager {
     
+    static let shared = NotificationManager()
+    
     let notificationCenter = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert, .sound, .badge]
     

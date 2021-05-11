@@ -47,4 +47,10 @@
 "ButtonDoneText" = "Terminar";
 "SummaryPageViewTitle" = "Resumen del día";
 "reflexion" = "Reflexión";
-
+"Security" = "Seguridad";
+"Password" = "Contraseña";
+"Notification" = "Notificación";
+"Notification settings" = "Establecer recordatorio";
+"Dark Mode" = "Modo Oscuro";
+"Night Mode" = "Modo Nocturno";
+"Following System" = "Seguir sistema";

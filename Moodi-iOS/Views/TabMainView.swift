@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TabMainView: View {
     @State private var selection = 2
+    private let screenSize: CGSize = UIScreen.main.bounds.size
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(Color("card"))
@@ -29,7 +30,7 @@ struct TabMainView: View {
                 }
                 .tag(2)
             
-            Text(LocalizedStringKey("Configurations"))
+            SettingsMainView(screenSize: screenSize)
                 .tabItem {
                     Label(LocalizedStringKey("Configurations"), systemImage: "gearshape.fill")
                 }
