@@ -10,13 +10,15 @@ import SwiftUI
 
 struct TabMainView: View {
     private let screenSize: CGSize = UIScreen.main.bounds.size
+    @Binding var tab: Int
     
-    init() {
+    init(tab: Binding<Int>) {
         UITabBar.appearance().backgroundColor = UIColor(Color("card"))
+        self._tab = tab
     }
     
     var body: some View {
-        TabView {
+        TabView(selection: $tab) {
             Text(LocalizedStringKey("Statistics"))
                 .tabItem {
                     Label(LocalizedStringKey("Statistics"), systemImage: "chart.bar.xaxis")
@@ -29,7 +31,7 @@ struct TabMainView: View {
                 }
                 .tag(2)
             
-            SettingsMainView(screenSize: screenSize)
+            SettingsMainView(screenSize: screenSize, tab: $tab)
                 .tabItem {
                     Label(LocalizedStringKey("Configurations"), systemImage: "gearshape.fill")
                 }
@@ -40,7 +42,8 @@ struct TabMainView: View {
 }
 
 struct TabBarView_Previews: PreviewProvider {
+    @State static private var tab: Int = 2
     static var previews: some View {
-        TabMainView()
+        TabMainView(tab: $tab)
     }
 }

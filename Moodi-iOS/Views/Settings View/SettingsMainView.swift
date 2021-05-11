@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsMainView: View {
     let screenSize: CGSize
+    @Binding var tab: Int
     
     var body: some View {
         NavigationView {
@@ -18,7 +19,7 @@ struct SettingsMainView: View {
                     
                     NotificationView(screenSize: screenSize)
                     
-                    DarkModeView(screenSize: screenSize)
+                    DarkModeView(screenSize: screenSize, tab: $tab)
                 }
             }
             .padding(.top)
@@ -29,8 +30,9 @@ struct SettingsMainView: View {
 
 struct SettingsMainView_Previews: PreviewProvider {
     @StateObject static private var preferences: PreferencesStore = PreferencesStore()
+    @State static private var tab: Int = 2
     static var previews: some View {
-        SettingsMainView(screenSize: UIScreen.main.bounds.size)
+        SettingsMainView(screenSize: UIScreen.main.bounds.size, tab: $tab)
             .environmentObject(preferences)
     }
 }
