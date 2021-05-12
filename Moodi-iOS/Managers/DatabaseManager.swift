@@ -54,14 +54,15 @@ class DatabaseManager: ObservableObject {
     
     func loadLastNDays(N: Int) -> [Day]{
         var lastNDays: [Day] = []
-        for day in days[0...days.count-1].reversed() {
-            if day.date.distance(from: Date(), only: .day, calendar: .current) >= (-1 * N) {
-                lastNDays.append(day)
-            }else {
-                break
+        if days.count > 0 {
+            for day in days[0...days.count-1].reversed() {
+                if day.date.distance(from: Date(), only: .day, calendar: .current) >= (-1 * N) {
+                    lastNDays.append(day)
+                }else {
+                    break
+                }
             }
         }
-        
         return lastNDays
     }
     

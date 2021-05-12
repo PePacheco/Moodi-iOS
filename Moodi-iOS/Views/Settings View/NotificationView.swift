@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NotificationView: View {
     @AppStorage("isNotificationsOn") private var isNotificationsOn = false
-    @State private var datePick = Date()
+    @AppStorage("notificationDate") private var datePick = Date()
 
     let screenSize: CGSize
 
