@@ -21,13 +21,12 @@ extension Color {
 }
 
 extension String {
-    func localized(withComment:String) -> String {
+    func localized(withComment: String) -> String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: withComment)
     }
 }
 
 extension Date {
-
     func fullDistance(from date: Date, resultIn component: Calendar.Component, calendar: Calendar = .current) -> Int? {
         calendar.dateComponents([component], from: self, to: date).value(for: component)
     }
@@ -40,5 +39,28 @@ extension Date {
 
     func hasSame(_ component: Calendar.Component, as date: Date) -> Bool {
         distance(from: date, only: component) == 0
+    }
+    
+    var dayAfter: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: self)!
+    }
+    
+    var dayBefore: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: self)!
+    }
+}
+
+extension View {
+    func asCard() -> some View {
+        self
+            .cornerRadius(16)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color("divider"), lineWidth: 0.5)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color("card"))
+                    )
+            )
     }
 }

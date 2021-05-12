@@ -8,32 +8,35 @@
 import SwiftUI
 
 struct DaySummaryView: View {
-    
+    @State private var isPresentingDayMainView: Bool = false
     let screenSize: CGSize
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("DaySummaryLabel", comment: ""))
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color("primaryText"))
                 .font(.system(size: screenSize.height*0.025, weight: .semibold))
             
-            ZStack {
-                Color(UIColor.tertiaryLabel)
-                HStack {
-                    Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                        .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                    if true || !DatabaseManager.shared.hasToday {
-                        NavigationLink(destination:QuizMainView()) {
-                            Image(systemName: "plus.circle")
+            HStack {
+                Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
+                    .foregroundColor(Color("callToAction"))
+                    .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                if !DatabaseManager.shared.hasToday {
+                    NavigationLink.init(
+                        destination: QuizMainView(isPresentingDayMainView: $isPresentingDayMainView),
+                        isActive: $isPresentingDayMainView,
+                        label: {
+                            Image(systemName: "plus")
                                 .resizable()
-                                .frame(width: screenSize.height*0.04, height: screenSize.height*0.04)
-                                .foregroundColor(Color(UIColor.label))
-                        }
-                    }
+                                .frame(width: screenSize.height*0.03, height: screenSize.height*0.03)
+                                .foregroundColor(Color("callToAction"))
+                        })
+                } else {
+                    SummaryDayMoodModalView(day: DatabaseManager.shared.today!)
                 }
             }
-            .frame(width: screenSize.width*0.8, height: screenSize.height * 0.13, alignment: .center)
+            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)
+            .asCard()
         }
     }
 }

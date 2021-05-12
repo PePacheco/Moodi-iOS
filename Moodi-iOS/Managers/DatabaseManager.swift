@@ -15,7 +15,13 @@ class DatabaseManager {
     
     var hasToday: Bool {
         self.days.contains { day in
-            return Date().hasSame(.day, as: day.date)
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
+        }
+    }
+    
+    var today: Day? {
+        self.days.first { day in
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
         }
     }
     
@@ -30,10 +36,8 @@ class DatabaseManager {
         if let encoded = try? encoder.encode(days) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
-            print(self.days.count)
             return true
         }
-        
         return false
     }
     
@@ -45,5 +49,23 @@ class DatabaseManager {
             }
         }
         return []
+    }
+    
+    func calculateStreak() -> Int {
+        var count = 0
+        var yesterday = Date().dayBefore
+
+        for _ in self.days {
+            let conditional = days.contains { item in
+                return yesterday.hasSame(.day, as: item.date) && yesterday.hasSame(.month, as: item.date) && yesterday.hasSame(.year, as: item.date)
+            }
+            if conditional {
+                count += 1
+            } else {
+                break
+            }
+            yesterday = yesterday.dayBefore
+        }
+        return count
     }
 }

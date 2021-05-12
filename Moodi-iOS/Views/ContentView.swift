@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tab: Int = 2
+    @Environment(\.colorScheme) var deviceColorScheme: ColorScheme
+    @EnvironmentObject private var preferences: PreferencesStore
+    
     var body: some View {
-
-        TabMainView()
+        if preferences.getStoredColorScheme() == .auto {
+            TabMainView(tab: $tab)
+        } else {
+            TabMainView(tab: $tab)
+                .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @StateObject static private var preferences: PreferencesStore = PreferencesStore()
     static var previews: some View {
         ContentView()
+            .environmentObject(preferences)
     }
 }

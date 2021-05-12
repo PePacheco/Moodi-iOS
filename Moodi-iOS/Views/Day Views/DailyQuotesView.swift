@@ -12,8 +12,8 @@ struct DailyQuotesView: View {
     
     var body: some View {
         Circle()
-            .foregroundColor(Color(UIColor.tertiaryLabel))
-            .frame(width: screenSize.width*0.6, height: screenSize.width*0.6)
+            .foregroundColor(Color("callToAction"))
+            .frame(width: screenSize.width*0.65, height: screenSize.width*0.65)
             .overlay(
                 TabView {
                     SentenceOfTheDay(sentence: NSLocalizedString("DailyQuotesTipLabel", comment: ""), screenSize: screenSize)
@@ -33,11 +33,11 @@ struct SentenceOfTheDay: View {
     var body: some View {
         VStack {
             Text(self.sentence)
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                .foregroundColor(Color("invertedPrimaryText"))
+                .font(.system(size: screenSize.height*0.025, weight: .bold))
                 .padding(.bottom,  screenSize.height * 0.02)
             Text("Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color("invertedPrimaryText"))
                 .multilineTextAlignment(.center)
                 .font(.system(size: screenSize.height*0.02, weight: .medium))
                 .padding(.horizontal, screenSize.width * 0.06)

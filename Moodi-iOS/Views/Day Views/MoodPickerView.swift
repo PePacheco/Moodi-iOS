@@ -13,32 +13,41 @@ struct MoodPickerView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            
             Text(NSLocalizedString("PickYourMood", comment: ""))
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color("primaryText"))
                 .font(.system(size: screenSize.height*0.022, weight: .semibold))
             
             HStack {
                 ForEach(Mood.allCases, id: \.self) { mood in
-                    VStack(spacing: 5) {
-                        Button{
-                            self.selectedMood = mood
-                        } label: {
-                            Rectangle()
-                                .foregroundColor(self.selectedMood == mood ? Color(UIColor.systemGreen) : Color(UIColor.tertiaryLabel))
-                                .frame(width: screenSize.width*0.12, height: screenSize.width*0.12)
-                        }
-                        
-                        Text(mood.id)
-                            .foregroundColor(Color(UIColor.secondaryLabel))
-                            .font(.system(size: screenSize.height*0.016, weight: .regular))
+                    Button{
+                        self.selectedMood = mood
+                    } label: {
+                        self.getMoodImage(mood: mood)
+                            .padding(.horizontal, 5)
                     }
-                    .padding(.horizontal, screenSize.width*0.008)
                 }
             }
-            .padding(.vertical)
-            .frame(height: screenSize.width*0.16)
+            .frame(width: screenSize.width*0.85,height: screenSize.width*0.2)
         }
+        .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)
+        .asCard()
+    }
+    
+    func getMoodImage(mood: Mood) -> some View {
+        mood.getMoodImage()
+            .resizable()
+            .overlay(
+                Circle()
+                    .stroke(self.selectedMood == mood ? Color("callToAction") : Color.clear, lineWidth: 6)
+            )
+            .frame(width: screenSize.width*0.13, height: screenSize.width*0.13)
     }
 }
 
+
+struct MoodPickerView_Previews: PreviewProvider {
+    @State static var mockBinding: Mood = .neutral
+    static var previews: some View {
+        MoodPickerView(screenSize: UIScreen.main.bounds.size, selectedMood: $mockBinding)
+    }
+}

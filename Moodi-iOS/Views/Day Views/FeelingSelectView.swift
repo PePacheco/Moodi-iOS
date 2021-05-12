@@ -17,12 +17,12 @@ struct FeelingSelectView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             Text(NSLocalizedString("PickYourFeelings", comment: ""))
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color("primaryText"))
                 .font(.system(size: screenSize.height*0.022, weight: .semibold))
-                .padding(.leading, screenSize.width*0.1)
+                .padding(.leading, screenSize.width*0.05)
             
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                 ForEach((Feeling.allCases), id: \.self) { feeling in
+                ForEach((Feeling.allCases), id: \.self) { feeling in
                     Button{
                         if selectedFeelings.contains(feeling) {
                             self.selectedFeelings.remove(feeling)
@@ -32,21 +32,25 @@ struct FeelingSelectView: View {
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                                .foregroundColor(selectedFeelings.contains(feeling) ? Color(UIColor.systemGreen) : Color(UIColor.tertiaryLabel))
-                                .frame(width: screenSize.width*0.32, height: screenSize.height*0.06)
+                                .foregroundColor(selectedFeelings.contains(feeling) ? feeling.getFeelingColor() : Color(UIColor.tertiaryLabel))
+                                .frame(width: screenSize.width*0.32, height: screenSize.height*0.04)
                             Text(LocalizedStringKey(feeling.id))
                                 .foregroundColor(Color(UIColor.label))
                                 .font(.system(size: screenSize.height*0.022, weight: .regular))
                         }
                     }
-                 }
-             }
+                }
+            }
         }
+        .padding(.vertical)
+        .frame(width: screenSize.width*0.9, height: screenSize.height * 0.32, alignment: .center)
+        .asCard()
     }
 }
 
-//struct FeelingSelectView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FeelingSelectView(screenSize: UIScreen.main.bounds.size, selectedFeelings: Binding<Set<Feeling>>([]))
-//    }
-//}
+struct FeelingSelectView_Previews: PreviewProvider {
+    @State static var mock: Set<Feeling> = []
+    static var previews: some View {
+        FeelingSelectView(screenSize: UIScreen.main.bounds.size, selectedFeelings: $mock)
+    }
+}
