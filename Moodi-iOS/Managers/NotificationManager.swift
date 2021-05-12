@@ -50,4 +50,9 @@ struct NotificationManager {
         
         notificationCenter.add(request, withCompletionHandler: nil)
     }
+    
+    func stopSending() {
+        notificationCenter.removeAllPendingNotificationRequests()
+        notificationCenter.removeAllDeliveredNotifications()
+    }
 }

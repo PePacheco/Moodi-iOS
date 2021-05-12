@@ -5,9 +5,9 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 03/05/21.
 //
 
-import Foundation
+import SwiftUI
 
-class DatabaseManager {
+class DatabaseManager: ObservableObject {
     
     static let shared: DatabaseManager = DatabaseManager()
     
@@ -15,21 +15,22 @@ class DatabaseManager {
     
     var hasToday: Bool {
         self.days.contains { day in
-            return Date().hasSame(.day, as: day.date)
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
         }
     }
     
-    var today: Day? {
+    var today: Day {
         self.days.first { day in
             return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
-        }
+        } ?? Day(date: Date(), mood: .neutral, answers: ["", "", ""], feelings: [])
     }
     
     private init(){
         days = Self.load()
     }
     
-    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool{
+    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
+        objectWillChange.send()
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
         self.days.append(day)
         let encoder = JSONEncoder()

@@ -251,7 +251,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                                                     container: dataProvider,
                                                     dataSet: dataSet)
             { (element) in
-                element.accessibilityLabel = "\(doesContainMultipleDataSets ? "\(dataSet.label ?? "Dataset")" : "") " + "\(xPos) - \(accessibilityMovementDescription). low: \(low), high: \(high), opening: \(open), closing: \(close)"
+                element.accessibilityLabel = "\(doesContainMultipleDataSets ? "\(dataSet.label ?? "")" : "") " + "\(xPos) - \(accessibilityMovementDescription). low: \(low), high: \(high), opening: \(open), closing: \(close)"
                 element.accessibilityFrame = accessibilityRect
             }
 

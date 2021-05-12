@@ -47,7 +47,7 @@ open class ChartDataSet: ChartBaseDataSet
     
     @objc public convenience init(entries: [ChartDataEntry]?)
     {
-        self.init(entries: entries, label: "DataSet")
+        self.init(entries: entries, label: "")
     }
     
     // MARK: - Data functions and accessors
