@@ -54,6 +54,5 @@ class PreferencesStore: ObservableObject {
         case .auto:
             appColorScheme = 0
         }
-        print("\(appColorScheme)")
     }
 }

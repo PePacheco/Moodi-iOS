@@ -26,7 +26,7 @@ class DatabaseManager: ObservableObject {
     }
     
     private init(){
-        days = Self.load()
+        days = Self.loadAllDays()
     }
     
     func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
@@ -42,7 +42,7 @@ class DatabaseManager: ObservableObject {
         return false
     }
     
-    static func load() -> [Day] {
+    static func loadAllDays() -> [Day] {
         if let savedDay = UserDefaults.standard.data(forKey: "days") {
             let decoder = JSONDecoder()
             if let loadedDay = try? decoder.decode([Day].self, from: savedDay) {
@@ -52,7 +52,7 @@ class DatabaseManager: ObservableObject {
         return []
     }
     
-    func loadLastNDays(N: Int) -> [Day]{
+    func loadLastNDays(N: Int) -> [Day] {
         var lastNDays: [Day] = []
         if days.count > 0 {
             for day in days[0...days.count-1].reversed() {
@@ -66,40 +66,4 @@ class DatabaseManager: ObservableObject {
         return lastNDays
     }
     
-    func calculateStreak() -> Int {
-        var count = 0
-        var yesterday = Date().dayBefore
-
-        for _ in self.days {
-            let conditional = days.contains { item in
-                return yesterday.hasSame(.day, as: item.date) && yesterday.hasSame(.month, as: item.date) && yesterday.hasSame(.year, as: item.date)
-            }
-            if conditional {
-                count += 1
-            } else {
-                break
-            }
-            yesterday = yesterday.dayBefore
-        }
-        return count
-    }
-    
-    func newMonthArray(month: Int, year: Int) -> [Date]{
-        var dateComponents = DateComponents()
-        let calendar = Calendar.current
-        var newMonthArray: [Date] = []
-        dateComponents.calendar = .current
-        dateComponents.day = 1
-        dateComponents.month = month
-        dateComponents.year = year
-        for _ in 1...31 {
-            if dateComponents.isValidDate {
-                newMonthArray.append(calendar.date(from: dateComponents)!)
-                dateComponents.day! += 1
-            }else {
-                break
-            }
-        }
-        return newMonthArray
-    }
 }
