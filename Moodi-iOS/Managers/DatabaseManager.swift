@@ -15,7 +15,7 @@ class DatabaseManager {
     
     var hasToday: Bool {
         self.days.contains { day in
-            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
+            return Date().hasSame(.day, as: day.date)
         }
     }
     
@@ -39,7 +39,6 @@ class DatabaseManager {
             print(self.days.count)
             return true
         }
-        
         return false
     }
     
@@ -51,5 +50,18 @@ class DatabaseManager {
             }
         }
         return []
+    }
+    
+    func loadLastNDays(N: Int) -> [Day]{
+        var lastNDays: [Day] = []
+        for day in days[0...days.count-1].reversed() {
+            if day.date.distance(from: Date(), only: .day, calendar: .current) >= (-1 * N) {
+                lastNDays.append(day)
+            }else {
+                break
+            }
+        }
+        
+        return lastNDays
     }
 }
