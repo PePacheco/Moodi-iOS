@@ -15,10 +15,10 @@ struct lastNdaysView: View {
         VStack{
             VStack{
                 Picker(selection: $lastNDays, label: Text("N days"), content: {
-                    Text("30 days").tag(30)
-                    Text("3 months").tag(90)
-                    Text("1 year").tag(365)
-                    Text("All time").tag(DatabaseManager.shared.days.count)
+                    Text("30 " + NSLocalizedString("Days", comment: "")).tag(30)
+                    Text("3 " + NSLocalizedString("Months", comment: "")).tag(90)
+                    Text("1 " + NSLocalizedString("Year", comment: "")).tag(365)
+                    Text(NSLocalizedString("All Time", comment: "")).tag(DatabaseManager.shared.days.count)
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: screenSize.width*0.9)

@@ -40,6 +40,7 @@
 		DECE2021264B7C5600FCE115 /* lastNdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE2020264B7C5600FCE115 /* lastNdaysView.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
+		EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC984A3F264C62D500BD5AF9 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B12641E27E00042FBC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EC984A3F264C62D500BD5AF9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			children = (
 				DECE201D264B779600FCE115 /* DonutChartView.swift */,
 				DECE2020264B7C5600FCE115 /* lastNdaysView.swift */,
+				EC984A3F264C62D500BD5AF9 /* CalendarView.swift */,
 			);
 			path = "Statistics Views";
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */,
 				DECE2021264B7C5600FCE115 /* lastNdaysView.swift in Sources */,
 				6DBCE2742645AD8F006B55BE /* SummaryDayMoodModalView.swift in Sources */,
+				EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */,
 				6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */,
 				6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */,
 				6DF40DB22641B809000C320F /* StreakView.swift in Sources */,
