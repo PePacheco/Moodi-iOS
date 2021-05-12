@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StreakView: View {
     let screenSize: CGSize
-    let streak: Int = DatabaseManager.shared.streak
+    let streak: Int = DatabaseManager.shared.calculateStreak()
     
     var body: some View {
         HStack {
