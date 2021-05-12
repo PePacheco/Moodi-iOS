@@ -12,6 +12,7 @@ struct DailyQuizTextInput: View {
     @Binding var textHeight: CGFloat
     var question: LocalizedStringKey
     private let screenSize: CGSize = UIScreen.main.bounds.size
+    private let speechRecognizer = SpeechRecognizer()
     
     var paddingTop: CGFloat {
         if question == LocalizedStringKey("Question3") {
@@ -36,11 +37,19 @@ struct DailyQuizTextInput: View {
     
     var body: some View{
         ZStack(alignment: .topLeading) {
-            Text(question)
-                .padding(.horizontal, screenSize.width*0.03)
-                .padding(.top, screenSize.height*0.015)
-                .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.02, weight: .bold))
+            HStack {
+                Text(question)
+                    .padding(.horizontal, screenSize.width*0.03)
+                    .padding(.top, screenSize.height*0.015)
+                    .foregroundColor(Color("primaryText"))
+                    .font(.system(size: screenSize.height*0.02, weight: .bold))
+                
+                Button(action: {
+                    speechRecognizer.record(to: $text)
+                }){
+                    Image(systemName: "mic.fill")
+                }
+            }
             
             if text.isEmpty {
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
