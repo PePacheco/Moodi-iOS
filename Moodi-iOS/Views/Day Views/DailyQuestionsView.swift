@@ -30,6 +30,7 @@ struct DailyQuestionsView: View {
         VStack(spacing: 30) {
             ForEach(0..<3) { id in
                 DailyQuizTextInput(text: $answers[id], textHeight: $textHeight[id], question: questions[id])
+                
             }
         }
         .padding()
