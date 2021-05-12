@@ -21,7 +21,7 @@ class DatabaseManager {
     
     var today: Day? {
         self.days.first { day in
-            return Date().hasSame(.day, as: day.date)
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
         }
     }
     
