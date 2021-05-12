@@ -82,4 +82,23 @@ class DatabaseManager: ObservableObject {
         }
         return count
     }
+    
+    func newMonthArray(month: Int, year: Int) -> [Date]{
+        var dateComponents = DateComponents()
+        let calendar = Calendar.current
+        var newMonthArray: [Date] = []
+        dateComponents.calendar = .current
+        dateComponents.day = 1
+        dateComponents.month = month
+        dateComponents.year = year
+        for _ in 1...31 {
+            if dateComponents.isValidDate {
+                newMonthArray.append(calendar.date(from: dateComponents)!)
+                dateComponents.day! += 1
+            }else {
+                break
+            }
+        }
+        return newMonthArray
+    }
 }
