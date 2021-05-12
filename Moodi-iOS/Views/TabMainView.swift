@@ -19,7 +19,7 @@ struct TabMainView: View {
     
     var body: some View {
         TabView(selection: $tab) {
-            Text(LocalizedStringKey("Statistics"))
+            lastNdaysView()
                 .tabItem {
                     Label(LocalizedStringKey("Statistics"), systemImage: "chart.bar.xaxis")
                 }
