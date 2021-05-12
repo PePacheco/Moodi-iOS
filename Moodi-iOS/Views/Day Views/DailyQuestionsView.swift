@@ -18,14 +18,6 @@ struct DailyQuestionsView: View {
     
     private let questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
     
-//    init(selectedFeelings: Set<Feeling>, selectedMood: Mood, screenSize: CGSize, answers: Binding<[String]>) {
-//        self.selectedFeelings = selectedFeelings
-//        self.selectedMood = selectedMood
-//        self.screenSize = screenSize
-//        self._answers = answers
-//
-//    }
-    
     var body: some View {
         VStack(spacing: 30) {
             ForEach(0..<3) { id in

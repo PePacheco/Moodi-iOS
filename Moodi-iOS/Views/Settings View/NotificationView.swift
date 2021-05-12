@@ -34,6 +34,12 @@ struct NotificationView: View {
                 .onChange(of: isNotificationsOn, perform: { value in
                     if value {
                         NotificationManager.shared.Authorization()
+                        let calendar = Calendar.current
+                        let hour = calendar.component(.hour, from: datePick)
+                        let minutes = calendar.component(.minute, from: datePick)
+                        NotificationManager.shared.Send(identifier: "Notif", title: "olá mundo", body: "será que ta funcionando?", hour: hour, minute: minutes)
+                    } else {
+                        NotificationManager.shared.stopSending()
                     }
                 })
                 .padding(.bottom)
@@ -45,7 +51,7 @@ struct NotificationView: View {
                         let calendar = Calendar.current
                         let hour = calendar.component(.hour, from: value)
                         let minutes = calendar.component(.minute, from: value)
-                        NotificationManager.shared.Send(identifier: "teste", title: "olá mundo", body: "será que ta funcionando?", hour: hour, minute: minutes)
+                        NotificationManager.shared.Send(identifier: "Notif", title: "olá mundo", body: "será que ta funcionando?", hour: hour, minute: minutes)
                     })
             }
             .padding()
