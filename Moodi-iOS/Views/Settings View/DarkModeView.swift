@@ -11,6 +11,7 @@ struct DarkModeView: View {
     @EnvironmentObject private var preferences: PreferencesStore
     @State private var mode: InternalColorScheme = PreferencesStore.appColorSchemeStatic
     let screenSize: CGSize
+    @Binding var tab: Int
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,6 +26,7 @@ struct DarkModeView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .onChange(of: mode, perform: { value in
+                    self.tab = 3
                     preferences.updateStoredColorScheme(colorScheme: value)
                 })
             }
@@ -37,8 +39,9 @@ struct DarkModeView: View {
 
 struct DarkModeView_Previews: PreviewProvider {
     @StateObject static private var preferences: PreferencesStore = PreferencesStore()
+    @State static private var tab: Int = 2
     static var previews: some View {
-        DarkModeView(screenSize: UIScreen.main.bounds.size)
+        DarkModeView(screenSize: UIScreen.main.bounds.size, tab: $tab)
             .environmentObject(preferences)
     }
 }

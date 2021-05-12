@@ -35,7 +35,7 @@ struct DaySummaryView: View {
                     SummaryDayMoodModalView(day: DatabaseManager.shared.today!)
                 }
             }
-            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.16, alignment: .center)
+            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)
             .asCard()
         }
     }

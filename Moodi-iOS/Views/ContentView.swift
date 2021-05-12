@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tab: Int = 2
     @Environment(\.colorScheme) var deviceColorScheme: ColorScheme
     @EnvironmentObject private var preferences: PreferencesStore
     
     var body: some View {
         if preferences.getStoredColorScheme() == .auto {
-            TabMainView()
+            TabMainView(tab: $tab)
         } else {
-            TabMainView()
+            TabMainView(tab: $tab)
                 .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
         }
     }
