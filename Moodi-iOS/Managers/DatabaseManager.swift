@@ -36,7 +36,6 @@ class DatabaseManager {
         if let encoded = try? encoder.encode(days) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
-            print(self.days.count)
             return true
         }
         return false
@@ -54,7 +53,7 @@ class DatabaseManager {
     
     func calculateStreak() -> Int {
         var count = 0
-        var yesterday = Date()
+        var yesterday = Date().dayBefore
 
         for _ in self.days {
             let conditional = days.contains { item in

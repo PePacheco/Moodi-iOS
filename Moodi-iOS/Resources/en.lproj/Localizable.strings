@@ -33,7 +33,7 @@
 "Question2" = "What could I have done better?";
 "Question3" = "What can I do to be better tomorrow?";
 "AddingNewDayQuestionsQuestion" = "How was your day?";
-"AddingNewDayQuestionsPlaceholder" = "Writte here";
+"AddingNewDayQuestionsPlaceholder" = "Write here";
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
 "AddingNewDayQuestionsGoodAlert" = "Your day was succefully saved";
 "SummaryPageTodayFeelingsTitle" = "Feelings:";
