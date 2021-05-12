@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StreakView: View {
     let screenSize: CGSize
+    let streak: Int = DatabaseManager.shared.streak
     
     var body: some View {
         HStack {
@@ -16,12 +17,11 @@ struct StreakView: View {
                 Image(systemName: "flame.fill")
                     .foregroundColor(Color("callToAction"))
                     .frame(width: screenSize.height * 0.05, height: screenSize.height * 0.05)
-                Text("14 \(NSLocalizedString("WeekSummaryDay", comment: ""))")
+                Text("\(streak) \(NSLocalizedString("WeekSummaryDay", comment: ""))")
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color("primaryText"))
             }
-            .padding(.trailing, 20)
-            .frame(width: screenSize.width * 0.4, height: screenSize.height * 0.05)
+            .frame(width: screenSize.width * 0.3, height: screenSize.height * 0.05)
             .asCard()
             Spacer()
         }

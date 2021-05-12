@@ -13,6 +13,10 @@ class DatabaseManager {
     
     private (set) var days: [Day]
     
+    var streak: Int {
+        return self.calculateStreak()
+    }
+    
     var hasToday: Bool {
         self.days.contains { day in
             return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
@@ -39,7 +43,6 @@ class DatabaseManager {
             print(self.days.count)
             return true
         }
-        
         return false
     }
     
@@ -51,5 +54,23 @@ class DatabaseManager {
             }
         }
         return []
+    }
+    
+    func calculateStreak() -> Int {
+        var count = 0
+        var yesterday = Date()
+
+        for _ in self.days {
+            let conditional = days.contains { item in
+                return yesterday.hasSame(.day, as: item.date) && yesterday.hasSame(.month, as: item.date) && yesterday.hasSame(.year, as: item.date)
+            }
+            if conditional {
+                count += 1
+            } else {
+                break
+            }
+            yesterday = yesterday.dayBefore
+        }
+        return count
     }
 }
