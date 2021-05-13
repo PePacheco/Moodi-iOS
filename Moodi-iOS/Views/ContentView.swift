@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @State private var tab: Int = 2
-    @Environment(\.colorScheme) var deviceColorScheme: ColorScheme
     @EnvironmentObject private var preferences: PreferencesStore
     
     var body: some View {
-        if preferences.getStoredColorScheme() == .auto {
-            TabMainView(tab: $tab)
+        if shouldShowOnboarding {
+            MainonboardingView(shouldShowOnboarding: $shouldShowOnboarding)
         } else {
-            TabMainView(tab: $tab)
-                .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+            if preferences.getStoredColorScheme() == .auto {
+                TabMainView(tab: $tab)
+            } else {
+                TabMainView(tab: $tab)
+                    .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+            }
         }
+    
+       
     }
 }
 
