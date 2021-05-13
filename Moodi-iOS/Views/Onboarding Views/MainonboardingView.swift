@@ -11,7 +11,6 @@ struct MainonboardingView: View {
     @Binding var shouldShowOnboarding: Bool
     var body: some View {
         TabView {
-
             Onboarding1()
             Onboarding2()
             Onboarding3()

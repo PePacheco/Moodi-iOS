@@ -14,7 +14,11 @@ struct ContentView: View {
     
     var body: some View {
         if shouldShowOnboarding {
-            MainonboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            ZStack {
+                Color("callToAction")
+                    .edgesIgnoringSafeArea(.all)
+                MainonboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            }
         } else {
             if preferences.getStoredColorScheme() == .auto {
                 TabMainView(tab: $tab)
@@ -23,8 +27,6 @@ struct ContentView: View {
                     .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
             }
         }
-    
-       
     }
 }
 

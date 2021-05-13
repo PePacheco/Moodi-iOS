@@ -37,6 +37,7 @@ struct TabMainView: View {
                 }
                 .tag(3)
         }
+        .tabViewStyle(DefaultTabViewStyle())
         .accentColor(Color("callToAction"))
     }
 }
