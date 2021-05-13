@@ -193,7 +193,7 @@ open class ChartBaseDataSet: NSObject, IChartDataSet, NSCopying
     open var valueColors = [NSUIColor]()
 
     /// The label string that describes the DataSet.
-    open var label: String? = "DataSet"
+    open var label: String? = ""
     
     /// The axis this DataSet should be plotted against.
     open var axisDependency = YAxis.AxisDependency.left

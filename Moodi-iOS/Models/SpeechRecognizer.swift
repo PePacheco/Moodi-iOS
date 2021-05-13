@@ -76,7 +76,7 @@ struct SpeechRecognizer {
                 inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
                     recognitionRequest.append(buffer)
                 }
-                relay(speech, message: "Preparing audio engine")
+                relay(speech, message: "audio engine ready")
                 audioEngine.prepare()
                 try audioEngine.start()
                 assistant.recognitionTask = assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in

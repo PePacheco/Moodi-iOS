@@ -5,9 +5,9 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 03/05/21.
 //
 
-import Foundation
+import SwiftUI
 
-class DatabaseManager {
+class DatabaseManager: ObservableObject {
     
     static let shared: DatabaseManager = DatabaseManager()
     
@@ -15,21 +15,22 @@ class DatabaseManager {
     
     var hasToday: Bool {
         self.days.contains { day in
-            return Date().hasSame(.day, as: day.date)
-        }
-    }
-    
-    var today: Day? {
-        self.days.first { day in
             return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
         }
     }
     
-    private init(){
-        days = Self.load()
+    var today: Day {
+        self.days.first { day in
+            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
+        } ?? Day(date: Date(), mood: .neutral, answers: ["", "", ""], feelings: [])
     }
     
-    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool{
+    private init(){
+        days = Self.loadAllDays()
+    }
+    
+    func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
+        objectWillChange.send()
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
         self.days.append(day)
         let encoder = JSONEncoder()
@@ -41,7 +42,7 @@ class DatabaseManager {
         return false
     }
     
-    static func load() -> [Day] {
+    static func loadAllDays() -> [Day] {
         if let savedDay = UserDefaults.standard.data(forKey: "days") {
             let decoder = JSONDecoder()
             if let loadedDay = try? decoder.decode([Day].self, from: savedDay) {
@@ -51,34 +52,18 @@ class DatabaseManager {
         return []
     }
     
-    func loadLastNDays(N: Int) -> [Day]{
+    func loadLastNDays(N: Int) -> [Day] {
         var lastNDays: [Day] = []
-        for day in days[0...days.count-1].reversed() {
-            if day.date.distance(from: Date(), only: .day, calendar: .current) >= (-1 * N) {
-                lastNDays.append(day)
-            }else {
-                break
+        if days.count > 0 {
+            for day in days[0...days.count-1].reversed() {
+                if day.date.distance(from: Date(), only: .day, calendar: .current) >= (-1 * N) {
+                    lastNDays.append(day)
+                }else {
+                    break
+                }
             }
         }
-        
         return lastNDays
     }
     
-    func calculateStreak() -> Int {
-        var count = 0
-        var yesterday = Date().dayBefore
-
-        for _ in self.days {
-            let conditional = days.contains { item in
-                return yesterday.hasSame(.day, as: item.date) && yesterday.hasSame(.month, as: item.date) && yesterday.hasSame(.year, as: item.date)
-            }
-            if conditional {
-                count += 1
-            } else {
-                break
-            }
-            yesterday = yesterday.dayBefore
-        }
-        return count
-    }
 }

@@ -17,12 +17,15 @@ struct SpeechMainView: View {
             
             Text(transcriptAnswer)
             
-            Button("Submit"){
+            Button(action: {
+                speechRecognizer.record(to: $transcriptAnswer)
+            }){
+                Image(systemName: "mic.fill")
             }
         }
         .padding()
         .onAppear {
-            speechRecognizer.record(to: $transcriptAnswer)
+//            speechRecognizer.record(to: $transcriptAnswer)
             isRecording = true
         }
         .onDisappear {
