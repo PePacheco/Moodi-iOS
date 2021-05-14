@@ -23,10 +23,10 @@ struct DaySummaryView: View {
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
                     .foregroundColor(Color("callToAction"))
                     .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                if databaseManager.hasToday {
-                    SummaryDayMoodModalView(day: databaseManager.today)
+                if databaseManager.hasDayInStorage(date: Date()) {
+                    SummaryDayMoodModalView(day: databaseManager.getDayInStorage(date: Date()))
                         .sheet(isPresented: $isShowingModal) {
-                            ModalDaySummaryView(showModal: $isShowingModal, day: databaseManager.today)
+                            ModalDaySummaryView(showModal: $isShowingModal, day: databaseManager.getDayInStorage(date: Date()))
                         }
                         .onTapGesture {
                             self.isShowingModal.toggle()

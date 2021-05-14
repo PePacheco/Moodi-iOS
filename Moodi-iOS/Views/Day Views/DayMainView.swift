@@ -16,7 +16,7 @@ struct DayMainView: View {
                 StreakView(screenSize: screenSize)
                     .padding(.bottom, screenSize.height*0.04)
                 
-                DailyQuotesView(screenSize: screenSize, yesterdayObjective: databaseManager.hasYesterday ? databaseManager.yesterday.answers[2] : NSLocalizedString("No Objective Added", comment: ""))
+                DailyQuotesView(screenSize: screenSize, yesterdayObjective: databaseManager.hasDayInStorage(date: Date().dayBefore) ? databaseManager.getDayInStorage(date: Date().dayBefore).answers[2] : NSLocalizedString("No Objective Added", comment: ""))
                     .padding(.bottom, screenSize.height*0.08)
                 
                 DaySummaryView(screenSize: screenSize)

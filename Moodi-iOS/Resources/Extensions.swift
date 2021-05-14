@@ -57,14 +57,6 @@ extension Date {
         return Calendar.current.date(byAdding: .year, value: -1, to: self)!
     }
     
-    func get(_ components: Calendar.Component..., calendar: Calendar = Calendar.current) -> DateComponents {
-         return calendar.dateComponents(Set(components), from: self)
-     }
-
-     func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
-         return calendar.component(component, from: self)
-     }
-    
     var day: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd"
