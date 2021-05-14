@@ -42,7 +42,7 @@ struct DailyQuizTextInput: View {
                     .padding(.horizontal, screenSize.width*0.03)
                     .padding(.top, screenSize.height*0.015)
                     .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.height*0.02, weight: .bold))
+                    .font(.system(size: screenSize.height*0.02, weight: .bold, design: .rounded))
                 
                 Button(action: {
                     speechRecognizer.record(to: $text)
@@ -54,7 +54,7 @@ struct DailyQuizTextInput: View {
             if text.isEmpty {
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
                     .foregroundColor(Color("secondaryText"))
-                    .font(.system(size: screenSize.height*0.015, weight: .regular))
+                    .font(.system(size: screenSize.height*0.015, weight: .regular, design: .rounded))
                     .padding(.top, paddingTop)
                     .padding(.leading, screenSize.width*0.03)
             }

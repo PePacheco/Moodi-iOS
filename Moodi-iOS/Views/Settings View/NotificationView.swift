@@ -24,11 +24,11 @@ struct NotificationView: View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("Notification", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.025, weight: .bold))
+                .font(.system(size: screenSize.height*0.025, weight: .bold, design: .rounded))
             VStack(alignment: .leading) {
                 Toggle(isOn: $isNotificationsOn) {
                     Text(NSLocalizedString("Notification settings", comment: ""))
-                        .font(.system(size: screenSize.height*0.02))
+                        .font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded))
                         .foregroundColor(Color("secondaryText"))
                 }
                 .onChange(of: isNotificationsOn, perform: { value in
@@ -37,7 +37,7 @@ struct NotificationView: View {
                         let calendar = Calendar.current
                         let hour = calendar.component(.hour, from: datePick)
                         let minutes = calendar.component(.minute, from: datePick)
-                        NotificationManager.shared.Send(identifier: "Notif", title: "olá mundo", body: "será que ta funcionando?", hour: hour, minute: minutes)
+                        NotificationManager.shared.Send(identifier: "Notif", title: NSLocalizedString("NotificationTitle", comment: ""), body: NSLocalizedString("NotificationBody", comment: ""), hour: hour, minute: minutes)
                     } else {
                         NotificationManager.shared.stopSending()
                     }
@@ -53,7 +53,7 @@ struct NotificationView: View {
                         let calendar = Calendar.current
                         let hour = calendar.component(.hour, from: value)
                         let minutes = calendar.component(.minute, from: value)
-                        NotificationManager.shared.Send(identifier: "Notif", title: "olá mundo", body: "será que ta funcionando?", hour: hour, minute: minutes)
+                        NotificationManager.shared.Send(identifier: "Notif", title: NSLocalizedString("NotificationTitle", comment: ""), body: NSLocalizedString("NotificationBody", comment: ""), hour: hour, minute: minutes)
                     })
                     
             }

@@ -19,7 +19,7 @@ struct StreakView: View {
                     .foregroundColor(Color("callToAction"))
                     .frame(width: screenSize.height * 0.03, height: screenSize.height * 0.03)
                 Text("\(streak) \(NSLocalizedString("WeekSummaryDay", comment: ""))")
-                    .font(.system(size: screenSize.height*0.02, weight: .medium))
+                    .font(.system(size: screenSize.height*0.02, weight: .medium, design: .rounded))
                     .foregroundColor(Color("primaryText"))
             }
             .frame(width: screenSize.width * 0.4, height: screenSize.height * 0.05)
