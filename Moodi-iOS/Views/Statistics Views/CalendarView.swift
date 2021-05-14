@@ -2,8 +2,7 @@ import SwiftUI
 
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
-    @State private var dayInModal: Day = Day(date: Date(), mood: .neutral, answers: ["","",""], feelings: [])
-    @State private var isShowingModal: Bool = false
+    @State private var dayInModal: Day? = nil
     private let daysInStorage: [Day] = DatabaseManager.shared.days
 
     let interval: DateInterval
@@ -36,11 +35,10 @@ struct CalendarView<DateView>: View where DateView: View {
                             if calendar.isDate(date, equalTo: month, toGranularity: .month) {
                                 if DatabaseManager.shared.hasDayInStorage(date: date) {
                                     content(date).id(date)
-                                        .background(DatabaseManager.shared.getDayInStorage(date: date).mood.getMoodColor())
+                                        .background(DatabaseManager.shared.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray))
                                         .cornerRadius(50)
                                         .onTapGesture {
                                             self.dayInModal = DatabaseManager.shared.getDayInStorage(date: date)
-                                            self.isShowingModal.toggle()
                                         }
                                 } else {
                                     content(date).id(date)
@@ -55,10 +53,10 @@ struct CalendarView<DateView>: View where DateView: View {
                 }
             }
             .padding()
-            .asCard()
-            .sheet(isPresented: $isShowingModal, content: {
-                ModalDaySummaryView(showModal: $isShowingModal, day: self.dayInModal)
+            .sheet(item: $dayInModal, content: { day in
+                ModalDaySummaryView(day: day)
             })
+            .asCard()
         }
     }
 

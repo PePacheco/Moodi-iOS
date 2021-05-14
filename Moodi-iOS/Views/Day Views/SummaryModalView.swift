@@ -14,14 +14,14 @@ struct SummaryModalView: View {
                   self.showModal.toggle()
                }
             .sheet(isPresented: $showModal) {
-                ModalDaySummaryView(showModal: self.$showModal, day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud, .relaxed, .tired]))
+                ModalDaySummaryView( day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud, .relaxed, .tired]))
                }
     }
 }
 
 
 struct ModalDaySummaryView: View {
-    @Binding var showModal: Bool
+    @Environment(\.presentationMode) var presentationMode
     let screenSize: CGSize = UIScreen.main.bounds.size
     let day: Day
     var body: some View {
@@ -29,7 +29,7 @@ struct ModalDaySummaryView: View {
             VStack (alignment: .leading){
                 HStack {
                     Button(action: {
-                        self.showModal.toggle()
+                        presentationMode.wrappedValue.dismiss()
                     }){
                         Image(systemName: "chevron.left")
                             .foregroundColor(Color(UIColor.secondaryLabel))
