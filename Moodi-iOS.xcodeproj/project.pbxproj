@@ -30,6 +30,7 @@
 		6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */; };
 		6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB52641C3A9000C320F /* DaySummaryView.swift */; };
 		6DF5594B264CA037009F6AE9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5594A264CA037009F6AE9 /* DateManager.swift */; };
+		6DFB34B4264F219A0074A1B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB34B3264F219A0074A1B4 /* Constants.swift */; };
 		9431554D264C45C00028BFAD /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431554C264C45C00028BFAD /* Onboarding1.swift */; };
 		94315550264C51400028BFAD /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431554F264C51400028BFAD /* Onboarding2.swift */; };
 		94315553264C52A70028BFAD /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315552264C52A70028BFAD /* Onboarding3.swift */; };
@@ -79,6 +80,7 @@
 		6DF40DB32641BCE5000C320F /* DailyQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesView.swift; sourceTree = "<group>"; };
 		6DF40DB52641C3A9000C320F /* DaySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryView.swift; sourceTree = "<group>"; };
 		6DF5594A264CA037009F6AE9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		6DFB34B3264F219A0074A1B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8085C6F1C3FAA48A94B08DB3 /* Pods-Moodi-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodi-iOS.release.xcconfig"; path = "Target Support Files/Pods-Moodi-iOS/Pods-Moodi-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9431554C264C45C00028BFAD /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		9431554F264C51400028BFAD /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				6DBA3A832640778700383620 /* Extensions.swift */,
 				EC81A5AE2640886D00042FBC /* Localizable.strings */,
 				EC81A5B12641E27E00042FBC /* Utilities.swift */,
+				6DFB34B3264F219A0074A1B4 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				6DAF75AF264AF2D3006DCB2E /* NotificationView.swift in Sources */,
 				B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */,
 				6DAF75B1264AF2EF006DCB2E /* DarkModeView.swift in Sources */,
+				6DFB34B4264F219A0074A1B4 /* Constants.swift in Sources */,
 				DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */,
 				DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */,
 				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,

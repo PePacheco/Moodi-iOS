@@ -5,16 +5,6 @@
   Created by Lucca Molon on 03/05/21.
   
 */
-"ContentView_Label_Hello" = "Hola Mundo";
-"WeekSummaryLabel" = "Tu semana";
-"WeekSummaryDay" = "días";
-"DailyQuotesTipLabel" = "Consejo del día";
-"DailyQuotesObjectiveLabel" = "Meta del día";
-"DaySummaryLabel" = "Resumo do dia";
-"DaySummaryMakeReflection" = "Fazer reflexão do día";
-"DayMainViewNavBarTitle" = "Hoy";
-"PickYourMood" = "Elija tu humor";
-"PickYourFeelings" = "Qué senstiste hoy";
 
 // Moods
 "veryHappy" = "Muy Feliz";
@@ -33,6 +23,20 @@
 "proud" = "Orgullo";
 "loving" = "Cariño";
 
+// Notifications
+"NotificationBody" = "Venga registrar su humor y reflejar sobre su día";
+"NotificationTitle" = "¿Se olvido de mi?";
+
+"ContentView_Label_Hello" = "Hola Mundo";
+"WeekSummaryLabel" = "Tu semana";
+"WeekSummaryDay" = "días";
+"DailyQuotesTipLabel" = "Consejo del día";
+"DailyQuotesObjectiveLabel" = "Meta del día";
+"DaySummaryLabel" = "Resumo do dia";
+"DaySummaryMakeReflection" = "Fazer reflexão do día";
+"DayMainViewNavBarTitle" = "Hoy";
+"PickYourMood" = "Elija tu humor";
+"PickYourFeelings" = "Qué senstiste hoy";
 "AddingNewDayMainLabel" = "¿Como se siente hoy?";
 "Close" = "Cerrar";
 "Next" = "Próximo";
@@ -48,7 +52,6 @@
 "AddingNewDayQuestionsGoodAlert" = "Tu día fué salvo con éxito";
 "SummaryPageTodayMoodTitle" = "El humor de hoy";
 "SummaryPageTodayFeelingsTitle" = "Sentimientos:";
-
 "SummaryTodayQuestionTitle" = "Preguntas";
 "ButtonDoneText" = "Terminar";
 "SummaryPageViewTitle" = "Resumen del día";
@@ -66,8 +69,26 @@
 "All Time" = "todo";
 "No Objective Added" = "No agregaste un objetivo ayer";
 
-
-
-// Notifications
-"NotificationBody" = "Venga registrar su humor y reflejar sobre su día";
-"NotificationTitle" = "¿Se olvido de mi?";
+// Daily tips
+"tip1" = "";
+"tip2" = "";
+"tip3" = "";
+"tip4" = "";
+"tip5" = "";
+"tip6" = "";
+"tip7" = "";
+"tip8" = "";
+"tip9" = "";
+"tip10" = "";
+"tip11" = "";
+"tip12" = "";
+"tip13" = "";
+"tip14" = "";
+"tip15" = "";
+"tip16" = "";
+"tip17" = "";
+"tip18" = "";
+"tip19" = "";
+"tip20" = "";
+"tip21" = "";
+"tip22" = "";
