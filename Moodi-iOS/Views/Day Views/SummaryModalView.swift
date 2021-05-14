@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct SummaryModalView: View {
-    @State private var showModal = false
-    var body: some View {
-        Button("Show Modal") {
-                  self.showModal.toggle()
-               }
-            .sheet(isPresented: $showModal) {
-                ModalDaySummaryView( day: Day(date: Date(), mood: .veryHappy, answers: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at dictum leo, a suscipit est. Vestibulum luctus laoreet odio, eget."], feelings: [.angry,.confident,.proud, .relaxed, .tired]))
-               }
-    }
-}
-
-
 struct ModalDaySummaryView: View {
     @Environment(\.presentationMode) var presentationMode
     let screenSize: CGSize = UIScreen.main.bounds.size
@@ -49,6 +36,7 @@ struct ModalDaySummaryView: View {
                         .padding()
                     Spacer()
                 }
+                .padding(.bottom, -16)
                 .frame(width: screenSize.width*0.8)
                 SummaryDayMoodModalView(day: day)
                     .padding(.bottom)
@@ -64,11 +52,5 @@ struct ModalDaySummaryView: View {
         dateFormatterGet.dateFormat = "E, d MMM yyyy"
 
         return dateFormatterGet.string(from: date)
-    }
-}
-
-struct SummaryModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        SummaryModalView()
     }
 }

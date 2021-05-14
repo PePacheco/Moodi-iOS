@@ -95,6 +95,30 @@ extension Date: RawRepresentable {
     public init?(rawValue: String) {
         self = Date.formatter.date(from: rawValue) ?? Date()
     }
+    
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "e"
+        
+        switch dateFormatter.string(from: self).capitalized {
+        case "1":
+                return "D"
+        case "2":
+            return "S"
+        case "3":
+            return "T"
+        case "4":
+            return "Q"
+        case "5":
+            return "Q"
+        case "6":
+            return "S"
+        case "7":
+            return "S"
+        default:
+            return " "
+        }
+    }
 }
 
 extension DateFormatter {
@@ -135,4 +159,8 @@ extension Calendar {
 
         return dates
     }
+    
+    func intervalOfWeek(for date: Date) -> DateInterval? {
+        dateInterval(of: .weekOfYear, for: date)
+      }
 }
