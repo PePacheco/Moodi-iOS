@@ -16,11 +16,21 @@ struct SummaryPageView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack (alignment: .center, spacing: 20){
-                Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
-                    .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
-                    .padding(.top)
-                    .padding(.trailing, screenSize.width/1.8)
+                HStack {
+                    Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
+                        .foregroundColor(Color("primaryText"))
+                        .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
+                        .padding(.top)
+                    Spacer()
+                }
+                .frame(width: screenSize.width*0.9)
+                HStack {
+                    Text(formatDate(date: day.date))
+                        .foregroundColor(Color("primaryText"))
+                        .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
+                    Spacer()
+                }
+                .frame(width: screenSize.width*0.9)
                 SummaryDayMoodModalView(day: day)
                     .asCard()
                 Text(LocalizedStringKey("reflexion"))
@@ -42,6 +52,13 @@ struct SummaryPageView: View {
             }
         }
         .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .inline)
+    }
+    
+    private func formatDate(date: Date) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "E, d MMM yyyy"
+
+        return dateFormatterGet.string(from: date)
     }
 }
 
