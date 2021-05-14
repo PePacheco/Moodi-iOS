@@ -17,7 +17,7 @@ struct DarkModeView: View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("Dark Mode", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.025, weight: .bold))
+                .font(.system(size: screenSize.height*0.025, weight: .bold, design: .rounded))
             VStack {
                 Picker(selection: $mode, label: Text("Which mode do you want to choose?")) {
                     Text("System").tag(InternalColorScheme.auto)

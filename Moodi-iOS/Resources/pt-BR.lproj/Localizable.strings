@@ -15,6 +15,15 @@
 "DayMainViewNavBarTitle" = "Hoje";
 "PickYourMood" = "Selecione seu humor";
 "PickYourFeelings" = "O que você sentiu hoje";
+
+// Moods
+"veryHappy" = "Muito Feliz";
+"happy" = "Feliz";
+"neutral" = "Neutro";
+"sad" = "Triste";
+"verySad" = "Muito Triste";
+
+// Feelings
 "anxiety" = "Ansiedade";
 "insecure" = "Insegurança";
 "confident" = "Confiança";
@@ -23,6 +32,7 @@
 "tired" = "Cansaço";
 "proud" = "Orgulho";
 "loving" = "Amor";
+
 "AddingNewDayMainLabel" = "Como você está se sentindo hoje?";
 "Close" = "Fechar";
 "Next" = "Próximo";
@@ -37,11 +47,6 @@
 "AddingNewDayQuestionsBadAlert" = "Ocorreu algum erro";
 "AddingNewDayQuestionsGoodAlert" = "Seu dia foi salvo com sucesso!";
 "SummaryPageTodayFeelingsTitle" = "Sentimentos:";
-"veryHappy" = "Muito Feliz";
-"happy" = "Feliz";
-"neutral" = "Neutro";
-"sad" = "Triste";
-"verySad" = "Muito Triste";
 "SummaryTodayQuestionTitle" = "Perguntas";
 "ButtonDoneText" = "Finalizar";
 "SummaryPageTodayMoodTitle" = "Humor de hoje";
@@ -59,3 +64,8 @@
 "Year" = "ano";
 "All Time" = "tudo";
 "No Objective Added" = "Você não adicionou um objetivo ontem";
+
+
+// Notifications
+"NotificationBody" = "Venha cadastrar seu humor e refletir sobre seu dia";
+"NotificationTitle" = "Esqueceu de mim?";

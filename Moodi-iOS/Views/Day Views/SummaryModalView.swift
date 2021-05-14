@@ -36,7 +36,7 @@ struct ModalDaySummaryView: View {
                     }
                     .padding(.leading)
                     Text(LocalizedStringKey("SummaryPageViewTitle"))
-                            .font(.system(size: screenSize.width*0.05, weight: .semibold))
+                            .font(.system(size: screenSize.width*0.05, weight: .semibold, design: .rounded))
                             .foregroundColor(Color(UIColor.label))
                             .padding(.top, screenSize.height*0.02)
                             .padding(.leading, screenSize.width*0.04)

@@ -17,7 +17,7 @@ struct DaySummaryView: View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("DaySummaryLabel", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                .font(.system(size: screenSize.height*0.025, weight: .semibold, design: .rounded))
             
             HStack {
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))

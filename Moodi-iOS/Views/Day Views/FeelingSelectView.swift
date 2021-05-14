@@ -18,7 +18,7 @@ struct FeelingSelectView: View {
         VStack(alignment: .leading, spacing: 30) {
             Text(NSLocalizedString("PickYourFeelings", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.022, weight: .semibold))
+                .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                 .padding(.leading, screenSize.width*0.05)
             
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
@@ -36,7 +36,7 @@ struct FeelingSelectView: View {
                                 .frame(width: screenSize.width*0.32, height: screenSize.height*0.04)
                             Text(LocalizedStringKey(feeling.id))
                                 .foregroundColor(Color(UIColor.label))
-                                .font(.system(size: screenSize.height*0.022, weight: .regular))
+                                .font(.system(size: screenSize.height*0.022, weight: .regular, design: .rounded))
                         }
                     }
                 }
