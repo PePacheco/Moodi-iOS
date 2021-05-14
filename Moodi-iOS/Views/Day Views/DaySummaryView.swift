@@ -43,7 +43,7 @@ struct DaySummaryView: View {
                         })
                 }
             }
-            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)
+            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.22, alignment: .center)
             .asCard()
         }
     }
@@ -52,5 +52,6 @@ struct DaySummaryView: View {
 struct DaySummaryView_Previews: PreviewProvider {
     static var previews: some View {
         DaySummaryView(screenSize: UIScreen.main.bounds.size)
+            .environmentObject(DatabaseManager.shared)
     }
 }

@@ -2,8 +2,9 @@ import SwiftUI
 
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
-    private let daysInStorage: [Day] = DatabaseManager.shared.days
+    @State private var dayInModal: Day = Day(date: Date(), mood: .neutral, answers: ["","",""], feelings: [])
     @State private var isShowingModal: Bool = false
+    private let daysInStorage: [Day] = DatabaseManager.shared.days
 
     let interval: DateInterval
     let showHeaders: Bool
@@ -36,15 +37,15 @@ struct CalendarView<DateView>: View where DateView: View {
                                 if DatabaseManager.shared.hasDayInStorage(date: date) {
                                     content(date).id(date)
                                         .background(DatabaseManager.shared.getDayInStorage(date: date).mood.getMoodColor())
-                                        .sheet(isPresented: $isShowingModal, content: {
-                                            ModalDaySummaryView(showModal: $isShowingModal, day: DatabaseManager.shared.getDayInStorage(date: date))
-                                        })
+                                        .cornerRadius(50)
                                         .onTapGesture {
+                                            self.dayInModal = DatabaseManager.shared.getDayInStorage(date: date)
                                             self.isShowingModal.toggle()
                                         }
                                 } else {
                                     content(date).id(date)
                                         .background(Color(UIColor.systemGray))
+                                        .cornerRadius(50)
                                 }
                             } else {
                                 content(date).hidden()
@@ -53,6 +54,11 @@ struct CalendarView<DateView>: View where DateView: View {
                     }
                 }
             }
+            .padding()
+            .asCard()
+            .sheet(isPresented: $isShowingModal, content: {
+                ModalDaySummaryView(showModal: $isShowingModal, day: self.dayInModal)
+            })
         }
     }
 
@@ -87,7 +93,7 @@ struct CalendarView_Previews: PreviewProvider {
         CalendarView(interval: .init()) { date in
             Text("31")
                 .padding(8)
-                .cornerRadius(8)
+                
         }
     }
 }

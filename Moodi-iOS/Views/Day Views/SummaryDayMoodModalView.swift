@@ -92,7 +92,7 @@ struct TagCloudView: View {
             .padding(.horizontal, 8)
             .font(.body)
             .background(color)
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.black)
             .cornerRadius(20)
     }
 

@@ -62,6 +62,12 @@ extension Date {
         dateFormatter.dateFormat = "dd"
         return dateFormatter.string(from: self)
     }
+    
+    var year: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "Y"
+        return dateFormatter.string(from: self)
+    }
 }
 
 extension View {
