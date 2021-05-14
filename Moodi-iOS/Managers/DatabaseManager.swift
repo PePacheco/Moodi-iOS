@@ -52,6 +52,18 @@ class DatabaseManager: ObservableObject {
         return []
     }
     
+    func hasDayInStorage(date: Date) -> Bool {
+        self.days.contains { day in
+            return date.hasSame(.day, as: day.date) && date.hasSame(.month, as: day.date) && date.hasSame(.year, as: day.date)
+        }
+    }
+    
+    func getDayInStorage(date: Date) -> Day {
+        self.days.first { day in
+            return date.hasSame(.day, as: day.date) && date.hasSame(.month, as: day.date) && date.hasSame(.year, as: day.date)
+        } ?? Day(date: Date(), mood: .neutral, answers: ["", "", ""], feelings: [])
+    }
+    
     func loadLastNDays(N: Int) -> [Day] {
         var lastNDays: [Day] = []
         if days.count > 0 {

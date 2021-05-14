@@ -50,7 +50,7 @@ class DateManager {
         return count
     }
     
-    static func fillMonthArray(month: [Date], days: [Day]) -> [DayCalendar]{
+    func fillMonthArray(month: [Date], days: [Day]) -> [DayCalendar]{
         var newArray: [DayCalendar] = []
         for i in month {
             for day in days {

@@ -2,10 +2,19 @@ import SwiftUI
 
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
+    private let daysInStorage: [Day] = DatabaseManager.shared.days
+    @State private var isShowingModal: Bool = false
 
     let interval: DateInterval
     let showHeaders: Bool
     let content: (Date) -> DateView
+    
+    private var months: [Date] {
+        calendar.generateDates(
+            inside: interval,
+            matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
+        )
+    }
 
     init(
         interval: DateInterval,
@@ -16,17 +25,27 @@ struct CalendarView<DateView>: View where DateView: View {
         self.showHeaders = showHeaders
         self.content = content
     }
-
+    
     var body: some View {
-        
         VStack {
             LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
-                ForEach(allTimeDayCalendar, id: \.self) { month in
-                    Section(header: header(for: month[0].day.date)) {
-                        ForEach(month, id: \.self) { date in
-                            if calendar.isDate(date, equalTo: date, toGranularity: .month) {
-                                
-                                content(date).id(date)
+                ForEach(months, id: \.self) { month in
+                    Section(header: header(for: month)) {
+                        ForEach(days(for: month), id: \.self) { date in
+                            if calendar.isDate(date, equalTo: month, toGranularity: .month) {
+                                if DatabaseManager.shared.hasDayInStorage(date: date) {
+                                    content(date).id(date)
+                                        .background(DatabaseManager.shared.getDayInStorage(date: date).mood.getMoodColor())
+                                        .sheet(isPresented: $isShowingModal, content: {
+                                            ModalDaySummaryView(showModal: $isShowingModal, day: DatabaseManager.shared.getDayInStorage(date: date))
+                                        })
+                                        .onTapGesture {
+                                            self.isShowingModal.toggle()
+                                        }
+                                } else {
+                                    content(date).id(date)
+                                        .background(Color(UIColor.systemGray))
+                                }
                             } else {
                                 content(date).hidden()
                             }
@@ -36,19 +55,6 @@ struct CalendarView<DateView>: View where DateView: View {
             }
         }
     }
-
-    private var months: [Date] {
-        calendar.generateDates(
-            inside: interval,
-            matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
-        )
-    }
-    
-    var monthArray = DateManager.shared.newMonthArray(month: 5, year: 2021) // passar valor dinamico
-    var days = DatabaseManager.shared.days
-    lazy var dayCalendar = DateManager.fillMonthArray(month: monthArray, days: days)
-    
-    lazy var allTimeDayCalendar: [[DayCalendar]] = [dayCalendar, dayCalendar, dayCalendar]
 
     private func header(for month: Date) -> some View {
         let component = calendar.component(.month, from: month)
@@ -78,10 +84,9 @@ struct CalendarView<DateView>: View where DateView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(interval: .init()) { _ in
+        CalendarView(interval: .init()) { date in
             Text("31")
                 .padding(8)
-                .background(Color.blue)
                 .cornerRadius(8)
         }
     }

@@ -7,18 +7,30 @@
 
 import SwiftUI
 
-struct lastNdaysView: View {
+struct LastNdaysView: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
     @State private var lastNDays = 30
+    private var interval: DateInterval {
+        switch lastNDays {
+        case 30:
+            return DateInterval(start: Date(), end: Date())
+        case 90:
+            return DateInterval(start: Date().monthBefore.monthBefore, end: Date())
+        case 365:
+            return DateInterval(start: Date().yearBefore, end: Date())
+        default:
+            return DateInterval(start: Date().dayBefore, end: Date())
+        }
+    }
     
     var body: some View {
-        VStack{
+        ScrollView(showsIndicators: false) {
             VStack{
                 Picker(selection: $lastNDays, label: Text("N days"), content: {
                     Text("30 " + NSLocalizedString("Days", comment: "")).tag(30)
                     Text("3 " + NSLocalizedString("Months", comment: "")).tag(90)
                     Text("1 " + NSLocalizedString("Year", comment: "")).tag(365)
-                    Text(NSLocalizedString("All Time", comment: "")).tag(DatabaseManager.shared.days.count)
+                    //Text(NSLocalizedString("All Time", comment: "")).tag(DatabaseManager.shared.days.count)
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: screenSize.width*0.9)
@@ -34,12 +46,19 @@ struct lastNdaysView: View {
                 .padding()
                 .frame(width: screenSize.width*0.9, height: 330)
                 .asCard()
+            
+            CalendarView(interval: interval) { date in
+                Text(date.day)
+                    .padding(8)
+                    .cornerRadius(8)
+            }
+            .frame(width: screenSize.width * 0.9)
         }
     }
 }
 
 struct lastNdaysView_Previews: PreviewProvider {
     static var previews: some View {
-        lastNdaysView()
+        LastNdaysView()
     }
 }
