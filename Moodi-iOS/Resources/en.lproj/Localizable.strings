@@ -15,7 +15,16 @@
 "DayMainViewNavBarTitle" = "Today";
 "PickYourMood" = "Choose your mood";
 "PickYourFeelings" = "What did you felt today?";
-"anxiety" = "Anxiety";
+
+// Moods
+"veryHappy" = "Very Happy";
+"happy" = "Happy";
+"neutral" = "Neutral";
+"sad" = "Sad";
+"verySad" = "Very Sad";
+
+// Feelings
+"anxiety" = "Anxious";
 "insecure" = "Insecure";
 "confident" = "Confident";
 "relaxed" = "Relaxed";
@@ -23,6 +32,7 @@
 "tired" = "Tired";
 "proud" = "Proud";
 "loving" = "Loving";
+
 "AddingNewDayMainLabel" = "How are you feeling today?";
 "Close" = "Close";
 "Next" = "Next";
@@ -37,11 +47,7 @@
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
 "AddingNewDayQuestionsGoodAlert" = "Your day was succefully saved";
 "SummaryPageTodayFeelingsTitle" = "Feelings:";
-"veryHappy" = "Very Happy";
-"happy" = "Happy";
-"neutral" = "Neutral";
-"sad" = "Sad";
-"verySad" = "Very Sad";
+
 "SummaryTodayQuestionTitle" = "Questions";
 "ButtonDoneText" = "Done";
 "SummaryPageTodayMoodTitle" = "Today's Mood";
@@ -59,3 +65,9 @@
 "Year" = "year";
 "All Time" = "all time";
 "No Objective Added" = "No objective added yesterday";
+
+
+
+// Notifications
+"NotificationBody" = "Come register your mood and reflect about your day";
+"NotificationTitle" = "Forgot about me?";

@@ -36,12 +36,12 @@ struct SentenceOfTheDay: View {
         VStack {
             Text(self.sentence)
                 .foregroundColor(Color("invertedPrimaryText"))
-                .font(.system(size: screenSize.height*0.025, weight: .bold))
+                .font(.system(size: screenSize.height*0.025, weight: .bold, design: .rounded))
                 .padding(.bottom,  screenSize.height * 0.02)
             Text(self.text)
                 .foregroundColor(Color("invertedPrimaryText"))
                 .multilineTextAlignment(.center)
-                .font(.system(size: screenSize.height*0.02, weight: .medium))
+                .font(.system(size: screenSize.height*0.02, weight: .medium, design: .rounded))
                 .padding(.horizontal, screenSize.width * 0.06)
                 .padding(.bottom, screenSize.height * 0.04)
         }
