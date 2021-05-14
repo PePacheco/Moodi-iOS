@@ -15,24 +15,6 @@
 "DayMainViewNavBarTitle" = "Today";
 "PickYourMood" = "Choose your mood";
 "PickYourFeelings" = "What did you felt today?";
-
-// Moods
-"veryHappy" = "Very Happy";
-"happy" = "Happy";
-"neutral" = "Neutral";
-"sad" = "Sad";
-"verySad" = "Very Sad";
-
-// Feelings
-"anxiety" = "Anxious";
-"insecure" = "Insecure";
-"confident" = "Confident";
-"relaxed" = "Relaxed";
-"angry" = "Angry";
-"tired" = "Tired";
-"proud" = "Proud";
-"loving" = "Loving";
-
 "AddingNewDayMainLabel" = "How are you feeling today?";
 "Close" = "Close";
 "Next" = "Next";
@@ -47,7 +29,6 @@
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
 "AddingNewDayQuestionsGoodAlert" = "Your day was succefully saved";
 "SummaryPageTodayFeelingsTitle" = "Feelings:";
-
 "SummaryTodayQuestionTitle" = "Questions";
 "ButtonDoneText" = "Done";
 "SummaryPageTodayMoodTitle" = "Today's Mood";
@@ -66,8 +47,49 @@
 "All Time" = "all time";
 "No Objective Added" = "No objective added yesterday";
 
+// Moods
+"veryHappy" = "Very Happy";
+"happy" = "Happy";
+"neutral" = "Neutral";
+"sad" = "Sad";
+"verySad" = "Very Sad";
+
+// Feelings
+"anxiety" = "Anxious";
+"insecure" = "Insecure";
+"confident" = "Confident";
+"relaxed" = "Relaxed";
+"angry" = "Angry";
+"tired" = "Tired";
+"proud" = "Proud";
+"loving" = "Loving";
 
 
 // Notifications
 "NotificationBody" = "Come register your mood and reflect about your day";
 "NotificationTitle" = "Forgot about me?";
+
+
+// Daily tips
+"tip1" = "Go out for a walk";
+"tip2" = "Watch your favorite movie";
+"tip3" = "Call a friend";
+"tip4" = "Listen to a song that remind you good moments";
+"tip5" = "Read a book";
+"tip6" = "Learn something new";
+"tip7" = "Eat a fruit";
+"tip8" = "Clean your skin";
+"tip9" = "Clean up your room";
+"tip10" = "Send a message to someone you love";
+"tip11" = "Listen to a new song";
+"tip12" = "";
+"tip13" = "Write a gratitude list";
+"tip14" = "";
+"tip15" = "Wear your favorite piece of clothing";
+"tip16" = "";
+"tip17" = "Drink water";
+"tip18" = "Hug someone";
+"tip19" = "Plant a tree";
+"tip20" = "";
+"tip21" = "Organize your calendar ";
+"tip22" = "Read a chapter of a book";
