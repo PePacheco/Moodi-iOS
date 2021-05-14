@@ -19,15 +19,8 @@ struct SummaryPageView: View {
                 HStack {
                     Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
                         .foregroundColor(Color("primaryText"))
-                        .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
+                        .font(.system(size: screenSize.width*0.06, weight: .bold, design: .rounded))
                         .padding(.top)
-                    Spacer()
-                }
-                .frame(width: screenSize.width*0.9)
-                HStack {
-                    Text(formatDate(date: day.date))
-                        .foregroundColor(Color("primaryText"))
-                        .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
                     Spacer()
                 }
                 .frame(width: screenSize.width*0.9)
