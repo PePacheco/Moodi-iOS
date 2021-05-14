@@ -11,16 +11,16 @@ struct SummaryDayMoodModalView: View {
                     .frame(width: screenSize.width*0.08, height: screenSize.width*0.08)
                 
                 Text(LocalizedStringKey(day.mood.id))
-                    .font(.system(size: screenSize.width*0.06, weight: .semibold))
+                    .font(.system(size: screenSize.width*0.06, weight: .semibold, design: .rounded))
             }
             
             Text(LocalizedStringKey("SummaryPageTodayFeelingsTitle"))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.width*0.05, weight: .regular))
+                .font(.system(size: screenSize.width*0.05, weight: .regular, design: .rounded))
             TagCloudView(tags: Array(day.feelings))
         }
-        .padding(.leading, screenSize.width*0.02)
-        .frame(width: screenSize.width*0.9, height: screenSize.height*0.25, alignment: .leading)
+        .padding(.leading, screenSize.width*0.05)
+        .frame(width: screenSize.width*0.9, height: screenSize.height*0.24, alignment: .leading)
     }
 }
 
@@ -90,9 +90,9 @@ struct TagCloudView: View {
         Text(text)
             .padding(.vertical, 3)
             .padding(.horizontal, 8)
-            .font(.body)
+            .font(.system(size: 18, weight: .regular, design: .rounded))
             .background(color)
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.black)
             .cornerRadius(20)
     }
 

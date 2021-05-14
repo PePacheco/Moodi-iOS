@@ -13,30 +13,6 @@ class DatabaseManager: ObservableObject {
     
     private (set) var days: [Day]
     
-    var hasToday: Bool {
-        self.days.contains { day in
-            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
-        }
-    }
-    
-    var hasYesterday: Bool {
-        self.days.contains { day in
-            return Date().dayBefore.hasSame(.day, as: day.date) && Date().dayBefore.hasSame(.month, as: day.date) && Date().dayBefore.hasSame(.year, as: day.date)
-        }
-    }
-    
-    var today: Day {
-        self.days.first { day in
-            return Date().hasSame(.day, as: day.date) && Date().hasSame(.month, as: day.date) && Date().hasSame(.year, as: day.date)
-        } ?? Day(date: Date(), mood: .neutral, answers: ["", "", ""], feelings: [])
-    }
-    
-    var yesterday: Day {
-        self.days.first { day in
-            return Date().dayBefore.hasSame(.day, as: day.date) && Date().dayBefore.hasSame(.month, as: day.date) && Date().dayBefore.hasSame(.year, as: day.date)
-        } ?? Day(date: Date().dayBefore, mood: .neutral, answers: ["", "", ""], feelings: [])
-    }
-    
     private init(){
         days = Self.loadAllDays()
     }
@@ -62,6 +38,18 @@ class DatabaseManager: ObservableObject {
             }
         }
         return []
+    }
+    
+    func hasDayInStorage(date: Date) -> Bool {
+        self.days.contains { day in
+            return date.hasSame(.day, as: day.date) && date.hasSame(.month, as: day.date) && date.hasSame(.year, as: day.date)
+        }
+    }
+    
+    func getDayInStorage(date: Date) -> Day? {
+        self.days.first { day in
+            return date.hasSame(.day, as: day.date) && date.hasSame(.month, as: day.date) && date.hasSame(.year, as: day.date)
+        }
     }
     
     func loadLastNDays(N: Int) -> [Day] {

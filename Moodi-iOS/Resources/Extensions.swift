@@ -48,6 +48,26 @@ extension Date {
     var dayBefore: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: self)!
     }
+    
+    var monthBefore: Date {
+        return Calendar.current.date(byAdding: .month, value: -1, to: self)!
+    }
+    
+    var yearBefore: Date {
+        return Calendar.current.date(byAdding: .year, value: -1, to: self)!
+    }
+    
+    var day: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: self)
+    }
+    
+    var year: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "Y"
+        return dateFormatter.string(from: self)
+    }
 }
 
 extension View {
@@ -74,6 +94,30 @@ extension Date: RawRepresentable {
     
     public init?(rawValue: String) {
         self = Date.formatter.date(from: rawValue) ?? Date()
+    }
+    
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "e"
+        
+        switch dateFormatter.string(from: self).capitalized {
+        case "1":
+                return "D"
+        case "2":
+            return "S"
+        case "3":
+            return "T"
+        case "4":
+            return "Q"
+        case "5":
+            return "Q"
+        case "6":
+            return "S"
+        case "7":
+            return "S"
+        default:
+            return " "
+        }
     }
 }
 
@@ -115,4 +159,8 @@ extension Calendar {
 
         return dates
     }
+    
+    func intervalOfWeek(for date: Date) -> DateInterval? {
+        dateInterval(of: .weekOfYear, for: date)
+      }
 }

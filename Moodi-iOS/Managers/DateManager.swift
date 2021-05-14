@@ -50,4 +50,17 @@ class DateManager {
         return count
     }
     
+    func returnWeek() -> [Date] {
+        var week: [Date] = []
+
+        if let interval = Calendar.current.intervalOfWeek(for: Date()) {
+            var day = interval.start
+            for _ in 0..<7{
+                week.append(day)
+                day = day.dayAfter
+            }
+        }
+        
+        return week
+    }
 }

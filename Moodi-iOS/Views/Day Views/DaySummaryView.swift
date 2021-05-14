@@ -17,16 +17,16 @@ struct DaySummaryView: View {
         VStack(alignment: .leading) {
             Text(NSLocalizedString("DaySummaryLabel", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.025, weight: .semibold))
+                .font(.system(size: screenSize.height*0.025, weight: .semibold, design: .rounded))
             
             HStack {
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
                     .foregroundColor(Color("callToAction"))
                     .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                if databaseManager.hasToday {
-                    SummaryDayMoodModalView(day: databaseManager.today)
+                if let day = databaseManager.getDayInStorage(date: Date()) {
+                    SummaryDayMoodModalView(day: day)
                         .sheet(isPresented: $isShowingModal) {
-                            ModalDaySummaryView(showModal: $isShowingModal, day: databaseManager.today)
+                            ModalDaySummaryView(day: day)
                         }
                         .onTapGesture {
                             self.isShowingModal.toggle()
@@ -43,7 +43,7 @@ struct DaySummaryView: View {
                         })
                 }
             }
-            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)
+            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.22, alignment: .center)
             .asCard()
         }
     }
@@ -52,5 +52,6 @@ struct DaySummaryView: View {
 struct DaySummaryView_Previews: PreviewProvider {
     static var previews: some View {
         DaySummaryView(screenSize: UIScreen.main.bounds.size)
+            .environmentObject(DatabaseManager.shared)
     }
 }

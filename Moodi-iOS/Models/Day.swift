@@ -76,7 +76,10 @@ enum Feeling: String, CaseIterable, Codable {
     }
 }
 
-struct Day: Codable {
+struct Day: Codable, Hashable, Identifiable {
+    var id: Date {
+        date
+    }
     var date: Date
     var mood: Mood
     var answers: [String]

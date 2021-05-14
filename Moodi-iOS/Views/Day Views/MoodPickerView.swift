@@ -15,7 +15,7 @@ struct MoodPickerView: View {
         VStack(alignment: .leading){
             Text(NSLocalizedString("PickYourMood", comment: ""))
                 .foregroundColor(Color("primaryText"))
-                .font(.system(size: screenSize.height*0.022, weight: .semibold))
+                .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
             
             HStack {
                 ForEach(Mood.allCases, id: \.self) { mood in

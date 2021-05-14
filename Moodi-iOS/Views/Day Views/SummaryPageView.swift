@@ -16,16 +16,19 @@ struct SummaryPageView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack (alignment: .center, spacing: 20){
-                Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
-                    .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.width*0.05, weight: .bold))
-                    .padding(.top)
-                    .padding(.trailing, screenSize.width/1.8)
+                HStack {
+                    Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
+                        .foregroundColor(Color("primaryText"))
+                        .font(.system(size: screenSize.width*0.06, weight: .bold, design: .rounded))
+                        .padding(.top)
+                    Spacer()
+                }
+                .frame(width: screenSize.width*0.9)
                 SummaryDayMoodModalView(day: day)
                     .asCard()
                 Text(LocalizedStringKey("reflexion"))
                     .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.width*0.05, weight: .bold))
+                    .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
                     .padding(.top)
                     .padding(.trailing, screenSize.width/1.6)
                 RectangleBox(question: "Question1", answer: day.answers[0])
@@ -43,6 +46,13 @@ struct SummaryPageView: View {
         }
         .navigationBarTitle(LocalizedStringKey("SummaryPageViewTitle"), displayMode: .inline)
     }
+    
+    private func formatDate(date: Date) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "E, d MMM yyyy"
+
+        return dateFormatterGet.string(from: date)
+    }
 }
 
 struct RectangleBox: View {
@@ -54,12 +64,12 @@ struct RectangleBox: View {
             VStack(alignment: .leading) {
                 Text(LocalizedStringKey(question))
                     .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.height*0.02, weight: .bold))
+                    .font(.system(size: screenSize.height*0.02, weight: .bold, design: .rounded))
                 Divider()
                 Text(answer)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(Color("secondaryText"))
-                    .font(.system(size: screenSize.height*0.016, weight: .regular))
+                    .font(.system(size: screenSize.height*0.016, weight: .regular, design: .rounded))
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding()
