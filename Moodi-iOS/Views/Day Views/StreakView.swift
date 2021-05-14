@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StreakView: View {
     let screenSize: CGSize
-    let streak: Int = DatabaseManager.shared.calculateStreak()
+    let streak: Int = DateManager.shared.calculateStreak(days: DatabaseManager.shared.days)
     
     var body: some View {
         HStack {
@@ -22,7 +22,7 @@ struct StreakView: View {
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color("primaryText"))
             }
-            .frame(width: screenSize.width * 0.3, height: screenSize.height * 0.05)
+            .frame(width: screenSize.width * 0.4, height: screenSize.height * 0.05)
             .asCard()
             Spacer()
         }

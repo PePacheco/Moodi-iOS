@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DaySummaryView: View {
+    @EnvironmentObject private var databaseManager: DatabaseManager
+    @State private var isShowingModal: Bool = false
     @State private var isPresentingDayMainView: Bool = false
     let screenSize: CGSize
     
@@ -21,7 +23,15 @@ struct DaySummaryView: View {
                 Text(NSLocalizedString("DaySummaryMakeReflection", comment: ""))
                     .foregroundColor(Color("callToAction"))
                     .font(.system(size: screenSize.height*0.025, weight: .semibold))
-                if !DatabaseManager.shared.hasToday {
+                if databaseManager.hasToday {
+                    SummaryDayMoodModalView(day: databaseManager.today)
+                        .sheet(isPresented: $isShowingModal) {
+                            ModalDaySummaryView(showModal: $isShowingModal, day: databaseManager.today)
+                        }
+                        .onTapGesture {
+                            self.isShowingModal.toggle()
+                        }
+                } else {
                     NavigationLink.init(
                         destination: QuizMainView(isPresentingDayMainView: $isPresentingDayMainView),
                         isActive: $isPresentingDayMainView,
@@ -31,8 +41,6 @@ struct DaySummaryView: View {
                                 .frame(width: screenSize.height*0.03, height: screenSize.height*0.03)
                                 .foregroundColor(Color("callToAction"))
                         })
-                } else {
-                    SummaryDayMoodModalView(day: DatabaseManager.shared.today!)
                 }
             }
             .frame(width: screenSize.width*0.9, height: screenSize.height * 0.18, alignment: .center)

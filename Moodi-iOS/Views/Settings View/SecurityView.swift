@@ -22,7 +22,7 @@ struct SecurityView: View {
             VStack {
                 Toggle(isOn: $isToggleOn) {
                     Text(NSLocalizedString("Password", comment: ""))
-                        .font(.system(size: screenSize.height*0.025))
+                        .font(.system(size: screenSize.height*0.020))
                         .foregroundColor(Color("primaryText"))
                 }
                 .frame(width: screenSize.width * 0.8, height: screenSize.height * 0.05, alignment: .center)
