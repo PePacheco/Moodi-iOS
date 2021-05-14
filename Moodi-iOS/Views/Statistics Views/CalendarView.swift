@@ -4,6 +4,7 @@ struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
     @State private var dayInModal: Day? = nil
     private let daysInStorage: [Day] = DatabaseManager.shared.days
+    let screenSize: CGSize = UIScreen.main.bounds.size
 
     let interval: DateInterval
     let showHeaders: Bool
@@ -35,15 +36,15 @@ struct CalendarView<DateView>: View where DateView: View {
                             if calendar.isDate(date, equalTo: month, toGranularity: .month) {
                                 if DatabaseManager.shared.hasDayInStorage(date: date) {
                                     content(date).id(date)
-                                        .background(DatabaseManager.shared.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray))
-                                        .cornerRadius(50)
+                                        .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
+                                        .background(Circle().fill(DatabaseManager.shared.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray)))
                                         .onTapGesture {
                                             self.dayInModal = DatabaseManager.shared.getDayInStorage(date: date)
                                         }
                                 } else {
                                     content(date).id(date)
-                                        .background(Color(UIColor.systemGray))
-                                        .cornerRadius(50)
+                                        .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
+                                        .background(Circle().fill(Color(UIColor.systemGray)))
                                 }
                             } else {
                                 content(date).hidden()
@@ -56,7 +57,6 @@ struct CalendarView<DateView>: View where DateView: View {
             .sheet(item: $dayInModal, content: { day in
                 ModalDaySummaryView(day: day)
             })
-            .asCard()
         }
     }
 

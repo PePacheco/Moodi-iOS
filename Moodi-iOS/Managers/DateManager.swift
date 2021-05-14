@@ -50,30 +50,17 @@ class DateManager {
         return count
     }
     
-//    func fillMonthArray(month: [Date], days: [Day]) -> [DayCalendar]{
-//        var newArray: [DayCalendar] = []
-//        for i in month {
-//            for day in days {
-//                if (day.date.get(.day) == i.get(.day)) && (day.date.get(.month) == i.get(.month)) {
-//                    newArray.append(DayCalendar(empty: false, day: day))
-//                    break
-//                }else if i.distance(from: day.date, only: .day, calendar: .current) <= -1 {
-//                    var newDay: Day = day
-//                    newDay.date = i
-//                    newArray.append(DayCalendar(empty: true, day: newDay))
-//                    break
-//                }
-//            }
-//        }
-//        
-//        if newArray.count < month.count {
-//            for _ in newArray.count-1...month.count-2 {
-//                var date = newArray[newArray.count-1].day.date
-//                date.addTimeInterval(86400)
-//                let dayCalendarDummy = DayCalendar(empty: true, day: Day(date: date, mood: .happy, answers: [], feelings: []))
-//                newArray.append(dayCalendarDummy)
-//            }
-//        }
-//        return newArray
-//    }
+    func returnWeek() -> [Date] {
+        var week: [Date] = []
+
+        if let interval = Calendar.current.intervalOfWeek(for: Date()) {
+            var day = interval.start
+            for _ in 0..<7{
+                week.append(day)
+                day = day.dayAfter
+            }
+        }
+        
+        return week
+    }
 }
