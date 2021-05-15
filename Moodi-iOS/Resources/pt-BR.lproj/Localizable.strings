@@ -7,6 +7,7 @@
 */
 
 // Moods
+"Moods" = "Humores";
 "veryHappy" = "Muito Feliz";
 "happy" = "Feliz";
 "neutral" = "Neutro";
@@ -14,6 +15,7 @@
 "verySad" = "Muito Triste";
 
 // Feelings
+"Feelings" = "Sentimentos";
 "anxiety" = "Ansiedade";
 "insecure" = "Insegurança";
 "confident" = "Confiança";
@@ -26,6 +28,15 @@
 // Notifications
 "NotificationBody" = "Venha cadastrar seu humor e refletir sobre seu dia";
 "NotificationTitle" = "Esqueceu de mim?";
+
+// Days of the week
+"Monday" = "S";
+"Tuesday" = "T";
+"Wednesday" = "Q";
+"Thursday" = "Q";
+"Friday" = "S";
+"Saturday" = "S";
+"Sunday" = "D";
 
 "ContentView_Label_Hello" = "Olá Mundo";
 "WeekSummaryLabel" = "Sua Semana";
@@ -61,6 +72,8 @@
 "Notification" = "Notificação";
 "Notification settings" = "Definir lembrete";
 "Dark Mode" = "Modo Escuro";
+"System" = "Sistema";
+"Light Mode" = "Modo Claro";
 "Night Mode" = "Modo Noturno";
 "Following system" = "Seguir sistema";
 "Days" = "dias";
@@ -68,6 +81,8 @@
 "Year" = "ano";
 "All Time" = "tudo";
 "No Objective Added" = "Você não adicionou um objetivo ontem";
+"ViewCalendar" = "Ver calendário";
+"Calendar" = "Calendário";
 
 // Daily tips
 "tip1" = "Saia para dar uma caminhada";

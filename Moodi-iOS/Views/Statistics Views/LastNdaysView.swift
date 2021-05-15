@@ -22,7 +22,7 @@ struct LastNdaysView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(Color("callToAction"))
-                            Text("Ver calendário")
+                            Text(LocalizedStringKey("ViewCalendar"))
                                 .foregroundColor(Color("callToAction"))
                                 .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                         }
@@ -44,14 +44,14 @@ struct LastNdaysView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text("Humores")
+                    Text(LocalizedStringKey("Moods"))
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                     PieChart(entries: dataDonutChart(last30days: DatabaseManager.shared.loadLastNDays(N: lastNDays)))
                         .padding()
                         .frame(width: screenSize.width*0.9, height: 300)
                         .asCard()
                         .padding(.bottom, 16)
-                    Text("Sentimentos")
+                    Text(LocalizedStringKey("Feelings"))
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                     PieChart(entries: dataDonutChart2(last30days: DatabaseManager.shared.loadLastNDays(N: lastNDays)))
                         .padding()

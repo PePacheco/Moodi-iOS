@@ -39,6 +39,8 @@
 "Notification" = "Notification";
 "Notification settings" = "Define reminder";
 "Dark Mode" = "Dark Mode";
+"System" = "System";
+"Light Mode" = "Light Mode";
 "Night Mode" = "Night Mode";
 "Following system" = "Following system";
 "Days" = "days";
@@ -46,8 +48,11 @@
 "Year" = "year";
 "All Time" = "all time";
 "No Objective Added" = "No objective added yesterday";
+"ViewCalendar" = "View calendar";
+"Calendar" = "Calendar";
 
 // Moods
+"Moods" = "Moods";
 "veryHappy" = "Very Happy";
 "happy" = "Happy";
 "neutral" = "Neutral";
@@ -55,6 +60,7 @@
 "verySad" = "Very Sad";
 
 // Feelings
+"Feelings" = "Feelings";
 "anxiety" = "Anxious";
 "insecure" = "Insecure";
 "confident" = "Confident";
@@ -93,3 +99,12 @@
 "tip20" = "";
 "tip21" = "Organize your calendar ";
 "tip22" = "Read a chapter of a book";
+
+// Days of the week
+"Monday" = "M";
+"Tuesday" = "T";
+"Wednesday" = "W";
+"Thursday" = "T";
+"Friday" = "F";
+"Saturday" = "S";
+"Sunday" = "S";
