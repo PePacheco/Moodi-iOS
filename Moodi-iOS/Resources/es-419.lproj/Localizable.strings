@@ -8,31 +8,31 @@
 
 // Moods
 "Moods" = "Humores";
-"veryHappy" = "Muy Feliz";
-"happy" = "Feliz";
-"neutral" = "Neutral";
+"veryHappy" = "Muy Contento";
+"happy" = "Contento";
+"neutral" = "Neutro";
 "sad" = "Triste";
 "verySad" = "Muy Triste";
 
 // Feelings
 "Feelings" = "Sentimientos";
-"anxiety" = "Ansioso";
-"insecure" = "Inseguro";
-"confident" = "Seguro";
+"anxiety" = "Ansiedad";
+"insecure" = "Inseguridad";
+"confident" = "Confianza";
 "relaxed" = "Relajado";
-"angry" = "Enojado";
-"tired" = "Cansado";
+"angry" = "Enfado";
+"tired" = "Cansancio";
 "proud" = "Orgullo";
-"loving" = "Cariño";
+"loving" = "Amor";
 
 // Notifications
-"NotificationBody" = "Venga registrar su humor y reflejar sobre su día";
-"NotificationTitle" = "¿Se olvido de mi?";
+"NotificationBody" = "Coloca aquí tu humor y piensa sobre tu día";
+"NotificationTitle" = "¿Te has olvidado de mi?";
 
 // Days of the week
 "Monday" = "L";
 "Tuesday" = "M";
-"Wednesday" = "M";
+"Wednesday" = "X";
 "Thursday" = "J";
 "Friday" = "V";
 "Saturday" = "S";
@@ -43,25 +43,25 @@
 "WeekSummaryDay" = "días";
 "DailyQuotesTipLabel" = "Consejo del día";
 "DailyQuotesObjectiveLabel" = "Meta del día";
-"DaySummaryLabel" = "Resumo do dia";
-"DaySummaryMakeReflection" = "Fazer reflexão do día";
+"DaySummaryLabel" = "Resumen del día";
+"DaySummaryMakeReflection" = "Piensa sobre tu día";
 "DayMainViewNavBarTitle" = "Hoy";
-"PickYourMood" = "Elija tu humor";
-"PickYourFeelings" = "Qué senstiste hoy";
-"AddingNewDayMainLabel" = "¿Como se siente hoy?";
+"PickYourMood" = "Elige tu humor";
+"PickYourFeelings" = "Como te has sentido hoy";
+"AddingNewDayMainLabel" = "¿Como te sientes hoy?";
 "Close" = "Cerrar";
 "Next" = "Próximo";
 "Statistics" = "Estadísticas";
 "Configurations" = "Ajustes";
-"Save" = "Ahorrar";
-"Question1" = "¿Que hice bien?";
-"Question2" = "¿Que podría hacer mejor?";
-"Question3" = "¿Que puedo mejorar para mañana?";
-"AddingNewDayQuestionsQuestion" = "¿Como fué tu día?";
-"AddingNewDayQuestionsPlaceholder" = "Escribe aqui";
-"AddingNewDayQuestionsBadAlert" = "Hubo un error";
-"AddingNewDayQuestionsGoodAlert" = "Tu día fué salvo con éxito";
-"SummaryPageTodayMoodTitle" = "El humor de hoy";
+"Save" = "Salvar";
+"Question1" = "¿Qué he hecho bien hoy?";
+"Question2" = "¿Qué podría haber hecho mejor?";
+"Question3" = "¿Qué puedo hacer mejor mañana?";
+"AddingNewDayQuestionsQuestion" = "¿Qué tal tu día?";
+"AddingNewDayQuestionsPlaceholder" = "Escribe aquí";
+"AddingNewDayQuestionsBadAlert" = "Algo va mal";
+"AddingNewDayQuestionsGoodAlert" = "Tu día se ha salvado con éxito";
+"SummaryPageTodayMoodTitle" = "Humor de hoy";
 "SummaryPageTodayFeelingsTitle" = "Sentimientos:";
 "SummaryTodayQuestionTitle" = "Preguntas";
 "ButtonDoneText" = "Terminar";
@@ -80,30 +80,30 @@
 "Months" = "meses";
 "Year" = "año";
 "All Time" = "todo";
-"No Objective Added" = "No agregaste un objetivo ayer";
+"No Objective Added" = "No añadiste un objetivo ayer";
 "ViewCalendar" = "Ver calendario";
 "Calendar" = "Calendario";
 
 // Daily tips
-"tip1" = "Sal a caminar";
-"tip2" = "Mira tu película favorita";
-"tip3" = "Llame un amigo";
-"tip4" = "Escuch una canción que te recuerde buenos tiempos";
-"tip5" = "Empiece a leer un libro";
-"tip6" = "Aprenda una receta nueva";
-"tip7" = "Come una fruta";
-"tip8" = "Limpia tu piel";
-"tip9" = "Limpia y mantenga organizado su entorno";
-"tip10" = "Envía una mensaje a alguien que amas";
+"tip1" = "Da un paseo";
+"tip2" = "Ve tu película favorita";
+"tip3" = "Llama a un amigo";
+"tip4" = "Escucha una canción que te recuerde los buenos tiempos";
+"tip5" = "Empieza a leer un libro";
+"tip6" = "Aprende una receta nueva";
+"tip7" = "Comete una fruta";
+"tip8" = "Hazte una limpieza de piel";
+"tip9" = "Limpia y mantén organizado tu entorno";
+"tip10" = "Envía un mensaje a alguien que amas";
 "tip11" = "Escucha una nueva canción";
-"tip12" = "Agradecer a alguien";
+"tip12" = "Da las gracias a alguien";
 "tip13" = "Escribe una lista de agradecimiento";
-"tip14" = "Haz una lista de logros";
+"tip14" = "Haz una lista de resultados";
 "tip15" = "Ponte tu ropa favorita";
-"tip16" = "Haga una lista de objeetivos";
-"tip17" = "Beber agua";
+"tip16" = "Haz una lista de objetivos";
+"tip17" = "Bebe agua";
 "tip18" = "Abraza a alguien";
-"tip19" = "Plantar un árbol";
-"tip20" = "Pregúntale a alguien que te gusta cómo estuvo su día";
-"tip21" = "Organice su calendario";
-"tip22" = "Leer un capítulo de un libro";
+"tip19" = "Planta un árbol";
+"tip20" = "Pregúntale a quien queras cómo ha sido su día";
+"tip21" = "Organiza su calendario";
+"tip22" = "Lee el capítulo de un libro";
