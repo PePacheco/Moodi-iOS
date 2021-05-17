@@ -2,8 +2,9 @@ import SwiftUI
 
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
+    @EnvironmentObject private var databaseManager: DatabaseManager
     @State private var dayInModal: Day? = nil
-    private let daysInStorage: [Day] = DatabaseManager.shared.days
+    @State private var daysInStorage: [Day] = []
     let screenSize: CGSize = UIScreen.main.bounds.size
 
     let interval: DateInterval
@@ -34,12 +35,12 @@ struct CalendarView<DateView>: View where DateView: View {
                     Section(header: header(for: month)) {
                         ForEach(days(for: month), id: \.self) { date in
                             if calendar.isDate(date, equalTo: month, toGranularity: .month) {
-                                if DatabaseManager.shared.hasDayInStorage(date: date) {
+                                if databaseManager.hasDayInStorage(date: date) {
                                     content(date).id(date)
                                         .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
-                                        .background(Circle().fill(DatabaseManager.shared.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray)))
+                                        .background(Circle().fill(databaseManager.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray)))
                                         .onTapGesture {
-                                            self.dayInModal = DatabaseManager.shared.getDayInStorage(date: date)
+                                            self.dayInModal = databaseManager.getDayInStorage(date: date)
                                         }
                                 } else {
                                     content(date).id(date)
@@ -57,6 +58,9 @@ struct CalendarView<DateView>: View where DateView: View {
             .sheet(item: $dayInModal, content: { day in
                 ModalDaySummaryView(day: day)
             })
+            .onAppear {
+                self.daysInStorage = databaseManager.days
+            }
         }
     }
 

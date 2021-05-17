@@ -11,13 +11,14 @@ class DatabaseManager: ObservableObject {
     
     static let shared: DatabaseManager = DatabaseManager()
     
-    @Published private (set) var days: [Day]
+    private (set) var days: [Day]
     
     private init(){
         days = Self.loadAllDays()
     }
         
     func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
+        objectWillChange.send()
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
         self.days.append(day)
         let encoder = JSONEncoder()

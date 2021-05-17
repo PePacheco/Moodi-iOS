@@ -13,9 +13,8 @@ struct Constants {
         let intDay = Date().intDay ?? 1
         if intDay >= dailyTips.count {
             return dailyTips[0]
-        } else {
-            return dailyTips[intDay - 1]
         }
+        return dailyTips[intDay - 1]
     }
     
     let dailyTips: [String] = [

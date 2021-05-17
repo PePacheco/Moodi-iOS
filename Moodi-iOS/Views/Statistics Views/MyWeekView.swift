@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MyWeekView: View {
+    @EnvironmentObject private var databaseManager: DatabaseManager
+    @State private var dayInModal: Day? = nil
     let week: [Date]  = DateManager.shared.returnWeek()
     let screenSize: CGSize = UIScreen.main.bounds.size
-    @State private var dayInModal: Day? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -21,14 +22,14 @@ struct MyWeekView: View {
             
             HStack {
                 ForEach(week, id: \.self) { day in
-                    if DatabaseManager.shared.hasDayInStorage(date: day) {
+                    if databaseManager.hasDayInStorage(date: day) {
                         Circle()
                             .frame(width: screenSize.width*0.1, height: screenSize.height*0.1)
-                            .foregroundColor(DatabaseManager.shared.getDayInStorage(date: day)?.mood.getMoodColor() ?? Color(UIColor.systemGray))
+                            .foregroundColor(databaseManager.getDayInStorage(date: day)?.mood.getMoodColor() ?? Color(UIColor.systemGray))
                             .padding(.horizontal, screenSize.width*0.004)
                             .overlay(Text(day.dayOfWeek() ?? "").font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded)))
                             .onTapGesture {
-                                self.dayInModal = DatabaseManager.shared.getDayInStorage(date: day)
+                                self.dayInModal = databaseManager.getDayInStorage(date: day)
                             }
                     } else {
                         Circle()
@@ -50,5 +51,6 @@ struct MyWeekView: View {
 struct MyWeekView_Previews: PreviewProvider {
     static var previews: some View {
         MyWeekView()
+            .environmentObject(DatabaseManager.shared)
     }
 }

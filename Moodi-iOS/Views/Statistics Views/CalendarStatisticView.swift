@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CalendarStatisticView: View {
+    @EnvironmentObject private var databaseManager: DatabaseManager
+    @State private var dateInterval: DateInterval = DateInterval()
     let screenSize: CGSize = UIScreen.main.bounds.size
-    @State private var dateInterval: DateInterval = DateInterval(start: DatabaseManager.shared.getFirstDay(), end: Date())
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -44,11 +45,15 @@ struct CalendarStatisticView: View {
             }
         }
         .navigationBarTitle(LocalizedStringKey("Calendar"), displayMode: .inline)
+        .onAppear {
+            dateInterval =  DateInterval(start: databaseManager.getFirstDay(), end: Date())
+        }
     }
 }
 
 struct CalendarStatisticView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarStatisticView()
+            .environmentObject(DatabaseManager.shared)
     }
 }

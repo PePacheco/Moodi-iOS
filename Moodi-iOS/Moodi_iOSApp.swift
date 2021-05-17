@@ -17,6 +17,11 @@ struct MyMood_iOSApp: App {
             ContentView()
                 .environmentObject(preferences)
                 .environmentObject(databaseManager)
+                .onAppear() {
+                    if let bundleID = Bundle.main.bundleIdentifier {
+                        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+                    }
+                }
         }
     }
 }
