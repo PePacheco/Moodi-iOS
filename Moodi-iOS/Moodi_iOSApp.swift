@@ -11,12 +11,15 @@ import SwiftUI
 struct MyMood_iOSApp: App {
     @StateObject private var preferences: PreferencesStore = PreferencesStore()
     @ObservedObject private var databaseManager: DatabaseManager = DatabaseManager.shared
+    var speechRecognizer = SpeechRecognizer();
+
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(preferences)
                 .environmentObject(databaseManager)
+                .environmentObject(speechRecognizer)
         }
     }
 }

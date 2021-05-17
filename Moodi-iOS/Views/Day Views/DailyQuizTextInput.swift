@@ -11,8 +11,24 @@ struct DailyQuizTextInput: View {
     @Binding var text: String
     @Binding var textHeight: CGFloat
     var question: LocalizedStringKey
+    //@GestureState var isDetectingLongPress = false
+    @EnvironmentObject var speechRecognizer: SpeechRecognizer
     private let screenSize: CGSize = UIScreen.main.bounds.size
-    private let speechRecognizer = SpeechRecognizer()
+    //private let speechRecognizer = SpeechRecognizer()
+    
+//    var longPress: some Gesture {
+//            LongPressGesture(minimumDuration: 1)
+//                .updating($isDetectingLongPress) { currentState, gestureState,
+//                        transaction in
+//                    gestureState = currentState
+//                    speechRecognizer.record(to: $text)
+//                    print("aaaaa")
+//                }
+//                .onEnded { finished in
+//                    speechRecognizer.assistant.final()
+//                    print("bbbbbbs")
+//                }
+//        }
     
     var paddingTop: CGFloat {
         if question == LocalizedStringKey("Question3") {
@@ -44,11 +60,18 @@ struct DailyQuizTextInput: View {
                     .foregroundColor(Color("primaryText"))
                     .font(.system(size: screenSize.height*0.02, weight: .bold, design: .rounded))
                 
-                Button(action: {
-                    speechRecognizer.record(to: $text)
-                }){
-                    Image(systemName: "mic.fill")
-                }
+                
+//                Button(action: {
+//                    speechRecognizer.record(to: $text)
+//                }){
+//
+//                }
+                
+                SpeechButton()
+                    
+                    
+                
+                    
             }
             
             if text.isEmpty {
