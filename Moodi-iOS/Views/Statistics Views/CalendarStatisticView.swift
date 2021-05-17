@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalendarStatisticView: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
-    @State private var dateInterval: DateInterval = DateInterval(start: DatabaseManager.shared.days[0].date, end: Date())
+    @State private var dateInterval: DateInterval = DateInterval(start: DatabaseManager.shared.getFirstDay(), end: Date())
     
     var body: some View {
         ScrollView(showsIndicators: false) {

@@ -15,12 +15,12 @@ struct Onboarding2: View {
         VStack {
             VStack(alignment:.leading){
                 
-                Text("Add Emotions")
+                Text(LocalizedStringKey("onboarding2Text1"))
                     .font(.system(size: screenSize.height*0.050, weight: .bold))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                 
                 
-                Text("You can choose how you are feelign in the day to help you understand more your emotions.")
+                Text(LocalizedStringKey("onboarding2Text1"))
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                     .padding(.trailing,screenSize.width*0.1)

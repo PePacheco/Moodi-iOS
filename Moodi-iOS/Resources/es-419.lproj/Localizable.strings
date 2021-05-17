@@ -107,3 +107,21 @@
 "tip20" = "Pregúntale a quien queras cómo ha sido su día";
 "tip21" = "Organiza su calendario";
 "tip22" = "Lee el capítulo de un libro";
+
+// Onboarding 1
+"onboarding1Text1" = "";
+"onboarding1Text2" = "";
+
+
+// Onboarding 2
+"onboarding2Text1" = "";
+"onboarding2Text2" = "";
+
+
+// Onboarding 3
+"onboarding3Text1" = "";
+"onboarding3Text2" = "";
+
+// Onboarding 4
+"onboarding4Text1" = "";
+"onboarding4Text2" = "";

@@ -14,12 +14,12 @@ struct Onboarding1: View {
     var body: some View {
         VStack {
             VStack(alignment:.leading){
-                Text("Welcome!")
+                Text(LocalizedStringKey("onboarding1Text1"))
                     .font(.system(size: screenSize.height*0.050, weight: .bold))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                 
                 
-                Text("Moodi helps you to create an easy diary to keep track of your days.")
+                Text(LocalizedStringKey("onboarding1Text2"))
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                     .padding(.trailing,screenSize.width*0.1)

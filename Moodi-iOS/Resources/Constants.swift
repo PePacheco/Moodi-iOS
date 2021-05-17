@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct DailyTipsManager {
+struct Constants {
     
     var sentenceOfTheDay: String  {
-        return dailyTips[0]
+        let intDay = Date().intDay ?? 1
+        return dailyTips[intDay - 1]
     }
     
     let dailyTips: [String] = [
@@ -37,7 +38,5 @@ struct DailyTipsManager {
         NSLocalizedString("tip21", comment: ""),
         NSLocalizedString("tip22", comment: "")
     ]
-    
-    init(){}
     
 }

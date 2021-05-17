@@ -100,6 +100,7 @@
 "tip21" = "Organize your calendar ";
 "tip22" = "Read a chapter of a book";
 
+
 // Days of the week
 "Monday" = "M";
 "Tuesday" = "T";
@@ -108,3 +109,22 @@
 "Friday" = "F";
 "Saturday" = "S";
 "Sunday" = "S";
+
+
+// Onboarding 1
+"onboarding1Text1" = "Welcome!";
+"onboarding1Text2" = "Moodi helps you to create an easy diary to keep track of your days.";
+
+
+// Onboarding 2
+"onboarding2Text1" = "Add Emotions";
+"onboarding2Text2" = "You can pick how you felt during the day to help you understand more your emotions."; //You can choose how you are feeling in the day to help you understand more your emotions.
+
+
+// Onboarding 3
+"onboarding3Text1" = "Reflect about your day";
+"onboarding3Text2" = "Everyday you can answer questions to make you think about your day and better youself.";
+
+// Onboarding 4
+"onboarding4Text1" = "Keep track of everything";
+"onboarding4Text2" = "With the calendar you can keep track of all your emotions and fellings very easily.";

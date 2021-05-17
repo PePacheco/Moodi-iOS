@@ -108,3 +108,20 @@
 "tip21" = "Organize o seu calendário";
 "tip22" = "Leia um capítulo de um livro";
 
+// Onboarding 1
+"onboarding1Text1" = "Bem vindo!";
+"onboarding1Text2" = "Moodi ajuda você a criar um diário para controlar seus dias.";
+
+
+// Onboarding 2
+"onboarding2Text1" = "Adicione emoções";
+"onboarding2Text2" = "Você pode escolher como se sentiu durante o dia para ajudá-lo a entender melhor suas emoções.";
+
+
+// Onboarding 3
+"onboarding3Text1" = "Reflita sobre o seu dia";
+"onboarding3Text2" = "Todos os dias você pode responder a perguntas para fazer você pensar sobre o seu dia.";
+
+// Onboarding 4
+"onboarding4Text1" = "Acompanhe tudo";
+"onboarding4Text2" = "Com o calendário, você pode acompanhar facilmente todas as suas emoções e sentimentos.";

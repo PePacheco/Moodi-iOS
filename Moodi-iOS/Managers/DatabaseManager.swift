@@ -16,7 +16,7 @@ class DatabaseManager: ObservableObject {
     private init(){
         days = Self.loadAllDays()
     }
-    
+        
     func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
         objectWillChange.send()
         let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
@@ -64,6 +64,13 @@ class DatabaseManager: ObservableObject {
             }
         }
         return lastNDays
+    }
+    
+    func getFirstDay() -> Date {
+        if days.count > 0 {
+            return self.days[0].date
+        }
+        return Date()
     }
     
 }

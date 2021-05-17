@@ -43,7 +43,7 @@ struct FeelingSelectView: View {
             }
         }
         .padding(.vertical)
-        .frame(width: screenSize.width*0.9, height: screenSize.height * 0.32, alignment: .center)
+        .frame(width: screenSize.width*0.9, height: screenSize.height * 0.36, alignment: .center)
         .asCard()
     }
 }

@@ -63,6 +63,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var intDay: Int? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        return Int(dateFormatter.string(from: self))
+    }
+    
     var year: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "Y"
