@@ -30,13 +30,13 @@
 "NotificationTitle" = "¿Te has olvidado de mi?";
 
 // Days of the week
-"Monday" = "L";
-"Tuesday" = "M";
-"Wednesday" = "X";
-"Thursday" = "J";
-"Friday" = "V";
-"Saturday" = "S";
-"Sunday" = "D";
+"Monday" = "M";
+"Tuesday" = "X";
+"Wednesday" = "J";
+"Thursday" = "V";
+"Friday" = "S";
+"Saturday" = "D";
+"Sunday" = "L";
 
 "ContentView_Label_Hello" = "Hola Mundo";
 "WeekSummaryLabel" = "Tu semana";
@@ -107,6 +107,16 @@
 "tip20" = "Pregúntale a quien queras cómo ha sido su día";
 "tip21" = "Organiza su calendario";
 "tip22" = "Lee el capítulo de un libro";
+"tip23" = "";
+"tip24" = "";
+"tip25" = "";
+"tip26" = "";
+"tip27" = "";
+"tip28" = "";
+"tip29" = "";
+"tip30" = "";
+"tip31" = "";
+
 
 // Onboarding 1
 "onboarding1Text1" = "¡Bienvenido!";

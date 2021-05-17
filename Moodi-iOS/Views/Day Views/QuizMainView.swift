@@ -17,7 +17,7 @@ struct QuizMainView: View {
     
     init(isPresentingDayMainView: Binding<Bool>) {
         self._isPresentingDayMainView = isPresentingDayMainView
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 26, weight: .bold)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 24, weight: .bold)]
     }
     
     var body: some View {

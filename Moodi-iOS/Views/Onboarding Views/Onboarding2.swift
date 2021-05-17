@@ -17,12 +17,14 @@ struct Onboarding2: View {
                 Text(LocalizedStringKey("onboarding2Text1"))
                     .font(.system(size: screenSize.height*0.050, weight: .bold))
                     .foregroundColor(Color(hex: 0xF2F2F7))
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 Text(LocalizedStringKey("onboarding2Text2"))
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color(hex: 0xF2F2F7))
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            .frame(width: screenSize.width*0.9, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: screenSize.width*0.9, height: 100)
             Spacer()
             Image("Emotions")
                 .resizable()

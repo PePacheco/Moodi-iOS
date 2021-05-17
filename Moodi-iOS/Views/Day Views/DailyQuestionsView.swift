@@ -22,7 +22,7 @@ struct DailyQuestionsView: View {
         self.selectedFeelings = selectedFeelings
         self.selectedMood = selectedMood
         self.screenSize = screenSize
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 26, weight: .bold)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 24, weight: .bold)]
     }
     
     private let questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
@@ -32,14 +32,13 @@ struct DailyQuestionsView: View {
             VStack(spacing: 30) {
                 ForEach(0..<3) { id in
                     DailyQuizTextInput(text: $answers[id], textHeight: $textHeight[id], question: questions[id])
-                    
                 }
             }
             .padding()
             .navigationBarTitle(LocalizedStringKey("AddingNewDayQuestionsQuestion"), displayMode: .large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: SummaryPageView(isPresentingDayMainView: $isPresentingDayMainView, day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings)), tag: id ?? UUID(), selection: $id) {
+                    NavigationLink(destination: SummaryPageView(isPresentingDayMainView: $isPresentingDayMainView, day: Day(date: Date(), mood: self.selectedMood, answers: self.answers, feelings: self.selectedFeelings))) {
                         Text(LocalizedStringKey("Next"))
                     }
                 }

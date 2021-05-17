@@ -11,12 +11,13 @@ struct DailyQuizTextInput: View {
     @Binding var text: String
     @Binding var textHeight: CGFloat
     var question: LocalizedStringKey
+    @EnvironmentObject var speechRecognizer: SpeechRecognizer
     private let screenSize: CGSize = UIScreen.main.bounds.size
-    private let speechRecognizer = SpeechRecognizer()
+
     
     var paddingTop: CGFloat {
         if question == LocalizedStringKey("Question3") {
-            return screenSize.height * 0.055
+            return screenSize.height * 0.065
         }
         return screenSize.height * 0.05
     }
@@ -43,12 +44,10 @@ struct DailyQuizTextInput: View {
                     .padding(.top, screenSize.height*0.015)
                     .foregroundColor(Color("primaryText"))
                     .font(.system(size: screenSize.height*0.02, weight: .bold, design: .rounded))
-                
-                Button(action: {
-                    speechRecognizer.record(to: $text)
-                }){
-                    Image(systemName: "mic.fill")
-                }
+                    
+                Spacer()
+                SpeechButton(text: $text)
+                    .padding([.top, .trailing])
             }
             
             if text.isEmpty {
