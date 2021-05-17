@@ -108,19 +108,19 @@ extension Date: RawRepresentable {
         
         switch dateFormatter.string(from: self).capitalized {
         case "1":
-            return NSLocalizedString("Monday", comment: "")
-        case "2":
-            return NSLocalizedString("Tuesday", comment: "")
-        case "3":
-            return NSLocalizedString("Wednesday", comment: "")
-        case "4":
-            return NSLocalizedString("Thursday", comment: "")
-        case "5":
-            return NSLocalizedString("Friday", comment: "")
-        case "6":
-            return NSLocalizedString("Saturday", comment: "")
-        case "7":
             return NSLocalizedString("Sunday", comment: "")
+        case "2":
+            return NSLocalizedString("Monday", comment: "")
+        case "3":
+            return NSLocalizedString("Tuesday", comment: "")
+        case "4":
+            return NSLocalizedString("Wednesday", comment: "")
+        case "5":
+            return NSLocalizedString("Thursday", comment: "")
+        case "6":
+            return NSLocalizedString("Friday", comment: "")
+        case "7":
+            return NSLocalizedString("Saturday", comment: "")
         default:
             return " "
         }

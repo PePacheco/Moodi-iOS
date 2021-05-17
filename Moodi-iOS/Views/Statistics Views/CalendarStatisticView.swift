@@ -16,6 +16,8 @@ struct CalendarStatisticView: View {
             VStack {
                 HStack{
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
+                        Text(LocalizedStringKey("Sunday"))
+                            .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
                         Text(LocalizedStringKey("Monday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
                         Text(LocalizedStringKey("Tuesday"))
@@ -27,8 +29,6 @@ struct CalendarStatisticView: View {
                         Text(LocalizedStringKey("Friday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
                         Text(LocalizedStringKey("Saturday"))
-                            .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text(LocalizedStringKey("Sunday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
                     }
                     .frame(width: screenSize.width*0.9)
