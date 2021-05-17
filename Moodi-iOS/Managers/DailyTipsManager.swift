@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-class DailyTipsManager: ObservableObject {
-    @AppStorage("dailyTipsIndex") private var dailyTipsIndex: Int = 0
-    var sentenceOfTheDay: String = ""
+struct DailyTipsManager {
+    
+    var sentenceOfTheDay: String  {
+        return dailyTips[0]
+    }
     
     let dailyTips: [String] = [
         NSLocalizedString("tip1", comment: ""),
@@ -36,18 +38,6 @@ class DailyTipsManager: ObservableObject {
         NSLocalizedString("tip22", comment: "")
     ]
     
-    init() {
-        self.getDailyTip()
-    }
-    
-    func getDailyTip() {
-        let dailyTip = dailyTips[dailyTipsIndex]
-        if dailyTipsIndex > 21 {
-            dailyTipsIndex = 0
-        } else {
-            dailyTipsIndex += 1
-        }
-        sentenceOfTheDay = dailyTip
-    }
+    init(){}
     
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DailyQuotesView: View {
-    @EnvironmentObject private var dailyTipsManager: DailyTipsManager
+    var dailyTipsManager: DailyTipsManager = DailyTipsManager()
     let screenSize: CGSize
     let yesterdayObjective: String
     
@@ -52,6 +52,5 @@ struct SentenceOfTheDay: View {
 struct DailyQuotesView_Previews: PreviewProvider {
     static var previews: some View {
         DailyQuotesView(screenSize: UIScreen.main.bounds.size, yesterdayObjective: "Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
-            .environmentObject(DailyTipsManager())
     }
 }
