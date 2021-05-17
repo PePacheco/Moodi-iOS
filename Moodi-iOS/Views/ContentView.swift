@@ -11,7 +11,6 @@ struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @State private var tab: Int = 2
     @EnvironmentObject private var preferences: PreferencesStore
-    @EnvironmentObject var speechRecognizer:SpeechRecognizer
 
     
     var body: some View {

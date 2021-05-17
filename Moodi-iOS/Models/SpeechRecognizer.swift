@@ -150,11 +150,11 @@ public class SpeechRecognizer: ObservableObject{
 
     }
     
-    func getButton()->SpeechButton{ // returns the button
+    func getButton()->SpeechButton{
         return button
     }
     
-    func startRecording(){// starts the recording sequence
+    func startRecording(){
         
         outputText = "";
         

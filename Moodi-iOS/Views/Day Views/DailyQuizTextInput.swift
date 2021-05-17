@@ -60,18 +60,7 @@ struct DailyQuizTextInput: View {
                     .foregroundColor(Color("primaryText"))
                     .font(.system(size: screenSize.height*0.02, weight: .bold, design: .rounded))
                 
-                
-//                Button(action: {
-//                    speechRecognizer.record(to: $text)
-//                }){
-//
-//                }
-                
                 SpeechButton()
-                    
-                    
-                
-                    
             }
             
             if text.isEmpty {
