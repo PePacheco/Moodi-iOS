@@ -38,8 +38,10 @@ struct ModalDaySummaryView: View {
                 }
                 .padding(.bottom, -16)
                 .frame(width: screenSize.width*0.8)
+                Divider()
                 SummaryDayMoodModalView(day: day)
                     .padding(.bottom)
+                Divider()
                 RectangleBox(question: "Question1", answer: day.answers[0])
                 RectangleBox(question: "Question2", answer: day.answers[1])
                 RectangleBox(question: "Question3", answer: day.answers[2])

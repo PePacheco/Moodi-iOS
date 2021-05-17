@@ -5,7 +5,6 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 03/05/21.
 //
 
-import Foundation
 import SwiftUI
 
 extension Color {
@@ -63,6 +62,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var intDay: Int? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        return Int(dateFormatter.string(from: self))
+    }
+    
     var year: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "Y"
@@ -102,19 +107,19 @@ extension Date: RawRepresentable {
         
         switch dateFormatter.string(from: self).capitalized {
         case "1":
-                return "D"
+            return NSLocalizedString("Sunday", comment: "")
         case "2":
-            return "S"
+            return NSLocalizedString("Monday", comment: "")
         case "3":
-            return "T"
+            return NSLocalizedString("Tuesday", comment: "")
         case "4":
-            return "Q"
+            return NSLocalizedString("Wednesday", comment: "")
         case "5":
-            return "Q"
+            return NSLocalizedString("Thursday", comment: "")
         case "6":
-            return "S"
+            return NSLocalizedString("Friday", comment: "")
         case "7":
-            return "S"
+            return NSLocalizedString("Saturday", comment: "")
         default:
             return " "
         }
@@ -163,4 +168,18 @@ extension Calendar {
     func intervalOfWeek(for date: Date) -> DateInterval? {
         dateInterval(of: .weekOfYear, for: date)
       }
+}
+
+extension UIFont {
+    class func rounded(ofSize size: CGFloat, weight: UIFont.Weight) -> UIFont {
+        let systemFont = UIFont.systemFont(ofSize: size, weight: weight)
+        let font: UIFont
+        
+        if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {
+            font = UIFont(descriptor: descriptor, size: size)
+        } else {
+            font = systemFont
+        }
+        return font
+    }
 }

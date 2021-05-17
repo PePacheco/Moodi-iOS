@@ -8,27 +8,28 @@
 import SwiftUI
 
 struct CalendarStatisticView: View {
+    @EnvironmentObject private var databaseManager: DatabaseManager
+    @State private var dateInterval: DateInterval = DateInterval()
     let screenSize: CGSize = UIScreen.main.bounds.size
-    @State private var dateInterval: DateInterval = DateInterval(start: DatabaseManager.shared.days[0].date, end: Date())
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
                 HStack{
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
-                        Text("D")
+                        Text(LocalizedStringKey("Sunday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("S")
+                        Text(LocalizedStringKey("Monday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("T")
+                        Text(LocalizedStringKey("Tuesday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("Q")
+                        Text(LocalizedStringKey("Wednesday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("Q")
+                        Text(LocalizedStringKey("Thursday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("S")
+                        Text(LocalizedStringKey("Friday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
-                        Text("S")
+                        Text(LocalizedStringKey("Saturday"))
                             .font(.system(size: screenSize.height*0.020, weight: .thin, design: .rounded))
                     }
                     .frame(width: screenSize.width*0.9)
@@ -43,12 +44,16 @@ struct CalendarStatisticView: View {
                 .frame(width: screenSize.width * 0.9)
             }
         }
-        .navigationBarTitle("Calendar", displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("Calendar"), displayMode: .inline)
+        .onAppear {
+            dateInterval =  DateInterval(start: databaseManager.getFirstDay(), end: Date())
+        }
     }
 }
 
 struct CalendarStatisticView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarStatisticView()
+            .environmentObject(DatabaseManager.shared)
     }
 }

@@ -20,7 +20,7 @@ struct SummaryDayMoodModalView: View {
             TagCloudView(tags: Array(day.feelings))
         }
         .padding(.leading, screenSize.width*0.05)
-        .frame(width: screenSize.width*0.9, height: screenSize.height*0.24, alignment: .leading)
+        .frame(width: screenSize.width*0.9, height: Array(day.feelings).count > 5 ?  screenSize.height*0.26 : screenSize.height*0.20, alignment: .leading)
     }
 }
 

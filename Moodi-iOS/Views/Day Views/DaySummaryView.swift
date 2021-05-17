@@ -43,7 +43,7 @@ struct DaySummaryView: View {
                         })
                 }
             }
-            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.22, alignment: .center)
+            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.24, alignment: .center)
             .asCard()
         }
     }

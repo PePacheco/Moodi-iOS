@@ -14,11 +14,11 @@ struct Onboarding3: View {
         
         VStack {
             VStack(alignment:.leading){
-                Text("Reflect about your day")
+                Text(LocalizedStringKey("onboarding3Text1"))
                     .font(.system(size: screenSize.height*0.050, weight: .bold))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                 
-                Text("Everyday you can answer questions to make you think about your day and better youself")
+                Text(LocalizedStringKey("onboarding3Text2"))
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                     .padding(.trailing,screenSize.width*0.1)

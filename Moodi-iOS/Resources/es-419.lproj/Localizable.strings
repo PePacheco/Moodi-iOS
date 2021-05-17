@@ -7,50 +7,61 @@
 */
 
 // Moods
-"veryHappy" = "Muy Feliz";
-"happy" = "Feliz";
-"neutral" = "Neutral";
+"Moods" = "Humores";
+"veryHappy" = "Muy Contento";
+"happy" = "Contento";
+"neutral" = "Neutro";
 "sad" = "Triste";
 "verySad" = "Muy Triste";
 
 // Feelings
-"anxiety" = "Ansioso";
-"insecure" = "Inseguro";
-"confident" = "Seguro";
+"Feelings" = "Sentimientos";
+"anxiety" = "Ansiedad";
+"insecure" = "Inseguridad";
+"confident" = "Confianza";
 "relaxed" = "Relajado";
-"angry" = "Enojado";
-"tired" = "Cansado";
+"angry" = "Enfado";
+"tired" = "Cansancio";
 "proud" = "Orgullo";
-"loving" = "Cariño";
+"loving" = "Amor";
 
 // Notifications
-"NotificationBody" = "Venga registrar su humor y reflejar sobre su día";
-"NotificationTitle" = "¿Se olvido de mi?";
+"NotificationBody" = "Coloca aquí tu humor y piensa sobre tu día";
+"NotificationTitle" = "¿Te has olvidado de mi?";
+
+// Days of the week
+"Monday" = "L";
+"Tuesday" = "M";
+"Wednesday" = "X";
+"Thursday" = "J";
+"Friday" = "V";
+"Saturday" = "S";
+"Sunday" = "D";
 
 "ContentView_Label_Hello" = "Hola Mundo";
 "WeekSummaryLabel" = "Tu semana";
 "WeekSummaryDay" = "días";
 "DailyQuotesTipLabel" = "Consejo del día";
 "DailyQuotesObjectiveLabel" = "Meta del día";
-"DaySummaryLabel" = "Resumo do dia";
-"DaySummaryMakeReflection" = "Fazer reflexão do día";
+"DaySummaryLabel" = "Resumen del día";
+"DaySummaryMakeReflection" = "Piensa sobre tu día";
 "DayMainViewNavBarTitle" = "Hoy";
-"PickYourMood" = "Elija tu humor";
-"PickYourFeelings" = "Qué senstiste hoy";
-"AddingNewDayMainLabel" = "¿Como se siente hoy?";
+"PickYourMood" = "Elige tu humor";
+"PickYourFeelings" = "Como te has sentido hoy";
+"AddingNewDayMainLabel" = "¿Como te sientes hoy?";
 "Close" = "Cerrar";
 "Next" = "Próximo";
 "Statistics" = "Estadísticas";
 "Configurations" = "Ajustes";
-"Save" = "Ahorrar";
-"Question1" = "¿Que hice bien?";
-"Question2" = "¿Que podría hacer mejor?";
-"Question3" = "¿Que puedo mejorar para mañana?";
-"AddingNewDayQuestionsQuestion" = "¿Como fué tu día?";
-"AddingNewDayQuestionsPlaceholder" = "Escribe aqui";
-"AddingNewDayQuestionsBadAlert" = "Hubo un error";
-"AddingNewDayQuestionsGoodAlert" = "Tu día fué salvo con éxito";
-"SummaryPageTodayMoodTitle" = "El humor de hoy";
+"Save" = "Salvar";
+"Question1" = "¿Qué he hecho bien hoy?";
+"Question2" = "¿Qué podría haber hecho mejor?";
+"Question3" = "¿Qué puedo hacer mejor mañana?";
+"AddingNewDayQuestionsQuestion" = "¿Qué tal tu día?";
+"AddingNewDayQuestionsPlaceholder" = "Escribe aquí";
+"AddingNewDayQuestionsBadAlert" = "Algo va mal";
+"AddingNewDayQuestionsGoodAlert" = "Tu día se ha salvado con éxito";
+"SummaryPageTodayMoodTitle" = "Humor de hoy";
 "SummaryPageTodayFeelingsTitle" = "Sentimientos:";
 "SummaryTodayQuestionTitle" = "Preguntas";
 "ButtonDoneText" = "Terminar";
@@ -61,34 +72,57 @@
 "Notification" = "Notificación";
 "Notification settings" = "Establecer recordatorio";
 "Dark Mode" = "Modo Oscuro";
+"System" = "Sistema";
+"Light Mode" = "Modo Claro";
 "Night Mode" = "Modo Nocturno";
 "Following System" = "Seguir sistema";
 "Days" = "días";
 "Months" = "meses";
 "Year" = "año";
 "All Time" = "todo";
-"No Objective Added" = "No agregaste un objetivo ayer";
+"No Objective Added" = "No añadiste un objetivo ayer";
+"ViewCalendar" = "Ver calendario";
+"Calendar" = "Calendario";
 
 // Daily tips
-"tip1" = "";
-"tip2" = "";
-"tip3" = "";
-"tip4" = "";
-"tip5" = "";
-"tip6" = "";
-"tip7" = "";
-"tip8" = "";
-"tip9" = "";
-"tip10" = "";
-"tip11" = "";
-"tip12" = "";
-"tip13" = "";
-"tip14" = "";
-"tip15" = "";
-"tip16" = "";
-"tip17" = "";
-"tip18" = "";
-"tip19" = "";
-"tip20" = "";
-"tip21" = "";
-"tip22" = "";
+"tip1" = "Da un paseo";
+"tip2" = "Ve tu película favorita";
+"tip3" = "Llama a un amigo";
+"tip4" = "Escucha una canción que te recuerde los buenos tiempos";
+"tip5" = "Empieza a leer un libro";
+"tip6" = "Aprende una receta nueva";
+"tip7" = "Comete una fruta";
+"tip8" = "Hazte una limpieza de piel";
+"tip9" = "Limpia y mantén organizado tu entorno";
+"tip10" = "Envía un mensaje a alguien que amas";
+"tip11" = "Escucha una nueva canción";
+"tip12" = "Da las gracias a alguien";
+"tip13" = "Escribe una lista de agradecimiento";
+"tip14" = "Haz una lista de resultados";
+"tip15" = "Ponte tu ropa favorita";
+"tip16" = "Haz una lista de objetivos";
+"tip17" = "Bebe agua";
+"tip18" = "Abraza a alguien";
+"tip19" = "Planta un árbol";
+"tip20" = "Pregúntale a quien queras cómo ha sido su día";
+"tip21" = "Organiza su calendario";
+"tip22" = "Lee el capítulo de un libro";
+
+// Onboarding 1
+"onboarding1Text1" = "¡Bienvenido!";
+"onboarding1Text2" = "Moodi te ayuda a crear un diario para controlar tus dias.";
+
+
+// Onboarding 2
+"onboarding2Text1" = "Adicione emociones";
+"onboarding2Text2" = "Puede elegir cómo te has sentido durante el día para comprender mejor tus emociones.";
+
+
+// Onboarding 3
+"onboarding3Text1" = "Piense sobre tu día";
+"onboarding3Text2" = "Todos los días puedes responder preguntas que te hagan pensar acerca de tu día.";
+
+// Onboarding 4
+"onboarding4Text1" = "Sigue todo";
+"onboarding4Text2" = "Con el calendario puede rastrear fácilmente todas tus emociones y sentimientos";
+"onboarding4Button" = "Empezar";

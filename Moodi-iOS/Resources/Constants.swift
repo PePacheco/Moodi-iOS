@@ -5,9 +5,18 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 14/05/21.
 //
 
-import Foundation
+import SwiftUI
 
 struct Constants {
+    
+    var sentenceOfTheDay: String  {
+        let intDay = Date().intDay ?? 1
+        if intDay >= dailyTips.count {
+            return dailyTips[0]
+        }
+        return dailyTips[intDay - 1]
+    }
+    
     let dailyTips: [String] = [
         NSLocalizedString("tip1", comment: ""),
         NSLocalizedString("tip2", comment: ""),
@@ -32,4 +41,5 @@ struct Constants {
         NSLocalizedString("tip21", comment: ""),
         NSLocalizedString("tip22", comment: "")
     ]
+    
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DailyQuotesView: View {
+    var constants: Constants = Constants()
     let screenSize: CGSize
     let yesterdayObjective: String
     
@@ -17,7 +18,7 @@ struct DailyQuotesView: View {
             .frame(width: screenSize.width*0.65, height: screenSize.width*0.65)
             .overlay(
                 TabView {
-                    SentenceOfTheDay(sentence: NSLocalizedString("DailyQuotesTipLabel", comment: ""), screenSize: screenSize, text: "Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
+                    SentenceOfTheDay(sentence: NSLocalizedString("DailyQuotesTipLabel", comment: ""), screenSize: screenSize, text: constants.sentenceOfTheDay)
                     
                     SentenceOfTheDay(sentence: NSLocalizedString("DailyQuotesObjectiveLabel", comment: ""), screenSize: screenSize, text: yesterdayObjective)
                 }

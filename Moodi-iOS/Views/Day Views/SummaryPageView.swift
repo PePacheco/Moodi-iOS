@@ -9,12 +9,13 @@ import SwiftUI
 
 struct SummaryPageView: View {
     @EnvironmentObject private var preferences: PreferencesStore
+    @EnvironmentObject private var databaseManager: DatabaseManager
     @Binding var isPresentingDayMainView: Bool
     let day: Day
     let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack (alignment: .center, spacing: 20){
                 HStack {
                     Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))
@@ -39,7 +40,7 @@ struct SummaryPageView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(LocalizedStringKey("Save")) {
-                    let _ = DatabaseManager.shared.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
+                    let _ = databaseManager.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
                     self.isPresentingDayMainView.toggle()
                 }
             }

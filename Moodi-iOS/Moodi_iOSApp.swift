@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MyMood_iOSApp: App {
     @StateObject private var preferences: PreferencesStore = PreferencesStore()
-    @ObservedObject private var databaseManager: DatabaseManager = DatabaseManager.shared
+    @StateObject private var databaseManager: DatabaseManager = DatabaseManager.shared
     
     var body: some Scene {
         WindowGroup {

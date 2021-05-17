@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LastNdaysView: View {
-    let screenSize: CGSize = UIScreen.main.bounds.size
+    @EnvironmentObject private var databaseManager: DatabaseManager
     @State private var lastNDays = 30
+    let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
         NavigationView {
@@ -22,7 +23,7 @@ struct LastNdaysView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(Color("callToAction"))
-                            Text("Ver calendário")
+                            Text(LocalizedStringKey("ViewCalendar"))
                                 .foregroundColor(Color("callToAction"))
                                 .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                         }
@@ -35,7 +36,7 @@ struct LastNdaysView: View {
                             .font(.system(size: screenSize.height*0.020, weight: .regular, design: .rounded))
                         Text("1 " + NSLocalizedString("Year", comment: "")).tag(365)
                             .font(.system(size: screenSize.height*0.020, weight: .regular, design: .rounded))
-                        Text(NSLocalizedString("All Time", comment: "")).tag(DatabaseManager.shared.days.count)
+                        Text(NSLocalizedString("All Time", comment: "")).tag(databaseManager.days.count)
                             .font(.system(size: screenSize.height*0.020, weight: .regular, design: .rounded))
                     })
                     .pickerStyle(SegmentedPickerStyle())
@@ -44,16 +45,16 @@ struct LastNdaysView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text("Humores")
+                    Text(LocalizedStringKey("Moods"))
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
-                    PieChart(entries: dataDonutChart(last30days: DatabaseManager.shared.loadLastNDays(N: lastNDays)))
+                    PieChart(entries: dataDonutChart(last30days: databaseManager.loadLastNDays(N: lastNDays)))
                         .padding()
                         .frame(width: screenSize.width*0.9, height: 300)
                         .asCard()
                         .padding(.bottom, 16)
-                    Text("Sentimentos")
+                    Text(LocalizedStringKey("Feelings"))
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
-                    PieChart(entries: dataDonutChart2(last30days: DatabaseManager.shared.loadLastNDays(N: lastNDays)))
+                    PieChart(entries: dataDonutChart2(last30days: databaseManager.loadLastNDays(N: lastNDays)))
                         .padding()
                         .frame(width: screenSize.width*0.9, height: 300)
                         .asCard()
@@ -67,5 +68,6 @@ struct LastNdaysView: View {
 struct lastNdaysView_Previews: PreviewProvider {
     static var previews: some View {
         LastNdaysView()
+            .environmentObject(DatabaseManager.shared)
     }
 }
