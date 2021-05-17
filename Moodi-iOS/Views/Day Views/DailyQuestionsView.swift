@@ -22,7 +22,7 @@ struct DailyQuestionsView: View {
         self.selectedFeelings = selectedFeelings
         self.selectedMood = selectedMood
         self.screenSize = screenSize
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 24, weight: .bold)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 22, weight: .bold)]
     }
     
     private let questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
