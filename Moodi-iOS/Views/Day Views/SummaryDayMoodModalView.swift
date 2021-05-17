@@ -19,8 +19,8 @@ struct SummaryDayMoodModalView: View {
                 .font(.system(size: screenSize.width*0.05, weight: .regular, design: .rounded))
             TagCloudView(tags: Array(day.feelings))
         }
-        .padding(.leading, screenSize.width*0.02)
-        .frame(width: screenSize.width*0.9, height: screenSize.height*0.25, alignment: .leading)
+        .padding(.leading, screenSize.width*0.05)
+        .frame(width: screenSize.width*0.9, height: Array(day.feelings).count > 5 ?  screenSize.height*0.26 : screenSize.height*0.20, alignment: .leading)
     }
 }
 

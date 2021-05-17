@@ -20,9 +20,9 @@ struct DarkModeView: View {
                 .font(.system(size: screenSize.height*0.025, weight: .bold, design: .rounded))
             VStack {
                 Picker(selection: $mode, label: Text("Which mode do you want to choose?")) {
-                    Text("System").tag(InternalColorScheme.auto)
-                    Text("Dark Mode").tag(InternalColorScheme.dark)
-                    Text("Light Mode").tag(InternalColorScheme.light)
+                    Text(LocalizedStringKey("System")).tag(InternalColorScheme.auto)
+                    Text(LocalizedStringKey("Dark Mode")).tag(InternalColorScheme.dark)
+                    Text(LocalizedStringKey("Light Mode")).tag(InternalColorScheme.light)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .onChange(of: mode, perform: { value in

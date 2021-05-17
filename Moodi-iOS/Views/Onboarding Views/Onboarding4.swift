@@ -16,11 +16,11 @@ struct Onboarding4: View {
         VStack {
             VStack(alignment:.leading){
                 
-                Text("Keep track of everything")
+                Text(LocalizedStringKey("onboarding4Text1"))
                     .font(.system(size: screenSize.height*0.050, weight: .bold))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                 
-                Text("With the calendar you can keep track of all your emotions and fellings very easily. ")
+                Text(LocalizedStringKey("onboarding4Text2"))
                     .font(.system(size: screenSize.height*0.02, weight: .medium))
                     .foregroundColor(Color(hex: 0xF2F2F7))
                     .padding(.trailing,screenSize.width*0.1)
@@ -34,7 +34,7 @@ struct Onboarding4: View {
             Button(action: {
                 self.shouldShowOnboarding.toggle()
             }, label: {
-                Text("Get Started")
+                Text(LocalizedStringKey("onboarding4Button"))
                     .font(.system(size: 17, weight: .medium))
                     .padding()
                     .frame(width: screenSize.width*0.4, height: screenSize.height*0.05)

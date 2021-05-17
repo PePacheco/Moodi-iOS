@@ -5,6 +5,39 @@
   Created by Lucca Molon on 03/05/21.
   
 */
+
+// Moods
+"Moods" = "Humores";
+"veryHappy" = "Muito Feliz";
+"happy" = "Feliz";
+"neutral" = "Neutro";
+"sad" = "Triste";
+"verySad" = "Muito Triste";
+
+// Feelings
+"Feelings" = "Sentimentos";
+"anxiety" = "Ansiedade";
+"insecure" = "Insegurança";
+"confident" = "Confiança";
+"relaxed" = "Relaxamento";
+"angry" = "Raiva";
+"tired" = "Cansaço";
+"proud" = "Orgulho";
+"loving" = "Amor";
+
+// Notifications
+"NotificationBody" = "Venha cadastrar seu humor e refletir sobre seu dia";
+"NotificationTitle" = "Esqueceu de mim?";
+
+// Days of the week
+"Monday" = "S";
+"Tuesday" = "T";
+"Wednesday" = "Q";
+"Thursday" = "Q";
+"Friday" = "S";
+"Saturday" = "S";
+"Sunday" = "D";
+
 "ContentView_Label_Hello" = "Olá Mundo";
 "WeekSummaryLabel" = "Sua Semana";
 "WeekSummaryDay" = "dias";
@@ -15,24 +48,6 @@
 "DayMainViewNavBarTitle" = "Hoje";
 "PickYourMood" = "Selecione seu humor";
 "PickYourFeelings" = "O que você sentiu hoje";
-
-// Moods
-"veryHappy" = "Muito Feliz";
-"happy" = "Feliz";
-"neutral" = "Neutro";
-"sad" = "Triste";
-"verySad" = "Muito Triste";
-
-// Feelings
-"anxiety" = "Ansiedade";
-"insecure" = "Insegurança";
-"confident" = "Confiança";
-"relaxed" = "Relaxamento";
-"angry" = "Raiva";
-"tired" = "Cansaço";
-"proud" = "Orgulho";
-"loving" = "Amor";
-
 "AddingNewDayMainLabel" = "Como você está se sentindo hoje?";
 "Close" = "Fechar";
 "Next" = "Próximo";
@@ -57,6 +72,8 @@
 "Notification" = "Notificação";
 "Notification settings" = "Definir lembrete";
 "Dark Mode" = "Modo Escuro";
+"System" = "Sistema";
+"Light Mode" = "Modo Claro";
 "Night Mode" = "Modo Noturno";
 "Following system" = "Seguir sistema";
 "Days" = "dias";
@@ -64,8 +81,48 @@
 "Year" = "ano";
 "All Time" = "tudo";
 "No Objective Added" = "Você não adicionou um objetivo ontem";
+"ViewCalendar" = "Ver calendário";
+"Calendar" = "Calendário";
+
+// Daily tips
+"tip1" = "Saia para dar uma caminhada";
+"tip2" = "Assista seu filme predileto";
+"tip3" = "Ligue para um amigo";
+"tip4" = "Escute uma música que lembre bons momentos";
+"tip5" = "Comece a ler um livro";
+"tip6" = "Aprenda uma receita nova";
+"tip7" = "Coma uma fruta";
+"tip8" = "Limpe sua pele";
+"tip9" = "Arrume e mantenha seu ambiente organizado";
+"tip10" = "Mande uma mensagem para uma pessoa que voce ame";
+"tip11" = "Escute uma música nova";
+"tip12" = "Agradeça a alguém";
+"tip13" = "Escreva uma lista de gratidões";
+"tip14" = "Faça uma lista de conquistas";
+"tip15" = "Use a sua roupa favorita";
+"tip16" = "Faça uma lista de objetivos";
+"tip17" = "Beba água";
+"tip18" = "Abrace alguém";
+"tip19" = "Plante uma árvore";
+"tip20" = "Pergunte como foi o dia de alguém que você gosta";
+"tip21" = "Organize o seu calendário";
+"tip22" = "Leia um capítulo de um livro";
+
+// Onboarding 1
+"onboarding1Text1" = "Bem vindo!";
+"onboarding1Text2" = "Moodi ajuda você a criar um diário para controlar seus dias.";
 
 
-// Notifications
-"NotificationBody" = "Venha cadastrar seu humor e refletir sobre seu dia";
-"NotificationTitle" = "Esqueceu de mim?";
+// Onboarding 2
+"onboarding2Text1" = "Adicione emoções";
+"onboarding2Text2" = "Você pode escolher como se sentiu durante o dia para ajudá-lo a entender melhor suas emoções.";
+
+
+// Onboarding 3
+"onboarding3Text1" = "Reflita sobre o seu dia";
+"onboarding3Text2" = "Todos os dias você pode responder a perguntas para fazer você pensar sobre o seu dia.";
+
+// Onboarding 4
+"onboarding4Text1" = "Acompanhe tudo";
+"onboarding4Text2" = "Com o calendário, você pode acompanhar facilmente todas as suas emoções e sentimentos.";
+"onboarding4Button" = "Começar";

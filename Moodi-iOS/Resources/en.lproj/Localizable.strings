@@ -15,24 +15,6 @@
 "DayMainViewNavBarTitle" = "Today";
 "PickYourMood" = "Choose your mood";
 "PickYourFeelings" = "What did you felt today?";
-
-// Moods
-"veryHappy" = "Very Happy";
-"happy" = "Happy";
-"neutral" = "Neutral";
-"sad" = "Sad";
-"verySad" = "Very Sad";
-
-// Feelings
-"anxiety" = "Anxious";
-"insecure" = "Insecure";
-"confident" = "Confident";
-"relaxed" = "Relaxed";
-"angry" = "Angry";
-"tired" = "Tired";
-"proud" = "Proud";
-"loving" = "Loving";
-
 "AddingNewDayMainLabel" = "How are you feeling today?";
 "Close" = "Close";
 "Next" = "Next";
@@ -47,7 +29,6 @@
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
 "AddingNewDayQuestionsGoodAlert" = "Your day was succefully saved";
 "SummaryPageTodayFeelingsTitle" = "Feelings:";
-
 "SummaryTodayQuestionTitle" = "Questions";
 "ButtonDoneText" = "Done";
 "SummaryPageTodayMoodTitle" = "Today's Mood";
@@ -58,6 +39,8 @@
 "Notification" = "Notification";
 "Notification settings" = "Define reminder";
 "Dark Mode" = "Dark Mode";
+"System" = "System";
+"Light Mode" = "Light Mode";
 "Night Mode" = "Night Mode";
 "Following system" = "Following system";
 "Days" = "days";
@@ -65,9 +48,84 @@
 "Year" = "year";
 "All Time" = "all time";
 "No Objective Added" = "No objective added yesterday";
+"ViewCalendar" = "View calendar";
+"Calendar" = "Calendar";
 
+// Moods
+"Moods" = "Moods";
+"veryHappy" = "Very Happy";
+"happy" = "Happy";
+"neutral" = "Neutral";
+"sad" = "Sad";
+"verySad" = "Very Sad";
+
+// Feelings
+"Feelings" = "Feelings";
+"anxiety" = "Anxious";
+"insecure" = "Insecure";
+"confident" = "Confident";
+"relaxed" = "Relaxed";
+"angry" = "Angry";
+"tired" = "Tired";
+"proud" = "Proud";
+"loving" = "Loving";
 
 
 // Notifications
 "NotificationBody" = "Come register your mood and reflect about your day";
 "NotificationTitle" = "Forgot about me?";
+
+
+// Daily tips
+"tip1" = "Go out for a walk";
+"tip2" = "Watch your favorite movie";
+"tip3" = "Call a friend";
+"tip4" = "Listen to a song that remind you good moments";
+"tip5" = "Read a book";
+"tip6" = "Learn something new";
+"tip7" = "Eat a fruit";
+"tip8" = "Clean your skin";
+"tip9" = "Clean up your room";
+"tip10" = "Send a message to someone you love";
+"tip11" = "Listen to a new song";
+"tip12" = "Thank someone";
+"tip13" = "Write a gratitude list";
+"tip14" = "Make a list of achievements";
+"tip15" = "Wear your favorite piece of clothing";
+"tip16" = "Make a list of goals";
+"tip17" = "Drink water";
+"tip18" = "Hug someone";
+"tip19" = "Plant a tree";
+"tip20" = "Ask how was the day of someone you like";
+"tip21" = "Organize your calendar ";
+"tip22" = "Read a chapter of a book";
+
+
+// Days of the week
+"Monday" = "M";
+"Tuesday" = "T";
+"Wednesday" = "W";
+"Thursday" = "T";
+"Friday" = "F";
+"Saturday" = "S";
+"Sunday" = "S";
+
+
+// Onboarding 1
+"onboarding1Text1" = "Welcome!";
+"onboarding1Text2" = "Moodi helps you to create an easy diary to keep track of your days.";
+
+
+// Onboarding 2
+"onboarding2Text1" = "Add Emotions";
+"onboarding2Text2" = "You can pick how you felt during the day to help you understand more your emotions."; //You can choose how you are feeling in the day to help you understand more your emotions.
+
+
+// Onboarding 3
+"onboarding3Text1" = "Reflect about your day";
+"onboarding3Text2" = "Everyday you can answer questions to make you think about your day and better youself.";
+
+// Onboarding 4
+"onboarding4Text1" = "Keep track of everything";
+"onboarding4Text2" = "With the calendar you can keep track of all your emotions and fellings very easily.";
+"onboarding4Button" = "Get Started";

@@ -16,6 +16,15 @@ struct DailyQuestionsView: View {
     let selectedMood: Mood
     let screenSize: CGSize
     
+    init(answers: Binding<[String]>, isPresentingDayMainView: Binding<Bool>, selectedFeelings: Set<Feeling>, selectedMood: Mood, screenSize: CGSize) {
+        self._answers = answers
+        self._isPresentingDayMainView = isPresentingDayMainView
+        self.selectedFeelings = selectedFeelings
+        self.selectedMood = selectedMood
+        self.screenSize = screenSize
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 26, weight: .bold)]
+    }
+    
     private let questions: [LocalizedStringKey] = [LocalizedStringKey("Question1"), LocalizedStringKey("Question2"), LocalizedStringKey("Question3")]
     
     var body: some View {
