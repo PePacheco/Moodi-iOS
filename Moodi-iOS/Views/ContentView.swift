@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @AppStorage("userPassword") var userPassword = ""
+    var isPasswordSet = UserDefaults.standard.bool(forKey: "isPasswordSet")
     @State private var tab: Int = 2
     @EnvironmentObject private var preferences: PreferencesStore
-
+    
     
     var body: some View {
         if shouldShowOnboarding {
@@ -20,6 +22,8 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 MainonboardingView(shouldShowOnboarding: $shouldShowOnboarding)
             }
+        } else if isPasswordSet {
+            FaceTouchIDView()
         } else {
             if preferences.getStoredColorScheme() == .auto {
                 TabMainView(tab: $tab)

@@ -15,7 +15,7 @@ struct SettingsMainView: View {
         NavigationView {
             ScrollView{
                 VStack(spacing: 30) {
-                    SecurityView(screenSize: screenSize)
+                    SecurityView(screenSize: screenSize, handler: {_, _ in})
                     
                     NotificationView(screenSize: screenSize)
                     

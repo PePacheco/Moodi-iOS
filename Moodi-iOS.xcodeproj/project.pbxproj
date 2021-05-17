@@ -36,6 +36,8 @@
 		94315553264C52A70028BFAD /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315552264C52A70028BFAD /* Onboarding3.swift */; };
 		94315556264C54340028BFAD /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315555264C54340028BFAD /* Onboarding4.swift */; };
 		94315559264C66160028BFAD /* MainonboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315558264C66160028BFAD /* MainonboardingView.swift */; };
+		B20054292652ECAE00E61F40 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20054282652ECAE00E61F40 /* PasscodeView.swift */; };
+		B200542B2652ED3500E61F40 /* FaceTouchIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200542A2652ED3500E61F40 /* FaceTouchIDView.swift */; };
 		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
 		B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2662A2641E02F008B110B /* SpeechMainView.swift */; };
 		DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */; };
@@ -88,6 +90,9 @@
 		94315552264C52A70028BFAD /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		94315555264C54340028BFAD /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
 		94315558264C66160028BFAD /* MainonboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainonboardingView.swift; sourceTree = "<group>"; };
+		B20054282652ECAE00E61F40 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
+		B200542A2652ED3500E61F40 /* FaceTouchIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTouchIDView.swift; sourceTree = "<group>"; };
+		B20054342652EEBC00E61F40 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		B2F2662A2641E02F008B110B /* SpeechMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMainView.swift; sourceTree = "<group>"; };
 		DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatisticView.swift; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 		6DAF75A9264AF273006DCB2E /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
+				B20054272652EC6400E61F40 /* Unlock View */,
 				6DAF75AA264AF28A006DCB2E /* SecurityView.swift */,
 				6DAF75AC264AF2B0006DCB2E /* SettingsMainView.swift */,
 				6DAF75AE264AF2D3006DCB2E /* NotificationView.swift */,
@@ -278,6 +284,15 @@
 			path = "Onboarding Views";
 			sourceTree = "<group>";
 		};
+		B20054272652EC6400E61F40 /* Unlock View */ = {
+			isa = PBXGroup;
+			children = (
+				B20054282652ECAE00E61F40 /* PasscodeView.swift */,
+				B200542A2652ED3500E61F40 /* FaceTouchIDView.swift */,
+			);
+			path = "Unlock View";
+			sourceTree = "<group>";
+		};
 		B2F266292641E004008B110B /* Speech Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +371,7 @@
 				Base,
 				"pt-BR",
 				"es-419",
+				ko,
 			);
 			mainGroup = 6DEDABA12640749B006CCDA8;
 			productRefGroup = 6DEDABAB2640749B006CCDA8 /* Products */;
@@ -462,7 +478,9 @@
 				EC6121FC264DB0CD00A6BB03 /* DayCalendar.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
 				DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */,
+				B200542B2652ED3500E61F40 /* FaceTouchIDView.swift in Sources */,
 				94315550264C51400028BFAD /* Onboarding2.swift in Sources */,
+				B20054292652ECAE00E61F40 /* PasscodeView.swift in Sources */,
 				6DF1993A264B4AF900273C0E /* PreferencesManager.swift in Sources */,
 				DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */,
 				6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */,
@@ -480,6 +498,7 @@
 				EC81A5AD2640886D00042FBC /* en */,
 				EC81A5AF264088B000042FBC /* pt-BR */,
 				EC81A5B0264088BD00042FBC /* es-419 */,
+				B20054342652EEBC00E61F40 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -613,7 +632,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 3XP27NL574;
+				DEVELOPMENT_TEAM = 26UK52Y76J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -636,7 +655,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 3XP27NL574;
+				DEVELOPMENT_TEAM = 26UK52Y76J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
