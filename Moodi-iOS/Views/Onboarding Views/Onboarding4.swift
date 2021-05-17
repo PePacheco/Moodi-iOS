@@ -34,7 +34,7 @@ struct Onboarding4: View {
             Button(action: {
                 self.shouldShowOnboarding.toggle()
             }, label: {
-                Text("Get Started")
+                Text(LocalizedStringKey("onboarding4Button"))
                     .font(.system(size: 17, weight: .medium))
                     .padding()
                     .frame(width: screenSize.width*0.4, height: screenSize.height*0.05)

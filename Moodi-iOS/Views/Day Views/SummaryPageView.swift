@@ -14,7 +14,7 @@ struct SummaryPageView: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack (alignment: .center, spacing: 20){
                 HStack {
                     Text(LocalizedStringKey("SummaryPageTodayMoodTitle"))

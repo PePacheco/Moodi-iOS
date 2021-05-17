@@ -15,13 +15,18 @@ struct QuizMainView: View {
     
     private let screenSize: CGSize = UIScreen.main.bounds.size
     
+    init(isPresentingDayMainView: Binding<Bool>) {
+        self._isPresentingDayMainView = isPresentingDayMainView
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.rounded(ofSize: 26, weight: .bold)]
+    }
+    
     var body: some View {
         VStack(spacing: 40) {
             MoodPickerView(screenSize: self.screenSize, selectedMood: $selectedMood)
             
             FeelingSelectView(screenSize: self.screenSize, selectedFeelings: $selectedFeelings)
         }
-        .navigationBarTitle(LocalizedStringKey("AddingNewDayMainLabel"), displayMode: .large)
+        .navigationBarTitle(Text(LocalizedStringKey("AddingNewDayMainLabel")), displayMode: .large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: DailyQuestionsView(answers: $answers, isPresentingDayMainView: $isPresentingDayMainView, selectedFeelings:selectedFeelings, selectedMood: selectedMood, screenSize: screenSize)) {

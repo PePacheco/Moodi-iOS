@@ -5,7 +5,6 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 03/05/21.
 //
 
-import Foundation
 import SwiftUI
 
 extension Color {
@@ -169,4 +168,18 @@ extension Calendar {
     func intervalOfWeek(for date: Date) -> DateInterval? {
         dateInterval(of: .weekOfYear, for: date)
       }
+}
+
+extension UIFont {
+    class func rounded(ofSize size: CGFloat, weight: UIFont.Weight) -> UIFont {
+        let systemFont = UIFont.systemFont(ofSize: size, weight: weight)
+        let font: UIFont
+        
+        if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {
+            font = UIFont(descriptor: descriptor, size: size)
+        } else {
+            font = systemFont
+        }
+        return font
+    }
 }
