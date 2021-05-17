@@ -10,14 +10,14 @@ import SwiftUI
 import Foundation
 
 struct SpeechButton: View {
-    @State private var speechRecognizer: SpeechRecognizer;
+    @State private var speechRecognizer: SpeechRecognizer
     @State private var isPressed: Bool = false
     @State private var actionPop: Bool = false
     @Binding var text: String
     
     init(text: Binding<String>) {
         self._text = text
-        self.speechRecognizer = SpeechRecognizer(text: text)
+        self._speechRecognizer = .init(initialValue: SpeechRecognizer(text: text))
     }
     
     var body: some View {

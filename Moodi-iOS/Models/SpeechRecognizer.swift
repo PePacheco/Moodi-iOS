@@ -69,9 +69,9 @@ public class SpeechRecognizer: ObservableObject{
         recognitionRequest.shouldReportPartialResults = true
         
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest){ result, error in
-            if (result != nil){
-                self.outputText = (result?.transcriptions[0].formattedString)!
-            }
+//            if (result != nil){
+//                self.outputText = (result?.transcriptions[0].formattedString)!
+//            }
             if let result = result{
                 self.outputText = result.transcriptions[0].formattedString
             }

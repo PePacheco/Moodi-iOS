@@ -30,13 +30,13 @@
 "NotificationTitle" = "Esqueceu de mim?";
 
 // Days of the week
-"Monday" = "S";
-"Tuesday" = "T";
+"Monday" = "T";
+"Tuesday" = "Q";
 "Wednesday" = "Q";
-"Thursday" = "Q";
+"Thursday" = "S";
 "Friday" = "S";
-"Saturday" = "S";
-"Sunday" = "D";
+"Saturday" = "D";
+"Sunday" = "S";
 
 "ContentView_Label_Hello" = "Olá Mundo";
 "WeekSummaryLabel" = "Sua Semana";
@@ -107,6 +107,15 @@
 "tip20" = "Pergunte como foi o dia de alguém que você gosta";
 "tip21" = "Organize o seu calendário";
 "tip22" = "Leia um capítulo de um livro";
+"tip23" = "Visite uma cafeteria nova";
+"tip24" = "Compre um presente para você";
+"tip25" = "Faça 15 flexões";
+"tip26" = "Imagine-se daqui 5 anos";
+"tip27" = "Não se compare com os outros";
+"tip28" = "Encontre a felicidade nas pequenas coisas";
+"tip29" = "Faça um exercício físico";
+"tip30" = "Assista um episódio da sua série do momento";
+"tip31" = "Aprenda uma nova palavra em outro idioma";
 
 // Onboarding 1
 "onboarding1Text1" = "Bem vindo!";

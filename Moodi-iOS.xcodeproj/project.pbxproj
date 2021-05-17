@@ -37,7 +37,6 @@
 		94315556264C54340028BFAD /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315555264C54340028BFAD /* Onboarding4.swift */; };
 		94315559264C66160028BFAD /* MainonboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315558264C66160028BFAD /* MainonboardingView.swift */; };
 		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
-		B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2662A2641E02F008B110B /* SpeechMainView.swift */; };
 		DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */; };
 		DE04871E264EEB840025ADCB /* MyWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871D264EEB840025ADCB /* MyWeekView.swift */; };
 		DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36968B26445A100087A696 /* DailyQuestionsView.swift */; };
@@ -48,7 +47,6 @@
 		DECE201E264B779600FCE115 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE201D264B779600FCE115 /* DonutChartView.swift */; };
 		DECE2021264B7C5600FCE115 /* LastNdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE2020264B7C5600FCE115 /* LastNdaysView.swift */; };
 		EC195CC3265208B1003698CC /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC195CC2265208B1003698CC /* SpeechButton.swift */; };
-		EC6121FC264DB0CD00A6BB03 /* DayCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6121FB264DB0CD00A6BB03 /* DayCalendar.swift */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 		EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC984A3F264C62D500BD5AF9 /* CalendarView.swift */; };
@@ -89,7 +87,6 @@
 		94315555264C54340028BFAD /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
 		94315558264C66160028BFAD /* MainonboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainonboardingView.swift; sourceTree = "<group>"; };
 		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		B2F2662A2641E02F008B110B /* SpeechMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechMainView.swift; sourceTree = "<group>"; };
 		DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatisticView.swift; sourceTree = "<group>"; };
 		DE04871D264EEB840025ADCB /* MyWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeekView.swift; sourceTree = "<group>"; };
 		DE36968B26445A100087A696 /* DailyQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionsView.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		DECE201D264B779600FCE115 /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 		DECE2020264B7C5600FCE115 /* LastNdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNdaysView.swift; sourceTree = "<group>"; };
 		EC195CC2265208B1003698CC /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
-		EC6121FB264DB0CD00A6BB03 /* DayCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCalendar.swift; sourceTree = "<group>"; };
 		EC81A5AD2640886D00042FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC81A5AF264088B000042FBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 			children = (
 				B2F266262641DBA7008B110B /* SpeechRecognizer.swift */,
 				6DBA3A7F2640774700383620 /* Day.swift */,
-				EC6121FB264DB0CD00A6BB03 /* DayCalendar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,7 +276,6 @@
 		B2F266292641E004008B110B /* Speech Views */ = {
 			isa = PBXGroup;
 			children = (
-				B2F2662A2641E02F008B110B /* SpeechMainView.swift */,
 				EC195CC2265208B1003698CC /* SpeechButton.swift */,
 			);
 			path = "Speech Views";
@@ -428,7 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF40DB62641C3A9000C320F /* DaySummaryView.swift in Sources */,
-				B2F2662B2641E02F008B110B /* SpeechMainView.swift in Sources */,
 				94315553264C52A70028BFAD /* Onboarding3.swift in Sources */,
 				6DAF75AD264AF2B0006DCB2E /* SettingsMainView.swift in Sources */,
 				DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */,
@@ -459,7 +452,6 @@
 				94315556264C54340028BFAD /* Onboarding4.swift in Sources */,
 				DE8726782643061500C27E74 /* QuizMainView.swift in Sources */,
 				94315559264C66160028BFAD /* MainonboardingView.swift in Sources */,
-				EC6121FC264DB0CD00A6BB03 /* DayCalendar.swift in Sources */,
 				6DBA3A802640774700383620 /* Day.swift in Sources */,
 				DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */,
 				94315550264C51400028BFAD /* Onboarding2.swift in Sources */,

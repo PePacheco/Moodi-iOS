@@ -17,7 +17,7 @@ struct DailyQuizTextInput: View {
     
     var paddingTop: CGFloat {
         if question == LocalizedStringKey("Question3") {
-            return screenSize.height * 0.055
+            return screenSize.height * 0.065
         }
         return screenSize.height * 0.05
     }
