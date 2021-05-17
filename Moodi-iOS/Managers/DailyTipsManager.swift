@@ -5,9 +5,12 @@
 //  Created by Pedro Gomes Rubbo Pacheco on 14/05/21.
 //
 
-import Foundation
+import SwiftUI
 
-struct Constants {
+class DailyTipsManager: ObservableObject {
+    @AppStorage("dailyTipsIndex") private var dailyTipsIndex: Int = 0
+    var sentenceOfTheDay: String = ""
+    
     let dailyTips: [String] = [
         NSLocalizedString("tip1", comment: ""),
         NSLocalizedString("tip2", comment: ""),
@@ -32,4 +35,19 @@ struct Constants {
         NSLocalizedString("tip21", comment: ""),
         NSLocalizedString("tip22", comment: "")
     ]
+    
+    init() {
+        self.getDailyTip()
+    }
+    
+    func getDailyTip() {
+        let dailyTip = dailyTips[dailyTipsIndex]
+        if dailyTipsIndex > 21 {
+            dailyTipsIndex = 0
+        } else {
+            dailyTipsIndex += 1
+        }
+        sentenceOfTheDay = dailyTip
+    }
+    
 }
