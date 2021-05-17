@@ -53,5 +53,7 @@
 	<string>You can view a text transcription of your response in the app</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>We need to unlock your data</string>
 </dict>
 </plist>

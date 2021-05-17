@@ -7,23 +7,15 @@
 */
 "ContentView_Label_Hello" = "전 세계 여러분 안녕하세요";
 "WeekSummaryLabel" = "이번주";
-"WeekSummaryDay" = "";
+"WeekSummaryDay" = "일";//쪼금 이상
 "DailyQuotesTipLabel" = "오늘의 팁";
 "DailyQuotesObjectiveLabel" = "오늘의 목표";
 "DaySummaryLabel" = "하루 요약";
 "DaySummaryMakeReflection" = "오늘 하루를 돌아보기";
 "DayMainViewNavBarTitle" = "오늘";
-"PickYourMood" = "오늘의 기분은 어떠합니까";
-"PickYourFeelings" = "오늘의 감정은 어떠합니까?";
-"anxiety" = "걱정";
-"insecure" = "불안정";
-"confident" = "자신 만만";
-"relaxed" = "편안함";
-"angry" = "화남";
-"tired" = "지침";
-"proud" = "자랑스러움";
-"loving" = "사랑스러움";
-"AddingNewDayMainLabel" = "How are you feeling today?";
+"PickYourMood" = "오늘의 기분";
+"PickYourFeelings" = "오늘의 감정";
+"AddingNewDayMainLabel" = "오늘의 기분은 어떠합니까?";
 "Close" = "닫기";
 "Next" = "다음";
 "Statistics" = "통계";
@@ -33,16 +25,11 @@
 "Question2" = "What could I have done better?";
 "Question3" = "What can I do to be better tomorrow?";
 "AddingNewDayQuestionsQuestion" = "How was your day?";
-"AddingNewDayQuestionsPlaceholder" = "Writte here";
+"AddingNewDayQuestionsPlaceholder" = "Write here";
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
 "AddingNewDayQuestionsGoodAlert" = "Your day was succefully saved";
 "SummaryPageTodayFeelingsTitle" = "감정:";
-"veryHappy" = "매우 행복";
-"happy" = "행복";
-"neutral" = "그저 그럼";
-"sad" = "슬픔";
-"verySad" = "매우 슬픔";
-"SummaryTodayQuestionTitle" = "질문";
+"SummaryTodayQuestionTitle" = "Questions";
 "ButtonDoneText" = "끝";
 "SummaryPageTodayMoodTitle" = "오늘의 기분";
 "SummaryPageViewTitle" = "하루 요약";
@@ -54,6 +41,7 @@
 "Dark Mode" = "다크 모드";
 "Night Mode" = "나이트 모드";
 "Following system" = "시스템 따라가기";
+"System" = "System";
 "Days" = "days";
 "Months" = "months";
 "Year" = "year";
@@ -71,15 +59,15 @@
 "verySad" = "Very Sad";
 
 // Feelings
-"Feelings" = "Feelings";
-"anxiety" = "Anxious";
-"insecure" = "Insecure";
-"confident" = "Confident";
-"relaxed" = "Relaxed";
-"angry" = "Angry";
-"tired" = "Tired";
-"proud" = "Proud";
-"loving" = "Loving";
+"Feelings" = "감정들";
+"anxiety" = "걱정";
+"insecure" = "불안정";
+"confident" = "자신 만만";
+"relaxed" = "편안함";
+"angry" = "화남";
+"tired" = "지침";
+"proud" = "자랑스러움";
+"loving" = "사랑스러움";
 
 
 // Notifications
@@ -119,7 +107,7 @@
 "Thursday" = "T";
 "Friday" = "F";
 "Saturday" = "S";
-"Sunday" = "S";
+"Sunday" = "일";
 
 
 // Onboarding 1
@@ -140,3 +128,4 @@
 "onboarding4Text1" = "Keep track of everything";
 "onboarding4Text2" = "With the calendar you can keep track of all your emotions and fellings very easily.";
 "onboarding4Button" = "Get Started";
+
