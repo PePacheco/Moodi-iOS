@@ -39,7 +39,16 @@ struct Constants {
         NSLocalizedString("tip19", comment: ""),
         NSLocalizedString("tip20", comment: ""),
         NSLocalizedString("tip21", comment: ""),
-        NSLocalizedString("tip22", comment: "")
+        NSLocalizedString("tip22", comment: ""),
+        NSLocalizedString("tip23", comment: ""),
+        NSLocalizedString("tip24", comment: ""),
+        NSLocalizedString("tip25", comment: ""),
+        NSLocalizedString("tip26", comment: ""),
+        NSLocalizedString("tip27", comment: ""),
+        NSLocalizedString("tip28", comment: ""),
+        NSLocalizedString("tip29", comment: ""),
+        NSLocalizedString("tip30", comment: ""),
+        NSLocalizedString("tip31", comment: ""),
     ]
     
 }
