@@ -29,6 +29,9 @@ struct LastNdaysView: View {
                         }
                         .padding(.bottom, 16)
                     }
+                }
+                Divider()
+                VStack(alignment: .leading) {
                     Picker(selection: $lastNDays, label: Text("N days"), content: {
                         Text("30 " + NSLocalizedString("Days", comment: "")).tag(30)
                             .font(.system(size: screenSize.height*0.020, weight: .regular, design: .rounded))
