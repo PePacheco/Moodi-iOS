@@ -44,7 +44,7 @@ struct LastNdaysView: View {
                     })
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(width: screenSize.width*0.9)
-                    .padding(.bottom, 16)
+                    .padding([.bottom, .top], 16)
                 }
                 
                 VStack(alignment: .leading) {
