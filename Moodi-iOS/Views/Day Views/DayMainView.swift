@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DayMainView: View {
     @EnvironmentObject private var databaseManager: DatabaseManager
+    
     let screenSize: CGSize = UIScreen.main.bounds.size
     var body: some View {
         NavigationView {
@@ -27,11 +28,7 @@ struct DayMainView: View {
             }
             .navigationBarTitle(NSLocalizedString("DayMainViewNavBarTitle", comment: ""), displayMode: .inline)
         }
-        .onAppear {
-            DatabaseManager.shared.updateViews()
-        }
     }
-    
 }
 
 struct DayMainView_Previews: PreviewProvider {
