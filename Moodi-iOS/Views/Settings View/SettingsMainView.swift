@@ -15,8 +15,6 @@ struct SettingsMainView: View {
         NavigationView {
             ScrollView{
                 VStack(spacing: 30) {
-                    SecurityView(screenSize: screenSize)
-                    
                     NotificationView(screenSize: screenSize)
                     
                     DarkModeView(screenSize: screenSize, tab: $tab)

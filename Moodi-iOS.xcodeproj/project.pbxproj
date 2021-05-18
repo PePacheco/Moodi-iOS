@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		527AB88A4BCA8F979439A4B3 /* Pods_Moodi_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6453A1CBAB73A8599548519C /* Pods_Moodi_iOS.framework */; };
 		6D5FC7242644782E004D8C04 /* DailyQuizTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */; };
-		6DAF75AB264AF28A006DCB2E /* SecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF75AA264AF28A006DCB2E /* SecurityView.swift */; };
 		6DAF75AD264AF2B0006DCB2E /* SettingsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF75AC264AF2B0006DCB2E /* SettingsMainView.swift */; };
 		6DAF75AF264AF2D3006DCB2E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF75AE264AF2D3006DCB2E /* NotificationView.swift */; };
 		6DAF75B1264AF2EF006DCB2E /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF75B0264AF2EF006DCB2E /* DarkModeView.swift */; };
@@ -57,7 +56,6 @@
 		6453A1CBAB73A8599548519C /* Pods_Moodi_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodi_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0906F226533E6B00F1B91D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuizTextInput.swift; sourceTree = "<group>"; };
-		6DAF75AA264AF28A006DCB2E /* SecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityView.swift; sourceTree = "<group>"; };
 		6DAF75AC264AF2B0006DCB2E /* SettingsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainView.swift; sourceTree = "<group>"; };
 		6DAF75AE264AF2D3006DCB2E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6DAF75B0264AF2EF006DCB2E /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		6DAF75A9264AF273006DCB2E /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
-				6DAF75AA264AF28A006DCB2E /* SecurityView.swift */,
 				6DAF75AC264AF2B0006DCB2E /* SettingsMainView.swift */,
 				6DAF75AE264AF2D3006DCB2E /* NotificationView.swift */,
 				6DAF75B0264AF2EF006DCB2E /* DarkModeView.swift */,
@@ -433,7 +430,6 @@
 				6DBA3A822640776500383620 /* DatabaseManager.swift in Sources */,
 				6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */,
 				6DBCE2762645AD95006B55BE /* SummaryModalView.swift in Sources */,
-				6DAF75AB264AF28A006DCB2E /* SecurityView.swift in Sources */,
 				6DAF75AF264AF2D3006DCB2E /* NotificationView.swift in Sources */,
 				B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */,
 				6DAF75B1264AF2EF006DCB2E /* DarkModeView.swift in Sources */,
