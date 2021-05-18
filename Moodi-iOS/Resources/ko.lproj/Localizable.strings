@@ -33,7 +33,7 @@
 "ButtonDoneText" = "끝";
 "SummaryPageTodayMoodTitle" = "오늘의 기분";
 "SummaryPageViewTitle" = "하루 요약";
-"reflexion" = "하루 되돌아보기";//change to reflection
+"reflection" = "하루 되돌아보기";
 "Security" = "보안";
 "Password" = "비밀번호";
 "Notification" = "알림";
@@ -72,7 +72,7 @@
 
 
 // Notifications
-"NotificationBody" = "오늘 하루는 어땠는지 moodi와 함께 공유해주세요";
+"NotificationBody" = "오늘 하루는 어땠는지 Moodi와 함께 공유해주세요";
 "NotificationTitle" = "저를 잊으셨나요?";
 
 
@@ -102,7 +102,7 @@
 "tip23"= "새로운 카페테리아 방문";
 "tip24"= "선물 구입";
 "tip25"= "푸시 업 15 회 수행";
-"tip26"= "지금으로부터 5 년 후 자신을 상상해보십시오";
+"tip26"= "지금으로부터 5년 후 자신을 상상해보십시오";
 "tip27"= "다른 사람과 비교하지 마십시오";
 "tip28"= "작은 일에서 행복 찾기";
 "tip29"= "운동하러 가기";
