@@ -1,0 +1,140 @@
+/* 
+  Localizable.strings
+  MyMood-iOS
+
+  Created by Lucca Molon on 03/05/21.
+  
+*/
+"ContentView_Label_Hello" = "전 세계 여러분 안녕하세요";
+"WeekSummaryLabel" = "이번주";
+"WeekSummaryDay" = "일";//쪼금 이상
+"DailyQuotesTipLabel" = "오늘의 팁";
+"DailyQuotesObjectiveLabel" = "오늘의 목표";
+"DaySummaryLabel" = "하루 요약";
+"DaySummaryMakeReflection" = "오늘 하루를 돌아보기";
+"DayMainViewNavBarTitle" = "오늘";
+"PickYourMood" = "오늘의 기분";
+"PickYourFeelings" = "오늘의 감정";
+"AddingNewDayMainLabel" = "오늘의 기분은 어떠합니까?";
+"Close" = "닫기";
+"Next" = "다음";
+"Statistics" = "통계";
+"Configurations" = "설정";
+"Save" = "저장";
+"Question1" = "오늘 내가 뭘 잘했을까?";
+"Question2" = "오늘 내가 뭘 더 잘할 수 있었을까?";
+"Question3" = "내일은 무엇을 더 잘할 수 있을까?";
+"AddingNewDayQuestionsQuestion" = "오늘 하루 어떠셨나요?";
+"AddingNewDayQuestionsPlaceholder" = "여기에 적으시오";
+"AddingNewDayQuestionsBadAlert" = "무언가 잘못되었습니다";
+"AddingNewDayQuestionsGoodAlert" = "오늘 하루가 성공적으로 저장되었습니다";
+"SummaryPageTodayFeelingsTitle" = "감정:";
+"SummaryTodayQuestionTitle" = "질문";
+"ButtonDoneText" = "끝";
+"SummaryPageTodayMoodTitle" = "오늘의 기분";
+"SummaryPageViewTitle" = "하루 요약";
+"reflexion" = "하루 되돌아보기";//change to reflection
+"Security" = "보안";
+"Password" = "비밀번호";
+"Notification" = "알림";
+"Notification settings" = "알림 설정";
+"Dark Mode" = "다크 모드";
+"Light Mode" = "라이트 모드";
+"Night Mode" = "나이트 모드";
+"Following system" = "시스템 따라가기";
+"System" = "시스템";
+"Days" = "일";
+"Months" = "주";
+"Year" = "년";
+"All Time" = "모두";
+"No Objective Added" = "아직 저장된 목표가 없습니다";
+"ViewCalendar" = "캘린더 보기";
+"Calendar" = "캘린더";
+
+// Moods
+"Moods" = "기분";
+"veryHappy" = "매우 행복";
+"happy" = "행복";
+"neutral" = "그저 그럼";
+"sad" = "슬픔";
+"verySad" = "매우 슬픔";
+
+// Feelings
+"Feelings" = "감정들";
+"anxiety" = "걱정되는";
+"insecure" = "불안정한";
+"confident" = "자신 만만한";
+"relaxed" = "편안한";
+"angry" = "화가 난";
+"tired" = "지친";
+"proud" = "자랑스러운";
+"loving" = "사랑스러운";
+
+
+// Notifications
+"NotificationBody" = "오늘 하루는 어땠는지 moodi와 함께 공유해주세요";
+"NotificationTitle" = "저를 잊으셨나요?";
+
+
+// Daily tips
+"tip1" = "산책하기";
+"tip2" = "제일 좋아하는 영화보기";
+"tip3" = "친구에게 전화 하기";
+"tip4" = "제일 좋아하는 음악듣기";
+"tip5" = "책 읽기";
+"tip6" = "새로운 것에 도전하기";
+"tip7" = "과일 먹기";
+"tip8" = "피부 관리하기";
+"tip9" = "방 청소 하기";
+"tip10" = "사랑하는 사람에게 문자 보내기";
+"tip11" = "새로운 음악듣기";
+"tip12" = "누군가에게 감사해하기";
+"tip13" = "감사 리스트 적기";
+"tip14" = "성취 리스트 적기";
+"tip15" = "제일 좋아하는 옷 입기";
+"tip16" = "목표 목록 만들기";
+"tip17" = "물 마시기";
+"tip18" = "누군가 안아주기";
+"tip19" = "나무 심기";
+"tip20" = "주변 사람에게 안부 인사 전하기";
+"tip21" = "캘린더 정리하기";
+"tip22" = "책 한 챕터 읽기";
+"tip23" = "";
+"tip24" = "";
+"tip25" = "";
+"tip26" = "";
+"tip27" = "";
+"tip28" = "";
+"tip29" = "";
+"tip30" = "";
+"tip31" = "";
+
+
+// Days of the week
+"Monday" = "월";
+"Tuesday" = "화";
+"Wednesday" = "수";
+"Thursday" = "목";
+"Friday" = "금";
+"Saturday" = "토";
+"Sunday" = "일";
+
+
+// Onboarding 1
+"onboarding1Text1" = "환영합니다!";
+"onboarding1Text2" = "저희 Moodi는 하루를 기록함으로써 당신의 일상을 관리해드립니다.";
+
+
+// Onboarding 2
+"onboarding2Text1" = "감정 추가";
+"onboarding2Text2" = "특정 감정들을 선택함으로써 오늘 어떠한 하루를 보냈는지 더 정확히 알 수 있을 것입니다."; //You can choose how you are feeling in the day to help you understand more your emotions.
+
+
+// Onboarding 3
+"onboarding3Text1" = "오늘 하루 되돌아보기";
+"onboarding3Text2" = "매일 스스로에게 질문하고 답 함으로써 오늘 하루를 이해하고 더 나은 본인을 기대할 수 있을 것입니다.";
+
+// Onboarding 4
+"onboarding4Text1" = "일상 속 모든 것 관리";
+"onboarding4Text2" = "캘린더에서 항상 관리되는 일상 속 모든 기분들과 감정들을 보실 수 있습니다.";
+"onboarding4Button" = "시작하기";
