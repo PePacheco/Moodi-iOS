@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CalendarStatisticView: View {
     @EnvironmentObject private var databaseManager: DatabaseManager
-    @State private var dateInterval: DateInterval = DateInterval()
     let screenSize: CGSize = UIScreen.main.bounds.size
+    @State private var date: Date = Date()
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -37,17 +37,38 @@ struct CalendarStatisticView: View {
                     .padding(.top, 16)
                         
                 }
-                CalendarView(interval: dateInterval) { date in
+                HStack {
+                    Button{
+                        date = date.monthBefore
+                    }label: {
+                        Image(systemName: "chevron.left.circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color("primaryText"))
+                    }
+                    Spacer()
+                    Button{
+                        date = date.monthAfter
+                    }label: {
+                        Image(systemName: "chevron.right.circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color("primaryText"))
+                    }
+                    
+                }
+                .frame(width: screenSize.width*0.8)
+                .padding(.top)
+                
+                CalendarView(interval: DateInterval(start: date, end: date)) { date in
                     Text(date.day)
                         .padding(8)
                 }
                 .frame(width: screenSize.width * 0.9)
+                .padding(.top, -70)
             }
         }
         .navigationBarTitle(LocalizedStringKey("Calendar"), displayMode: .inline)
-        .onAppear {
-            dateInterval =  DateInterval(start: databaseManager.getFirstDay(), end: Date())
-        }
     }
 }
 

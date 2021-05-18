@@ -52,15 +52,16 @@ struct LastNdaysView: View {
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                     PieChart(entries: dataDonutChart(last30days: databaseManager.loadLastNDays(N: lastNDays)))
                         .padding()
-                        .frame(width: screenSize.width*0.9, height: 300)
+                        .frame(width: screenSize.width*0.9, height: 320)
                         .asCard()
                         .padding(.bottom, 16)
                     Text(LocalizedStringKey("Feelings"))
                         .font(.system(size: screenSize.height*0.022, weight: .semibold, design: .rounded))
                     PieChart(entries: dataDonutChart2(last30days: databaseManager.loadLastNDays(N: lastNDays)))
                         .padding()
-                        .frame(width: screenSize.width*0.9, height: 300)
+                        .frame(width: screenSize.width*0.9, height: 320)
                         .asCard()
+                        .padding(.bottom, 16)
                 }
             }
             .navigationBarTitle(LocalizedStringKey("Statistics"), displayMode: .inline)

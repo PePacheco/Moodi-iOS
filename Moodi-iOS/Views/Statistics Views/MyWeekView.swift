@@ -36,6 +36,7 @@ struct MyWeekView: View {
                             .frame(width: screenSize.width*0.1, height: screenSize.height*0.1)
                             .foregroundColor(Color(UIColor.systemGray))
                             .overlay(Text(day.dayOfWeek() ?? "").font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded)))
+                            .opacity(0.4)
                             .padding(.horizontal, screenSize.width*0.004)
                     }
                 }
