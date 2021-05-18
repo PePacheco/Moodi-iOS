@@ -20,7 +20,6 @@
 		6DBCE2782645AD9C006B55BE /* SummaryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCE2772645AD9C006B55BE /* SummaryPageView.swift */; };
 		6DEDABAE2640749B006CCDA8 /* Moodi_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */; };
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
-		6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB12640749C006CCDA8 /* Assets.xcassets */; };
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
 		6DF1993A264B4AF900273C0E /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF19939264B4AF900273C0E /* PreferencesManager.swift */; };
 		6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAD2641B56B000C320F /* TabMainView.swift */; };
@@ -39,6 +38,7 @@
 		DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */; };
 		DE04871E264EEB840025ADCB /* MyWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871D264EEB840025ADCB /* MyWeekView.swift */; };
 		DE36968C26445A100087A696 /* DailyQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36968B26445A100087A696 /* DailyQuestionsView.swift */; };
+		DE6597FE26542013000FACFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6597FD26542013000FACFD /* Assets.xcassets */; };
 		DE87265226408CC800C27E74 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87265126408CC800C27E74 /* NotificationManager.swift */; };
 		DE8726782643061500C27E74 /* QuizMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8726772643061500C27E74 /* QuizMainView.swift */; };
 		DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87267B2643064A00C27E74 /* MoodPickerView.swift */; };
@@ -68,7 +68,6 @@
 		6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodi-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEDABAD2640749B006CCDA8 /* Moodi_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moodi_iOSApp.swift; sourceTree = "<group>"; };
 		6DEDABAF2640749B006CCDA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6DEDABB12640749C006CCDA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF19939264B4AF900273C0E /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatisticView.swift; sourceTree = "<group>"; };
 		DE04871D264EEB840025ADCB /* MyWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeekView.swift; sourceTree = "<group>"; };
 		DE36968B26445A100087A696 /* DailyQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionsView.swift; sourceTree = "<group>"; };
+		DE6597FD26542013000FACFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE87265126408CC800C27E74 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		DE8726772643061500C27E74 /* QuizMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMainView.swift; sourceTree = "<group>"; };
 		DE87267B2643064A00C27E74 /* MoodPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				6DFB34B3264F219A0074A1B4 /* Constants.swift */,
-				6DEDABB12640749C006CCDA8 /* Assets.xcassets */,
 				6DBA3A832640778700383620 /* Extensions.swift */,
+				DE6597FD26542013000FACFD /* Assets.xcassets */,
 				EC81A5AE2640886D00042FBC /* Localizable.strings */,
 				EC81A5B12641E27E00042FBC /* Utilities.swift */,
 			);
@@ -366,8 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */,
+				DE6597FE26542013000FACFD /* Assets.xcassets in Resources */,
 				EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */,
-				6DEDABB22640749C006CCDA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

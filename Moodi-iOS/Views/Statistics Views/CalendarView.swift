@@ -46,6 +46,7 @@ struct CalendarView<DateView>: View where DateView: View {
                                     content(date).id(date)
                                         .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
                                         .background(Circle().fill(Color(UIColor.systemGray)))
+                                        .opacity(0.4)
                                 }
                             } else {
                                 content(date).hidden()
@@ -65,12 +66,11 @@ struct CalendarView<DateView>: View where DateView: View {
     }
 
     private func header(for month: Date) -> some View {
-        let component = calendar.component(.month, from: month)
-        let formatter = component == 1 ? DateFormatter.monthAndYear : .month
+        let formatter = DateFormatter.monthAndYear
 
         return Group {
             if showHeaders {
-                Text(formatter.string(from: month))
+                Text(formatter.string(from: month).capitalized)
                     .font(.title)
                     .padding()
             }
