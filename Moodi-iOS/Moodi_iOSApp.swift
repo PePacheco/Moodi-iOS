@@ -11,22 +11,19 @@ import SwiftUI
 struct MyMood_iOSApp: App {
     @StateObject private var preferences: PreferencesStore = PreferencesStore()
     @StateObject private var databaseManager: DatabaseManager = DatabaseManager.shared
-    @Environment(\.scenePhase) var scenePhase
+    private let didBecomeActive = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(preferences)
                 .environmentObject(databaseManager)
-                .onChange(of: scenePhase) { newPhase in
-                    if newPhase == .inactive {
-                        databaseManager.updateViews()
-                    } else if newPhase == .active {
-                        databaseManager.updateViews()
-                    } else if newPhase == .background {
-                        databaseManager.updateViews()
-                    }
+                .onAppear {
+                    SpeechRecognizer.requestStatus()
                 }
+                .onReceive(didBecomeActive, perform: { _ in
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                })
         }
     }
 }
