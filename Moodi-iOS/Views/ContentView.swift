@@ -23,9 +23,14 @@ struct ContentView: View {
         } else {
             if preferences.getStoredColorScheme() == .auto {
                 TabMainView(tab: $tab)
+            } else if preferences.getStoredColorScheme() == .dark{
+                TabMainView(tab: $tab)
+                    .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+                    .preferredColorScheme(.dark)
             } else {
                 TabMainView(tab: $tab)
                     .colorScheme(preferences.getStoredColorScheme().systemColorScheme())
+                    .preferredColorScheme(.light)
             }
         }
     }
