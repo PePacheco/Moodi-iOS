@@ -603,8 +603,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 26UK52Y76J;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -612,7 +613,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.Moodi-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -626,8 +627,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Moodi-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 26UK52Y76J;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Moodi-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -635,7 +637,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pedropacheco.Moodi-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

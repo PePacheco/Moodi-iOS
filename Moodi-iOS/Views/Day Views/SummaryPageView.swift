@@ -27,7 +27,7 @@ struct SummaryPageView: View {
                 .frame(width: screenSize.width*0.9)
                 SummaryDayMoodModalView(day: day)
                     .asCard()
-                Text(LocalizedStringKey("reflexion"))
+                Text(LocalizedStringKey("reflection"))
                     .foregroundColor(Color("primaryText"))
                     .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
                     .padding(.top)
