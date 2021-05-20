@@ -13,6 +13,12 @@ import SwiftUI
 public class SpeechRecognizer: ObservableObject{
     init(text: Binding<String>){
         
+        recognitionTask?.cancel()
+        self.recognitionTask = nil
+        self._outputText = text
+    }
+    
+    public static func requestStatus() {
         SFSpeechRecognizer.requestAuthorization{ authStatus in
             OperationQueue.main.addOperation {
                 switch authStatus {
@@ -33,10 +39,6 @@ public class SpeechRecognizer: ObservableObject{
                 }
             }
         }
-        
-        recognitionTask?.cancel()
-        self.recognitionTask = nil
-        self._outputText = text
     }
     
     func startRecording(){

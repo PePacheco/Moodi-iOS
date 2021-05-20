@@ -12,7 +12,7 @@ import Foundation
 struct SpeechButton: View {
     @State private var speechRecognizer: SpeechRecognizer
     @State private var isPressed: Bool = false
-    @State private var actionPop: Bool = false
+    @State private var isDenied: Bool = false
     @Binding var text: String
     
     init(text: Binding<String>) {
@@ -23,8 +23,8 @@ struct SpeechButton: View {
     var body: some View {
         
         Button(action: {
-            if(self.speechRecognizer.getSpeechStatus() == "Denied"){
-                self.actionPop.toggle()
+            if(self.speechRecognizer.getSpeechStatus() == "Denied - Close the App"){
+                self.isDenied.toggle()
             }else{
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.3, blendDuration: 0.3)){
                     self.speechRecognizer.isRecording.toggle()
@@ -39,9 +39,9 @@ struct SpeechButton: View {
                .foregroundColor(.white)
                 .background(self.isPressed ? Circle().foregroundColor(.red).frame(width: 50, height: 50) : Circle().foregroundColor(.blue).frame(width: 30, height: 30))
         }
-        .actionSheet(isPresented: $actionPop){
-            ActionSheet(title: Text("ERROR: - 1"), message: Text("Access Denied by User"), buttons: [ActionSheet.Button.destructive(Text("Reinstall the Appp"))])
-        }
+        .alert(isPresented: $isDenied, content: {
+            Alert(title: Text("Oops"), message: Text("Go to the preferences and allow the app to record your microphone"), dismissButton: .default(Text("OK")))
+        })
     }
 }
 

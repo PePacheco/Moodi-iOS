@@ -19,7 +19,7 @@ struct DayMainView: View {
                         .padding(.bottom, screenSize.height*0.04)
                     
                     DailyQuotesView(screenSize: screenSize, yesterdayObjective: databaseManager.getDayInStorage(date: Date().dayBefore)?.answers[2] ?? NSLocalizedString("No Objective Added", comment: ""))
-                        .padding(.bottom, screenSize.height*0.08)
+                        .padding(.bottom, screenSize.height*0.06)
                     
                     DaySummaryView(screenSize: screenSize)
                     

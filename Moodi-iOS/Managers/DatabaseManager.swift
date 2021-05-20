@@ -16,10 +16,6 @@ class DatabaseManager: ObservableObject {
     private init(){
         days = Self.loadAllDays()
     }
-    
-    func updateViews() {
-        objectWillChange.send()
-    }
         
     func store(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
         objectWillChange.send()

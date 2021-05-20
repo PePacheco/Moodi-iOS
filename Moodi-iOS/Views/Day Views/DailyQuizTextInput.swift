@@ -11,7 +11,6 @@ struct DailyQuizTextInput: View {
     @Binding var text: String
     @Binding var textHeight: CGFloat
     var question: LocalizedStringKey
-    @EnvironmentObject var speechRecognizer: SpeechRecognizer
     private let screenSize: CGSize = UIScreen.main.bounds.size
 
     
