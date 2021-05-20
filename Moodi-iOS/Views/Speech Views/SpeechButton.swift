@@ -23,7 +23,7 @@ struct SpeechButton: View {
     var body: some View {
         
         Button(action: {
-            if(self.speechRecognizer.getSpeechStatus() == "Denied"){
+            if(self.speechRecognizer.getSpeechStatus() == "Denied - Close the App"){
                 self.isDenied.toggle()
             }else{
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.3, blendDuration: 0.3)){
@@ -40,7 +40,7 @@ struct SpeechButton: View {
                 .background(self.isPressed ? Circle().foregroundColor(.red).frame(width: 50, height: 50) : Circle().foregroundColor(.blue).frame(width: 30, height: 30))
         }
         .alert(isPresented: $isDenied, content: {
-            Alert(title: Text(""), message: Text(""), dismissButton: .default(Text("")))
+            Alert(title: Text("Oops"), message: Text("Go to the preferences and allow the app to record your microphone"), dismissButton: .default(Text("OK")))
         })
     }
 }

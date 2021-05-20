@@ -10,6 +10,7 @@ import SwiftUI
 struct DaySummaryView: View {
     @EnvironmentObject private var databaseManager: DatabaseManager
     private let didBecomeActive = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
+    @State private var updateView: Bool = false
     @State private var isShowingModal: Bool = false
     @State private var isPresentingDayMainView: Bool = false
     let screenSize: CGSize
@@ -47,7 +48,7 @@ struct DaySummaryView: View {
                 }
             }
             .onReceive(didBecomeActive, perform: { _ in
-                databaseManager.updateViews()
+                self.updateView.toggle()
             })
             .frame(width: screenSize.width*0.9, height: screenSize.height * 0.24, alignment: .center)
             .asCard()
