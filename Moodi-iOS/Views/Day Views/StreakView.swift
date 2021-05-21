@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StreakView: View {
     @EnvironmentObject private var databaseManager: DatabaseManager
+    private let didBecomeActive = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
+    @State private var updateView: Bool = false
     @State var streak: Int = 0
     let screenSize: CGSize
     
@@ -29,6 +31,9 @@ struct StreakView: View {
         }
         .padding(.leading)
         .padding(.top)
+        .onReceive(didBecomeActive, perform: { _ in
+            self.updateView.toggle()
+        })
         .onAppear {
             streak = DateManager.shared.calculateStreak(days: databaseManager.days)
         }

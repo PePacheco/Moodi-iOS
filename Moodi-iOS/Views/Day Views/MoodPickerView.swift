@@ -22,8 +22,13 @@ struct MoodPickerView: View {
                     Button{
                         self.selectedMood = mood
                     } label: {
-                        self.getMoodImage(mood: mood)
-                            .padding(.horizontal, 5)
+                        if self.selectedMood == mood {
+                            self.getMoodImage(mood: mood)
+                                .padding(.horizontal, 5)
+                        } else {
+                            self.getMoodImageGray(mood: mood)
+                                .padding(.horizontal, 5)
+                        }
                     }
                 }
             }
@@ -36,10 +41,12 @@ struct MoodPickerView: View {
     func getMoodImage(mood: Mood) -> some View {
         mood.getMoodImage()
             .resizable()
-            .overlay(
-                Circle()
-                    .stroke(self.selectedMood == mood ? Color("callToAction") : Color.clear, lineWidth: 6)
-            )
+            .frame(width: screenSize.width*0.13, height: screenSize.width*0.13)
+    }
+    
+    func getMoodImageGray(mood: Mood) -> some View {
+        mood.getMoodImageGray()
+            .resizable()
             .frame(width: screenSize.width*0.13, height: screenSize.width*0.13)
     }
 }
