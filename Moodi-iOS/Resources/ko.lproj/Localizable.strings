@@ -7,11 +7,11 @@
 */
 "ContentView_Label_Hello" = "전 세계 여러분 안녕하세요";
 "WeekSummaryLabel" = "이번주";
-"WeekSummaryDay" = "일";//쪼금 이상
+"WeekSummaryDay" = "일";
 "DailyQuotesTipLabel" = "오늘의 팁";
 "DailyQuotesObjectiveLabel" = "오늘의 목표";
 "DaySummaryLabel" = "하루 요약";
-"DaySummaryMakeReflection" = "오늘 하루를 돌아보기";
+"DaySummaryMakeReflection" = "오늘 하루 되돌아보기";
 "DayMainViewNavBarTitle" = "오늘";
 "PickYourMood" = "오늘의 기분";
 "PickYourFeelings" = "오늘의 감정";
@@ -21,11 +21,11 @@
 "Statistics" = "통계";
 "Configurations" = "설정";
 "Save" = "저장";
-"Question1" = "오늘 내가 뭘 잘했을까?";
-"Question2" = "오늘 내가 뭘 더 잘할 수 있었을까?";
+"Question1" = "오늘 내가 무엇을 잘했을까?";
+"Question2" = "오늘 내가 무엇을 더 잘할 수 있었을까?";
 "Question3" = "내일은 무엇을 더 잘할 수 있을까?";
-"AddingNewDayQuestionsQuestion" = "오늘 하루 어떠셨나요?";
-"AddingNewDayQuestionsPlaceholder" = "여기에 적으시오";
+"AddingNewDayQuestionsQuestion" = "오늘 하루는 어떠셨나요?";
+"AddingNewDayQuestionsPlaceholder" = "빈칸";
 "AddingNewDayQuestionsBadAlert" = "무언가 잘못되었습니다";
 "AddingNewDayQuestionsGoodAlert" = "오늘 하루가 성공적으로 저장되었습니다";
 "SummaryPageTodayFeelingsTitle" = "감정:";
@@ -41,7 +41,7 @@
 "Dark Mode" = "다크 모드";
 "Light Mode" = "라이트 모드";
 "Night Mode" = "나이트 모드";
-"Following system" = "시스템 따라가기";
+"Following system" = "시스템";
 "System" = "시스템";
 "Days" = "일";
 "Months" = "주";
@@ -79,34 +79,34 @@
 // Daily tips
 "tip1" = "산책하기";
 "tip2" = "제일 좋아하는 영화보기";
-"tip3" = "친구에게 전화 하기";
+"tip3" = "친구에게 전화하기";
 "tip4" = "제일 좋아하는 음악듣기";
 "tip5" = "책 읽기";
 "tip6" = "새로운 것에 도전하기";
 "tip7" = "과일 먹기";
 "tip8" = "피부 관리하기";
-"tip9" = "방 청소 하기";
-"tip10" = "사랑하는 사람에게 문자 보내기";
+"tip9" = "방 청소하기";
+"tip10" = "사랑하는 사람에게 문자보내기";
 "tip11" = "새로운 음악듣기";
 "tip12" = "누군가에게 감사해하기";
 "tip13" = "감사 리스트 적기";
 "tip14" = "성취 리스트 적기";
 "tip15" = "제일 좋아하는 옷 입기";
-"tip16" = "목표 목록 만들기";
+"tip16" = "목표 리스트 만들기";
 "tip17" = "물 마시기";
-"tip18" = "누군가 안아주기";
+"tip18" = "사랑하는 사람 안아주기";
 "tip19" = "나무 심기";
 "tip20" = "주변 사람에게 안부 인사 전하기";
 "tip21" = "캘린더 정리하기";
 "tip22" = "책 한 챕터 읽기";
-"tip23"= "새로운 카페테리아 방문";
-"tip24"= "선물 구입";
-"tip25"= "푸시 업 15 회 수행";
-"tip26"= "지금으로부터 5년 후 자신을 상상해보십시오";
-"tip27"= "다른 사람과 비교하지 마십시오";
+"tip23"= "새로운 카페 방문";
+"tip24"= "자기 자신에게 선물하기";
+"tip25"= "푸시업 15회 하기";
+"tip26"= "지금으로부터 5년 후 자신을 상상해보기";
+"tip27"= "다른 사람과 자신을 비교하지 말기";
 "tip28"= "작은 일에서 행복 찾기";
 "tip29"= "운동하러 가기";
-"tip30"= "현재 시리즈의 에피소드보기";
+"tip30"= "현재 시청하고 있는 시리즈의 에피소드보기";
 "tip31"= "다른 언어로 새로운 단어 배우기";
 
 
