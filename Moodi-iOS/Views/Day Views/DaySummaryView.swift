@@ -50,7 +50,8 @@ struct DaySummaryView: View {
             .onReceive(didBecomeActive, perform: { _ in
                 self.updateView.toggle()
             })
-            .frame(width: screenSize.width*0.9, height: screenSize.height * 0.24, alignment: .center)
+            .frame(width: screenSize.width*0.9)
+            .frame(minHeight: screenSize.height * 0.18)
             .asCard()
         }
     }

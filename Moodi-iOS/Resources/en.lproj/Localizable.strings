@@ -23,7 +23,7 @@
 "Save" = "Save";
 "Question1" = "What did I do right?";
 "Question2" = "What could I have done better?";
-"Question3" = "What can I do to be better tomorrow?";
+"Question3" = "What can I do better tomorrow?";
 "AddingNewDayQuestionsQuestion" = "How was your day?";
 "AddingNewDayQuestionsPlaceholder" = "Write here";
 "AddingNewDayQuestionsBadAlert" = "Something went wrong";
@@ -44,6 +44,7 @@
 "Night Mode" = "Night Mode";
 "Following system" = "Following system";
 "Days" = "days";
+"Day" = "day";
 "Months" = "months";
 "Year" = "year";
 "All Time" = "all time";

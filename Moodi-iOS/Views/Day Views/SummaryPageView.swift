@@ -24,14 +24,20 @@ struct SummaryPageView: View {
                         .padding(.top)
                     Spacer()
                 }
-                .frame(width: screenSize.width*0.9)
+                .frame(width: screenSize.width*0.88)
                 SummaryDayMoodModalView(day: day)
+                    .frame(width: screenSize.width*0.9)
+                    .frame(minHeight: screenSize.height * 0.18)
                     .asCard()
-                Text(LocalizedStringKey("reflection"))
-                    .foregroundColor(Color("primaryText"))
-                    .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
-                    .padding(.top)
-                    .padding(.trailing, screenSize.width/1.6)
+                HStack {
+                    Text(LocalizedStringKey("reflection"))
+                        .foregroundColor(Color("primaryText"))
+                        .font(.system(size: screenSize.width*0.05, weight: .bold, design: .rounded))
+                        .padding(.top)
+                    Spacer()
+                }
+                .frame(width: screenSize.width*0.88)
+                
                 RectangleBox(question: "Question1", answer: day.answers[0])
                 RectangleBox(question: "Question2", answer: day.answers[1])
                 RectangleBox(question: "Question3", answer: day.answers[2])
@@ -50,7 +56,7 @@ struct SummaryPageView: View {
     
     private func formatDate(date: Date) -> String {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "E, d MMM yyyy"
+        dateFormatterGet.dateFormat = "E d MMM yyyy"
 
         return dateFormatterGet.string(from: date)
     }

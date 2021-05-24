@@ -22,6 +22,7 @@
 		6DEDABB02640749B006CCDA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDABAF2640749B006CCDA8 /* ContentView.swift */; };
 		6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */; };
 		6DF1993A264B4AF900273C0E /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF19939264B4AF900273C0E /* PreferencesManager.swift */; };
+		6DF328F9265C2A5A00814186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF328F8265C2A5A00814186 /* LaunchScreen.storyboard */; };
 		6DF40DAE2641B56B000C320F /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAD2641B56B000C320F /* TabMainView.swift */; };
 		6DF40DB02641B7A1000C320F /* DayMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DAF2641B7A1000C320F /* DayMainView.swift */; };
 		6DF40DB22641B809000C320F /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF40DB12641B809000C320F /* StreakView.swift */; };
@@ -71,6 +72,7 @@
 		6DEDABB42640749C006CCDA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DEDABB62640749C006CCDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF19939264B4AF900273C0E /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
+		6DF328F8265C2A5A00814186 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DF40DAD2641B56B000C320F /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
 		6DF40DAF2641B7A1000C320F /* DayMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMainView.swift; sourceTree = "<group>"; };
 		6DF40DB12641B809000C320F /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				6DBA3A7C264076F500383620 /* Managers */,
 				6DBA3A7B264076EC00383620 /* Models */,
 				6DEDABB62640749C006CCDA8 /* Info.plist */,
+				6DF328F8265C2A5A00814186 /* LaunchScreen.storyboard */,
 				6DEDABB32640749C006CCDA8 /* Preview Content */,
 			);
 			path = "Moodi-iOS";
@@ -367,6 +370,7 @@
 			files = (
 				6DEDABB52640749C006CCDA8 /* Preview Assets.xcassets in Resources */,
 				DE6597FE26542013000FACFD /* Assets.xcassets in Resources */,
+				6DF328F9265C2A5A00814186 /* LaunchScreen.storyboard in Resources */,
 				EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

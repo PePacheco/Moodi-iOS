@@ -40,6 +40,8 @@ struct ModalDaySummaryView: View {
                 .frame(width: screenSize.width*0.8)
                 Divider()
                 SummaryDayMoodModalView(day: day)
+                    .frame(width: screenSize.width*0.9)
+                    .frame(minHeight: screenSize.height * 0.18)
                     .padding(.bottom)
                 Divider()
                 RectangleBox(question: "Question1", answer: day.answers[0])
@@ -51,7 +53,7 @@ struct ModalDaySummaryView: View {
     
     private func formatDate(date: Date) -> String {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "E, d MMM yyyy"
+        dateFormatterGet.dateFormat = "E d MMM yyyy"
 
         return dateFormatterGet.string(from: date)
     }
