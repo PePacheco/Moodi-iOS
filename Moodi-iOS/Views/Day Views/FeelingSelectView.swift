@@ -35,7 +35,7 @@ struct FeelingSelectView: View {
                                 .foregroundColor(selectedFeelings.contains(feeling) ? feeling.getFeelingColor() : Color(UIColor.tertiaryLabel))
                                 .frame(width: screenSize.width*0.32, height: screenSize.height*0.04)
                             Text(LocalizedStringKey(feeling.id))
-                                .foregroundColor(Color(UIColor.label))
+                                .foregroundColor(.black)
                                 .font(.system(size: screenSize.height*0.022, weight: .regular, design: .rounded))
                         }
                     }

@@ -27,7 +27,7 @@ struct MyWeekView: View {
                             .frame(width: screenSize.width*0.1, height: screenSize.height*0.1)
                             .foregroundColor(databaseManager.getDayInStorage(date: day)?.mood.getMoodColor() ?? Color(UIColor.systemGray))
                             .padding(.horizontal, screenSize.width*0.004)
-                            .overlay(Text(day.dayOfWeek() ?? "").font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded)))
+                            .overlay(Text(day.dayOfWeek() ?? "").font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded)).foregroundColor(.black))
                             .onTapGesture {
                                 self.dayInModal = databaseManager.getDayInStorage(date: day)
                             }
@@ -41,6 +41,7 @@ struct MyWeekView: View {
                     }
                 }
             }
+            .padding(.top, -8)
             .padding(.vertical, -4)
             .sheet(item: $dayInModal, content: { day in
                 ModalDaySummaryView(day: day)

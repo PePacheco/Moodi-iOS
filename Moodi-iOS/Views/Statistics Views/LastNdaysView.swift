@@ -30,6 +30,7 @@ struct LastNdaysView: View {
                         .padding(.bottom, 16)
                     }
                 }
+                .padding(.top)
                 Divider()
                 VStack(alignment: .leading) {
                     Picker(selection: $lastNDays, label: Text("N days"), content: {

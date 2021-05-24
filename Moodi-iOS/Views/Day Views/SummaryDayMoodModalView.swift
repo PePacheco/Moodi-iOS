@@ -4,7 +4,7 @@ struct SummaryDayMoodModalView: View {
     let screenSize: CGSize = UIScreen.main.bounds.size
     let day: Day
     var body: some View {
-        VStack (alignment: .leading){
+        VStack (alignment: .leading) {
             HStack {
                 day.mood.getMoodImage()
                     .resizable()
@@ -19,8 +19,7 @@ struct SummaryDayMoodModalView: View {
                 .font(.system(size: screenSize.width*0.05, weight: .regular, design: .rounded))
             TagCloudView(tags: Array(day.feelings))
         }
-        .padding(.leading, screenSize.width*0.05)
-        .frame(width: screenSize.width*0.9, height: Array(day.feelings).count > 5 ?  screenSize.height*0.26 : screenSize.height*0.20, alignment: .leading)
+        .padding()
     }
 }
 
@@ -90,7 +89,7 @@ struct TagCloudView: View {
         Text(text)
             .padding(.vertical, 3)
             .padding(.horizontal, 8)
-            .font(.system(size: 18, weight: .regular, design: .rounded))
+            .font(.system(size: 16, weight: .regular, design: .rounded))
             .background(color)
             .foregroundColor(Color.black)
             .cornerRadius(20)
@@ -109,6 +108,10 @@ struct TagCloudView: View {
 
 struct SummaryDayMoodModalView_Previews: PreviewProvider {
     static var previews: some View {
-        SummaryDayMoodModalView(day: Day(date: Date(), mood: .happy, answers: ["aaaa", "aaaaaaa", "aaa"], feelings: Set([.angry, .anxiety, .confident,.insecure, .loving, .proud])))
+        VStack {
+            Spacer()
+            SummaryDayMoodModalView(day: Day(date: Date(), mood: .happy, answers: ["aaaa", "aaaaaaa", "aaa"], feelings: Set([.angry, .anxiety, .confident,.insecure, .loving, .proud])))
+            Spacer()
+        }
     }
 }

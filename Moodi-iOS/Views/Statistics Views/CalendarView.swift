@@ -38,6 +38,7 @@ struct CalendarView<DateView>: View where DateView: View {
                                 if databaseManager.hasDayInStorage(date: date) {
                                     content(date).id(date)
                                         .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
+                                        .foregroundColor(.black)
                                         .background(Circle().fill(databaseManager.getDayInStorage(date: date)?.mood.getMoodColor() ?? Color(UIColor.systemGray)))
                                         .onTapGesture {
                                             self.dayInModal = databaseManager.getDayInStorage(date: date)
@@ -45,6 +46,7 @@ struct CalendarView<DateView>: View where DateView: View {
                                 } else {
                                     content(date).id(date)
                                         .frame(width: screenSize.width*0.1, height: screenSize.width*0.1)
+                                        .foregroundColor(Color(UIColor.label))
                                         .background(Circle().fill(Color(UIColor.systemGray)))
                                         .opacity(0.4)
                                 }

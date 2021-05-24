@@ -10,6 +10,12 @@ import SwiftUI
 struct StreakView: View {
     @EnvironmentObject private var databaseManager: DatabaseManager
     private let didBecomeActive = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
+    private var streakLabel: String {
+        if streak == 1 {
+            return "Day"
+        }
+        return "Days"
+    }
     @State private var updateView: Bool = false
     @State var streak: Int = 0
     let screenSize: CGSize
@@ -21,7 +27,7 @@ struct StreakView: View {
                     .resizable()
                     .foregroundColor(Color("callToAction"))
                     .frame(width: screenSize.height * 0.03, height: screenSize.height * 0.03)
-                Text("\(streak) \(NSLocalizedString("WeekSummaryDay", comment: ""))")
+                Text("\(streak) \(NSLocalizedString(streakLabel, comment: ""))")
                     .font(.system(size: screenSize.height*0.02, weight: .medium, design: .rounded))
                     .foregroundColor(Color("primaryText"))
             }
