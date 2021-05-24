@@ -62,6 +62,7 @@ struct CalendarStatisticView: View {
                 
                 CalendarView(interval: DateInterval(start: date, end: date)) { date in
                     Text(date.day)
+                        .font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded))
                         .padding(8)
                 }
                 .frame(width: screenSize.width * 0.9)

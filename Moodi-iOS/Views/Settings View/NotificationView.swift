@@ -45,7 +45,7 @@ struct NotificationView: View {
                 .padding(.bottom)
                 
                 DatePicker("", selection: $datePick, displayedComponents: .hourAndMinute)
-                    .transformEffect(.init(scaleX: 1.4, y: 1.4))
+                    .transformEffect(.init(scaleX: 1.3, y: 1.3))
                     .foregroundColor(Color("primaryText"))
                     .labelsHidden()
                     .accentColor(Color("primaryText"))
