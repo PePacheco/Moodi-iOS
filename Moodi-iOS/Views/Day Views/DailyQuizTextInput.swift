@@ -52,14 +52,15 @@ struct DailyQuizTextInput: View {
             if text.isEmpty {
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
                     .foregroundColor(Color("secondaryText"))
-                    .font(.system(size: screenSize.height*0.015, weight: .regular, design: .rounded))
-                    .padding(.top, paddingTop)
-                    .padding(.leading, screenSize.width*0.03)
+                    .font(.system(size: screenSize.height*0.02, weight: .regular, design: .rounded))
+                    .padding(.top, paddingTop + 7)
+                    .padding(.leading, screenSize.width*0.038)
             }
             
             DynamicHeightTextField(text: $text, height: $textHeight)
                 .padding(.top, paddingTop)
-                .padding(.leading, screenSize.width*0.03)
+                .padding(.horizontal, screenSize.width*0.03)
+                .padding(.bottom)
             
         }
         .frame(width: screenSize.width*0.9, height: textFieldHeight)

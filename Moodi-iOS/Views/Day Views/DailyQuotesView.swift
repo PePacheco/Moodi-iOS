@@ -45,12 +45,13 @@ struct SentenceOfTheDay: View {
                 .font(.system(size: screenSize.height*0.02, weight: .medium, design: .rounded))
                 .padding(.horizontal, screenSize.width * 0.06)
                 .padding(.bottom, screenSize.height * 0.04)
+                .lineLimit(6)
         }
     }
 }
 
 struct DailyQuotesView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyQuotesView(screenSize: UIScreen.main.bounds.size, yesterdayObjective: "Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
+        DailyQuotesView(screenSize: UIScreen.main.bounds.size, yesterdayObjective: "Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.")
     }
 }

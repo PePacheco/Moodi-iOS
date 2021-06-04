@@ -9,12 +9,14 @@ import SwiftUI
 struct DynamicHeightTextField: UIViewRepresentable {
     @Binding var text: String
     @Binding var height: CGFloat
+    let screenSize: CGSize = UIScreen.main.bounds.size
     
     func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
         
         textView.isEditable = true
         textView.isUserInteractionEnabled = true
+        textView.font = UIFont.rounded(ofSize: screenSize.height*0.02, weight: .regular)
         
         textView.isScrollEnabled = true
         textView.alwaysBounceVertical = false
