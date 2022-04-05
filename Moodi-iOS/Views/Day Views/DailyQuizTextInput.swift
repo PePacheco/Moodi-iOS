@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DailyQuizTextInput: View {
+    @ObservedObject var model = ViewModelPhone()
     @Binding var text: String
     @Binding var textHeight: CGFloat
     var question: LocalizedStringKey
@@ -50,11 +51,13 @@ struct DailyQuizTextInput: View {
             }
             
             if text.isEmpty {
+                
                 Text(LocalizedStringKey("AddingNewDayQuestionsPlaceholder"))
                     .foregroundColor(Color("secondaryText"))
                     .font(.system(size: screenSize.height*0.015, weight: .regular, design: .rounded))
                     .padding(.top, paddingTop)
                     .padding(.leading, screenSize.width*0.03)
+//                Text(self.model.messageText)
             }
             
             DynamicHeightTextField(text: $text, height: $textHeight)

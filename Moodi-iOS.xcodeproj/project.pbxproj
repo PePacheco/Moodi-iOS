@@ -35,6 +35,17 @@
 		94315553264C52A70028BFAD /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315552264C52A70028BFAD /* Onboarding3.swift */; };
 		94315556264C54340028BFAD /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315555264C54340028BFAD /* Onboarding4.swift */; };
 		94315559264C66160028BFAD /* MainonboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94315558264C66160028BFAD /* MainonboardingView.swift */; };
+		B2CB38E227FCBFD7006C0F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CB38E127FCBFD7006C0F57 /* Assets.xcassets */; };
+		B2CB38E827FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2CB38E727FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B2CB38ED27FCBFD7006C0F57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */; };
+		B2CB38EF27FCBFD7006C0F57 /* Moodi_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB38EE27FCBFD7006C0F57 /* Moodi_iOSApp.swift */; };
+		B2CB38F127FCBFD7006C0F57 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB38F027FCBFD7006C0F57 /* ComplicationController.swift */; };
+		B2CB38F327FCBFD9006C0F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CB38F227FCBFD9006C0F57 /* Assets.xcassets */; };
+		B2CB38F627FCBFD9006C0F57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CB38F527FCBFD9006C0F57 /* Preview Assets.xcassets */; };
+		B2CB38FA27FCBFD9006C0F57 /* Moodi-WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B2CB38DF27FCBFD6006C0F57 /* Moodi-WatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B2CB390427FCC075006C0F57 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB390327FCC075006C0F57 /* ViewModelWatch.swift */; };
+		B2CB390627FCC0AD006C0F57 /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB390527FCC0AD006C0F57 /* ViewModelPhone.swift */; };
+		B2CB390727FCCF7A006C0F57 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A7F2640774700383620 /* Day.swift */; };
 		B2F266272641DBA7008B110B /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F266262641DBA7008B110B /* SpeechRecognizer.swift */; };
 		DE04871B264EDF830025ADCB /* CalendarStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */; };
 		DE04871E264EEB840025ADCB /* MyWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871D264EEB840025ADCB /* MyWeekView.swift */; };
@@ -51,6 +62,48 @@
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 		EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC984A3F264C62D500BD5AF9 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2CB38E927FCBFD7006C0F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DEDABA22640749B006CCDA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2CB38E627FCBFD7006C0F57;
+			remoteInfo = "Moodi-WatchOS WatchKit Extension";
+		};
+		B2CB38F827FCBFD9006C0F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DEDABA22640749B006CCDA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2CB38DE27FCBFD6006C0F57;
+			remoteInfo = "Moodi-WatchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2CB38FB27FCBFD9006C0F57 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B2CB38FA27FCBFD9006C0F57 /* Moodi-WatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CB38FE27FCBFD9006C0F57 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B2CB38E827FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B4DA2901756CAB5C58F68E5 /* Pods-Moodi-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodi-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moodi-iOS/Pods-Moodi-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +139,17 @@
 		94315552264C52A70028BFAD /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		94315555264C54340028BFAD /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
 		94315558264C66160028BFAD /* MainonboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainonboardingView.swift; sourceTree = "<group>"; };
+		B2CB38DF27FCBFD6006C0F57 /* Moodi-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodi-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CB38E127FCBFD7006C0F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2CB38E727FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Moodi-WatchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2CB38EE27FCBFD7006C0F57 /* Moodi_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moodi_iOSApp.swift; sourceTree = "<group>"; };
+		B2CB38F027FCBFD7006C0F57 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		B2CB38F227FCBFD9006C0F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2CB38F527FCBFD9006C0F57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2CB38F727FCBFD9006C0F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2CB390327FCC075006C0F57 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		B2CB390527FCC0AD006C0F57 /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
 		B2F266262641DBA7008B110B /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		DE04871A264EDF830025ADCB /* CalendarStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStatisticView.swift; sourceTree = "<group>"; };
 		DE04871D264EEB840025ADCB /* MyWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeekView.swift; sourceTree = "<group>"; };
@@ -111,6 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				527AB88A4BCA8F979439A4B3 /* Pods_Moodi_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CB38E427FCBFD7006C0F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +222,7 @@
 			children = (
 				B2F266262641DBA7008B110B /* SpeechRecognizer.swift */,
 				6DBA3A7F2640774700383620 /* Day.swift */,
+				B2CB390527FCC0AD006C0F57 /* ViewModelPhone.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				6DEDABAC2640749B006CCDA8 /* Moodi-iOS */,
+				B2CB38E027FCBFD6006C0F57 /* Moodi-WatchOS */,
+				B2CB38EB27FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */,
 				6DEDABAB2640749B006CCDA8 /* Products */,
 				848B42361A309C3D7B203B19 /* Pods */,
 				56BAD6FCDEA8387558A36462 /* Frameworks */,
@@ -216,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */,
+				B2CB38DF27FCBFD6006C0F57 /* Moodi-WatchOS.app */,
+				B2CB38E727FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +350,36 @@
 			path = "Onboarding Views";
 			sourceTree = "<group>";
 		};
+		B2CB38E027FCBFD6006C0F57 /* Moodi-WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB38E127FCBFD7006C0F57 /* Assets.xcassets */,
+			);
+			path = "Moodi-WatchOS";
+			sourceTree = "<group>";
+		};
+		B2CB38EB27FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */,
+				B2CB38EE27FCBFD7006C0F57 /* Moodi_iOSApp.swift */,
+				B2CB38F027FCBFD7006C0F57 /* ComplicationController.swift */,
+				B2CB390327FCC075006C0F57 /* ViewModelWatch.swift */,
+				B2CB38F227FCBFD9006C0F57 /* Assets.xcassets */,
+				B2CB38F727FCBFD9006C0F57 /* Info.plist */,
+				B2CB38F427FCBFD9006C0F57 /* Preview Content */,
+			);
+			path = "Moodi-WatchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B2CB38F427FCBFD9006C0F57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB38F527FCBFD9006C0F57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B2F266292641E004008B110B /* Speech Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,15 +424,51 @@
 				6DEDABA72640749B006CCDA8 /* Frameworks */,
 				6DEDABA82640749B006CCDA8 /* Resources */,
 				E2A944F3F8E349BB7E02817A /* [CP] Embed Pods Frameworks */,
+				B2CB38FB27FCBFD9006C0F57 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B2CB38F927FCBFD9006C0F57 /* PBXTargetDependency */,
 			);
 			name = "Moodi-iOS";
 			productName = "MyMood-iOS";
 			productReference = 6DEDABAA2640749B006CCDA8 /* Moodi-iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B2CB38DE27FCBFD6006C0F57 /* Moodi-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2CB390227FCBFD9006C0F57 /* Build configuration list for PBXNativeTarget "Moodi-WatchOS" */;
+			buildPhases = (
+				B2CB38DD27FCBFD6006C0F57 /* Resources */,
+				B2CB38FE27FCBFD9006C0F57 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2CB38EA27FCBFD7006C0F57 /* PBXTargetDependency */,
+			);
+			name = "Moodi-WatchOS";
+			productName = "Moodi-WatchOS";
+			productReference = B2CB38DF27FCBFD6006C0F57 /* Moodi-WatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B2CB38E627FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2CB390127FCBFD9006C0F57 /* Build configuration list for PBXNativeTarget "Moodi-WatchOS WatchKit Extension" */;
+			buildPhases = (
+				B2CB38E327FCBFD7006C0F57 /* Sources */,
+				B2CB38E427FCBFD7006C0F57 /* Frameworks */,
+				B2CB38E527FCBFD7006C0F57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Moodi-WatchOS WatchKit Extension";
+			productName = "Moodi-WatchOS WatchKit Extension";
+			productReference = B2CB38E727FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -334,11 +476,17 @@
 		6DEDABA22640749B006CCDA8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					6DEDABA92640749B006CCDA8 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					B2CB38DE27FCBFD6006C0F57 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					B2CB38E627FCBFD7006C0F57 = {
+						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
@@ -359,6 +507,8 @@
 			projectRoot = "";
 			targets = (
 				6DEDABA92640749B006CCDA8 /* Moodi-iOS */,
+				B2CB38DE27FCBFD6006C0F57 /* Moodi-WatchOS */,
+				B2CB38E627FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +522,23 @@
 				DE6597FE26542013000FACFD /* Assets.xcassets in Resources */,
 				6DF328F9265C2A5A00814186 /* LaunchScreen.storyboard in Resources */,
 				EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CB38DD27FCBFD6006C0F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CB38E227FCBFD7006C0F57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CB38E527FCBFD7006C0F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CB38F627FCBFD9006C0F57 /* Preview Assets.xcassets in Resources */,
+				B2CB38F327FCBFD9006C0F57 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +606,7 @@
 				6DAF75B1264AF2EF006DCB2E /* DarkModeView.swift in Sources */,
 				6DFB34B4264F219A0074A1B4 /* Constants.swift in Sources */,
 				DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */,
+				B2CB390627FCC0AD006C0F57 /* ViewModelPhone.swift in Sources */,
 				DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */,
 				6DF40DB42641BCE5000C320F /* DailyQuotesView.swift in Sources */,
 				EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */,
@@ -465,7 +633,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2CB38E327FCBFD7006C0F57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CB38EF27FCBFD7006C0F57 /* Moodi_iOSApp.swift in Sources */,
+				B2CB38ED27FCBFD7006C0F57 /* ContentView.swift in Sources */,
+				B2CB390427FCC075006C0F57 /* ViewModelWatch.swift in Sources */,
+				B2CB390727FCCF7A006C0F57 /* Day.swift in Sources */,
+				B2CB38F127FCBFD7006C0F57 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2CB38EA27FCBFD7006C0F57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2CB38E627FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */;
+			targetProxy = B2CB38E927FCBFD7006C0F57 /* PBXContainerItemProxy */;
+		};
+		B2CB38F927FCBFD9006C0F57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2CB38DE27FCBFD6006C0F57 /* Moodi-WatchOS */;
+			targetProxy = B2CB38F827FCBFD9006C0F57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC81A5AE2640886D00042FBC /* Localizable.strings */ = {
@@ -648,6 +841,124 @@
 			};
 			name = Release;
 		};
+		B2CB38FC27FCBFD9006C0F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Moodi_WatchOS_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Moodi-WatchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pedropacheco.Moodi;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		B2CB38FD27FCBFD9006C0F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Moodi_WatchOS_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Moodi-WatchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pedropacheco.Moodi;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		B2CB38FF27FCBFD9006C0F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Moodi-WatchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = N4RVKMCF48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moodi-WatchOS WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Moodi-WatchOS WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		B2CB390027FCBFD9006C0F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Moodi-WatchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = N4RVKMCF48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moodi-WatchOS WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Moodi-WatchOS WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedropacheco.Moodi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -665,6 +976,24 @@
 			buildConfigurations = (
 				6DEDABBA2640749C006CCDA8 /* Debug */,
 				6DEDABBB2640749C006CCDA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2CB390127FCBFD9006C0F57 /* Build configuration list for PBXNativeTarget "Moodi-WatchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2CB38FF27FCBFD9006C0F57 /* Debug */,
+				B2CB390027FCBFD9006C0F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2CB390227FCBFD9006C0F57 /* Build configuration list for PBXNativeTarget "Moodi-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2CB38FC27FCBFD9006C0F57 /* Debug */,
+				B2CB38FD27FCBFD9006C0F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

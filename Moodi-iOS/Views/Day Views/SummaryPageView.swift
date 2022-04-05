@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SummaryPageView: View {
+    @ObservedObject var model = ViewModelPhone()
     @EnvironmentObject private var preferences: PreferencesStore
     @EnvironmentObject private var databaseManager: DatabaseManager
     @Binding var isPresentingDayMainView: Bool
@@ -48,6 +49,10 @@ struct SummaryPageView: View {
                 Button(LocalizedStringKey("Save")) {
                     let _ = databaseManager.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
                     self.isPresentingDayMainView.toggle()
+                    print(day)
+                    self.model.session.sendMessage(["message" : day.dayDic], replyHandler: nil) { (error) in
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }

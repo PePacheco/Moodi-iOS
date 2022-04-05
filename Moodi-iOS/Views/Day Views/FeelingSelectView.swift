@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct FeelingSelectView: View {
-    
+    @ObservedObject var model = ViewModelPhone()
     let screenSize: CGSize
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-    
+
     @Binding var selectedFeelings: Set<Feeling>
     
     var body: some View {
@@ -28,6 +28,7 @@ struct FeelingSelectView: View {
                             self.selectedFeelings.remove(feeling)
                         } else {
                             self.selectedFeelings.insert(feeling)
+//                            print(feeling.rawValue)
                         }
                     } label: {
                         ZStack {

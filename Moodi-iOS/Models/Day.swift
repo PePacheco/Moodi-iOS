@@ -99,4 +99,18 @@ struct Day: Codable, Hashable, Identifiable {
     var mood: Mood
     var answers: [String]
     var feelings: Set<Feeling>
+    
+    var dayDic: [String: Any] {
+        return ["date": date,
+                "mood": mood,
+                "answers": answers,
+                "feelings": feelings]
+    }
+    
+    var nsDictionary: NSDictionary {
+        return dayDic as NSDictionary
+    }
 }
+
+
+
