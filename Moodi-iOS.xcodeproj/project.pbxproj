@@ -55,6 +55,9 @@
 		DE8726782643061500C27E74 /* QuizMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8726772643061500C27E74 /* QuizMainView.swift */; };
 		DE87267C2643064A00C27E74 /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87267B2643064A00C27E74 /* MoodPickerView.swift */; };
 		DE87267F2643066100C27E74 /* FeelingSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE87267E2643066100C27E74 /* FeelingSelectView.swift */; };
+		DE9FDF0C27FE041500C025AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6597FD26542013000FACFD /* Assets.xcassets */; };
+		DE9FDF0D27FE041800C025AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
+		DE9FDF1027FE044900C025AE /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9FDF0F27FE044900C025AE /* FeelingView.swift */; };
 		DECE201E264B779600FCE115 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE201D264B779600FCE115 /* DonutChartView.swift */; };
 		DECE2021264B7C5600FCE115 /* LastNdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE2020264B7C5600FCE115 /* LastNdaysView.swift */; };
 		EC195CC3265208B1003698CC /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC195CC2265208B1003698CC /* SpeechButton.swift */; };
@@ -159,6 +162,7 @@
 		DE8726772643061500C27E74 /* QuizMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMainView.swift; sourceTree = "<group>"; };
 		DE87267B2643064A00C27E74 /* MoodPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
 		DE87267E2643066100C27E74 /* FeelingSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingSelectView.swift; sourceTree = "<group>"; };
+		DE9FDF0F27FE044900C025AE /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
 		DECE201D264B779600FCE115 /* DonutChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
 		DECE2020264B7C5600FCE115 /* LastNdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNdaysView.swift; sourceTree = "<group>"; };
 		EC195CC2265208B1003698CC /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 		B2CB38EB27FCBFD7006C0F57 /* Moodi-WatchOS WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DE9FDF0E27FE041F00C025AE /* Views */,
 				B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */,
 				B2CB38EE27FCBFD7006C0F57 /* Moodi_iOSApp.swift */,
 				B2CB38F027FCBFD7006C0F57 /* ComplicationController.swift */,
@@ -398,6 +403,14 @@
 				6D5FC7232644782E004D8C04 /* DailyQuizTextInput.swift */,
 			);
 			name = "Daily Quiz Views";
+			sourceTree = "<group>";
+		};
+		DE9FDF0E27FE041F00C025AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE9FDF0F27FE044900C025AE /* FeelingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DECE201C264B777400FCE115 /* Statistics Views */ = {
@@ -538,6 +551,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CB38F627FCBFD9006C0F57 /* Preview Assets.xcassets in Resources */,
+				DE9FDF0D27FE041800C025AE /* Localizable.strings in Resources */,
+				DE9FDF0C27FE041500C025AE /* Assets.xcassets in Resources */,
 				B2CB38F327FCBFD9006C0F57 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CB38EF27FCBFD7006C0F57 /* Moodi_iOSApp.swift in Sources */,
+				DE9FDF1027FE044900C025AE /* FeelingView.swift in Sources */,
 				B2CB38ED27FCBFD7006C0F57 /* ContentView.swift in Sources */,
 				B2CB390427FCC075006C0F57 /* ViewModelWatch.swift in Sources */,
 				B2CB390727FCCF7A006C0F57 /* Day.swift in Sources */,
