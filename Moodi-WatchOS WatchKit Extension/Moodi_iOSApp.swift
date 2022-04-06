@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct Moodi_iOSApp: App {
+    @State var selectedFeelings: Set<Feeling> = []
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                FeelingView(selectedFeelings: $selectedFeelings)
             }
         }
     }
