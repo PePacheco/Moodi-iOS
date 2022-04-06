@@ -10,7 +10,10 @@ import WatchConnectivity
 
 class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
     var session: WCSession
-    @Published var messageMood: Mood?
+    @Published var messageDate: Date?
+    @Published var messageMood: String?
+    @Published var messageFeelings: [String]?
+    @Published var messageAnswers: [String]?
     init(session: WCSession = .default){
         self.session = session
         super.init()
@@ -22,8 +25,10 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            self.messageMood = message["mood"] as? Mood
-//            print(self.messageText )
+            self.messageDate = message["date"] as? Date
+            self.messageMood = message["mood"] as? String
+            self.messageFeelings = message["feelings"] as? [String]
+            self.messageAnswers = message["answers"] as? [String]
         }
     }
 }

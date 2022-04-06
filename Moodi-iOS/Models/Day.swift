@@ -140,6 +140,18 @@ struct Day: Codable, Hashable, Identifiable {
     var nsDictionary: NSDictionary {
         return dayDic as NSDictionary
     }
+    
+    func toDic() -> [String: Any] {
+            let setFeelings: [String] = feelings.map { $0.id }
+
+            var dict = [String: Any]()
+            dict["date"] = date
+            dict["mood"] = mood.id
+            dict["answers"] = answers
+            dict["feelings"] = setFeelings
+
+            return dict
+        }
 }
 
 

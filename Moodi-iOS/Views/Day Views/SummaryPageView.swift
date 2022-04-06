@@ -49,8 +49,7 @@ struct SummaryPageView: View {
                 Button(LocalizedStringKey("Save")) {
                     let _ = databaseManager.store(mood: day.mood, answers: day.answers, feelings: day.feelings)
                     self.isPresentingDayMainView.toggle()
-                    print(day)
-                    self.model.session.sendMessage(["message" : day.dayDic], replyHandler: nil) { (error) in
+                    self.model.session.sendMessage(day.toDic(), replyHandler: nil) { (error) in
                         print(error.localizedDescription)
                     }
                 }

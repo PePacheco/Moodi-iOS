@@ -19,6 +19,7 @@ struct ContentView: View {
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
                     .padding(.trailing, 55)
+                    .padding(.top, 8)
                 HStack {
                     MoodButton(mood: .veryHappy, selectedMood: $selectedMood)
                     MoodButton(mood: .happy, selectedMood: $selectedMood)
