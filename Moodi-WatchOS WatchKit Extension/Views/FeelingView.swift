@@ -14,6 +14,7 @@ struct FeelingView: View {
         VStack{
             Text(NSLocalizedString("PickYourFeelings", comment: "") + "?")
                 .foregroundColor(.white)
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
             List {
                 ForEach((Feeling.allCases), id: \.self) { feeling in
                     Button{
@@ -23,15 +24,17 @@ struct FeelingView: View {
                             self.selectedFeelings.insert(feeling)
                         }
                     } label: {
-                        ZStack {
-                            Rectangle()
-                                .foregroundColor(selectedFeelings.contains(feeling) ? feeling.getFeelingColor() : Color("primaryText"))
-                            Text(LocalizedStringKey(feeling.id))
-                                .foregroundColor(.white)
-                        }
-                    }
+                        Text(LocalizedStringKey(feeling.id))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity,  alignment: .center)
+                            .font(.system(size: 15, weight: .regular, design: .rounded))
+
+                    }.listRowBackground(selectedFeelings.contains(feeling) ? feeling.getFeelingColor().cornerRadius(10) : Color("primaryText").cornerRadius(10))
+
+
                 }
             }
+
         }
     }
 }
