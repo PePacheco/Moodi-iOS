@@ -58,6 +58,7 @@
 		DECE201E264B779600FCE115 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE201D264B779600FCE115 /* DonutChartView.swift */; };
 		DECE2021264B7C5600FCE115 /* LastNdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE2020264B7C5600FCE115 /* LastNdaysView.swift */; };
 		EC195CC3265208B1003698CC /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC195CC2265208B1003698CC /* SpeechButton.swift */; };
+		EC64C79027FE154A00CBA32F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 		EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC984A3F264C62D500BD5AF9 /* CalendarView.swift */; };
@@ -538,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CB38F627FCBFD9006C0F57 /* Preview Assets.xcassets in Resources */,
+				EC64C79027FE154A00CBA32F /* Localizable.strings in Resources */,
 				B2CB38F327FCBFD9006C0F57 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

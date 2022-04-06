@@ -9,16 +9,52 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model = ViewModelWatch()
-//    @State var messageText: [String: Any] = "helllloooo woroodld"
+    @State var selectedMood: Mood = .neutral
     var body: some View {
-        Text(self.model.messageMood?.rawValue ?? "no mood")
+            VStack {
+                Text(LocalizedStringKey("MoodScreenText"))
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .padding(.trailing, 55)
+                HStack {
+                    MoodButton(mood: .veryHappy, selectedMood: $selectedMood)
+                    MoodButton(mood: .happy, selectedMood: $selectedMood)
+                }
+                HStack {
+                    MoodButton(mood: .neutral, selectedMood: $selectedMood)
+                    MoodButton(mood: .sad, selectedMood: $selectedMood)
+                }
+                MoodButton(mood: .verySad, selectedMood: $selectedMood)
+            }
+        }
+         //Text(self.model.messageMood?.rawValue ?? "no mood")
 //        Button(action: {
 //            self.model.session.sendMessage(["message" : self.messageText], replyHandler: nil) { (error) in
 //                print(error.localizedDescription)
 //            }
 //        }) {
-//        Text("Send Message")
+//        Text("Send Message")t
 //        }
+    }
+
+
+struct MoodButton: View {
+    var mood: Mood
+    @Binding var selectedMood: Mood
+    
+    var body: some View {
+        if mood == selectedMood {
+            self.mood.getMoodWatchImage()
+        } else {
+            self.mood.getMoodWtachImageGray()
+                .onTapGesture {
+                    selectedMood = mood
+                }
+        }
+        
     }
 }
 

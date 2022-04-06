@@ -31,6 +31,36 @@ enum Mood: String, CaseIterable, Codable {
         }
     }
     
+    func getMoodWatchImage() -> Image {
+        switch self {
+            case .veryHappy:
+                return Image("VeryHappy")
+            case .happy:
+                return Image("Happy")
+            case .neutral:
+                return Image("Normal")
+            case .sad:
+                return Image("Sad")
+            case .verySad:
+                return Image("VerySad")
+        }
+    }
+    
+    func getMoodWtachImageGray() -> Image {
+        switch self {
+        case .veryHappy:
+            return Image("VeryHappyBlack")
+        case .happy:
+            return Image("HappyBlack")
+        case .neutral:
+            return Image("NormalBlack")
+        case .sad:
+            return Image("SadBlack")
+        case .verySad:
+            return Image("VerySadBlack")
+        }
+    }
+    
     func getMoodImageGray() -> Image {
         switch self {
         case .veryHappy:

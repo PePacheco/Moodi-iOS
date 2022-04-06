@@ -137,3 +137,6 @@
 "onboarding4Text1" = "Sigue todo";
 "onboarding4Text2" = "Con el calendario puede rastrear fácilmente todas tus emociones y sentimientos";
 "onboarding4Button" = "Empezar";
+
+// Watch 1 screen
+"MoodScreenText" = "How was your mood?"; //traduzir

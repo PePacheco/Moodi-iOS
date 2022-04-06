@@ -139,3 +139,6 @@
 "onboarding4Text1" = "Keep track of everything";
 "onboarding4Text2" = "With the calendar you can keep track of all your emotions and fellings very easily.";
 "onboarding4Button" = "Get Started";
+
+// Watch 1 screen
+"MoodScreenText" = "How was your mood?";

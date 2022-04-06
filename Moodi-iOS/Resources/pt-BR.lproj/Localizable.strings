@@ -136,3 +136,6 @@
 "onboarding4Text1" = "Acompanhe tudo";
 "onboarding4Text2" = "Com o calendário, você pode acompanhar facilmente todas as suas emoções e sentimentos.";
 "onboarding4Button" = "Começar";
+
+// Watch 1 screen
+"MoodScreenText" = "Como foi o seu humor?";

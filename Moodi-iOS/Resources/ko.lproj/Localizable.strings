@@ -139,3 +139,6 @@
 "onboarding4Text1" = "일상 속 모든 것 관리";
 "onboarding4Text2" = "캘린더에서 항상 관리되는 일상 속 모든 기분들과 감정들을 보실 수 있습니다.";
 "onboarding4Button" = "시작하기";
+
+// Watch 1 screen
+"MoodScreenText" = "How was your mood?"; //traduzir
