@@ -64,6 +64,8 @@
 		EC81A5AC2640886D00042FBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC81A5AE2640886D00042FBC /* Localizable.strings */; };
 		EC81A5B22641E27E00042FBC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81A5B12641E27E00042FBC /* Utilities.swift */; };
 		EC984A40264C62D500BD5AF9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC984A3F264C62D500BD5AF9 /* CalendarView.swift */; };
+		FD77426327FE25DB00BFC8E9 /* DaysSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD77426227FE25DB00BFC8E9 /* DaysSummary.swift */; };
+		FD77426427FE2C3200BFC8E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA3A832640778700383620 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,7 @@
 		EC81A5B0264088BD00042FBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EC81A5B12641E27E00042FBC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EC984A3F264C62D500BD5AF9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		FD77426227FE25DB00BFC8E9 /* DaysSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9FDF0F27FE044900C025AE /* FeelingView.swift */,
+				FD77426227FE25DB00BFC8E9 /* DaysSummary.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -655,8 +659,10 @@
 				B2CB38EF27FCBFD7006C0F57 /* Moodi_iOSApp.swift in Sources */,
 				DE9FDF1027FE044900C025AE /* FeelingView.swift in Sources */,
 				B2CB38ED27FCBFD7006C0F57 /* ContentView.swift in Sources */,
+				FD77426427FE2C3200BFC8E9 /* Extensions.swift in Sources */,
 				B2CB390427FCC075006C0F57 /* ViewModelWatch.swift in Sources */,
 				B2CB390727FCCF7A006C0F57 /* Day.swift in Sources */,
+				FD77426327FE25DB00BFC8E9 /* DaysSummary.swift in Sources */,
 				B2CB38F127FCBFD7006C0F57 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

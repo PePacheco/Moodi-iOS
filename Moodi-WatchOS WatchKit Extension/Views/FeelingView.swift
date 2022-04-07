@@ -12,6 +12,8 @@ struct FeelingView: View {
     
     var body: some View {
         VStack{
+
+            
             Text(NSLocalizedString("PickYourFeelings", comment: "") + "?")
                 .foregroundColor(.white)
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
