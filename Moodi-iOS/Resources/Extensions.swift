@@ -77,6 +77,21 @@ extension Date {
         dateFormatter.dateFormat = "Y"
         return dateFormatter.string(from: self)
     }
+    var nameOfWeekDay: String {
+        let weekdays = [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ]
+
+                let calendar = Calendar.current.component(.weekday, from: self)
+                return weekdays[calendar - 1]
+    }
+
 }
 
 extension View {

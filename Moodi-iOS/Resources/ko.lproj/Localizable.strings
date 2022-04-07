@@ -53,7 +53,8 @@
 "Calendar" = "캘린더";
 
 // Moods
-"Moods" = "기분";
+"Moods" = "기분들";
+"Mood" = "기분";
 "veryHappy" = "매우 행복";
 "happy" = "행복";
 "neutral" = "그저 그럼";
