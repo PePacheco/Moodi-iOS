@@ -22,6 +22,7 @@ struct DaySummaryView: View {
                 .font(.system(size: screenSize.height*0.025, weight: .semibold, design: .rounded))
             
             HStack {
+                
                 if let day = databaseManager.getDayInStorage(date: Date()) {
                     SummaryDayMoodModalView(day: day)
                         .sheet(isPresented: $isShowingModal) {

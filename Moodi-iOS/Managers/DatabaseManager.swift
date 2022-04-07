@@ -11,6 +11,11 @@ class DatabaseManager: ObservableObject {
     
     static let shared: DatabaseManager = DatabaseManager()
     
+//    @Published var dayFromWatch: Day?
+//
+    @Published var dayToggle: Bool = false
+    
+    
     private (set) var days: [Day]
     
     private init(){
@@ -25,10 +30,27 @@ class DatabaseManager: ObservableObject {
         if let encoded = try? encoder.encode(days) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "days")
+            dayToggle.toggle()
             return true
         }
         return false
     }
+    
+//    func storeFromWatch(mood: Mood, answers: [String], feelings: Set<Feeling>) -> Bool {
+//        objectWillChange.send()
+//        let day = Day(date: Date(), mood: mood, answers: answers, feelings: feelings)
+//        dayFromWatch = day
+//        guard let d = dayFromWatch else { return false}
+//        self.days.append(d)
+//        let encoder = JSONEncoder()
+//        if let encoded = try? encoder.encode(days) {
+//            let defaults = UserDefaults.standard
+//            defaults.set(encoded, forKey: "days")
+//            dayFromWatchToggle.toggle()
+//            return true
+//        }
+//        return false
+//    }
     
     static func loadAllDays() -> [Day] {
         if let savedDay = UserDefaults.standard.data(forKey: "days") {
