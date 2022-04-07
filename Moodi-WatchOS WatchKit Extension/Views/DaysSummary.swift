@@ -13,22 +13,22 @@ struct DaysSummary: View {
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
-
-                Text(Date().nameOfWeekDay)
+                Text(Date().nameOfWeekDay + " " + Date().toString())
+                    .padding(.bottom, 2)
                 Text(NSLocalizedString("Mood", comment: ""))
                     .font(.system(size: 17 , weight: .bold, design: .rounded))
                 humorMood.getMoodWatchImage()
                 Text(NSLocalizedString("Feelings", comment: ""))
                     .font(.system(size: 17 , weight: .bold, design: .rounded))
-
                 TagCloudView(tags: Array(feelings))
-
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-
         }
+        .navigationBarHidden(true)
+        .padding(.leading, 8)
+        .padding(.trailing, 6)
     }
-
 }
+    
 
 struct DaysSummary_Previews: PreviewProvider {
     //@State var mood: Mood = .happy
@@ -60,7 +60,7 @@ struct TagCloudView: View {
                 self.item(for: tag.rawValue.localized(withComment: ""), with: tag.getFeelingColor())
                     .padding([.horizontal, .vertical], 4)
                     .alignmentGuide(.leading, computeValue: { d in
-                        if (abs(width - d.width) + 30 > g.size.width)
+                        if (abs(width - d.width) > g.size.width)
                         {
                             width = 0
                             height -= d.height

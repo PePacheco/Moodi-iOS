@@ -91,6 +91,13 @@ extension Date {
                 let calendar = Calendar.current.component(.weekday, from: self)
                 return weekdays[calendar - 1]
     }
+    
+    func toString(format: String = "MM/dd/yyyy") -> String {
+           let formatter = DateFormatter()
+           formatter.dateStyle = .short
+           formatter.dateFormat = format
+           return formatter.string(from: self)
+       }
 
 }
 

@@ -10,16 +10,27 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var model = ViewModelWatch()
     @State var selectedMood: Mood = .neutral
+    @State var feelings: Set<Feeling> = []
     var body: some View {
             VStack {
-                Text(LocalizedStringKey("MoodScreenText"))
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.trailing, 55)
-                    .padding(.top, 8)
+                HStack {
+                    Text(LocalizedStringKey("MoodScreenText"))
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .padding(.trailing, 10)
+                        .padding(.top, 8)
+                    NavigationLink(destination: FeelingView(selectedMood: $selectedMood, selectedFeelings: $feelings)) {
+                        Image(systemName: "arrow.forward.circle")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(Color("callToAction"))
+                }
+                    .frame(width: 35, height: 35)
+                    .buttonStyle(.plain)
+                }
                 HStack {
                     MoodButton(mood: .veryHappy, selectedMood: $selectedMood)
                     MoodButton(mood: .happy, selectedMood: $selectedMood)
@@ -31,14 +42,6 @@ struct ContentView: View {
                 MoodButton(mood: .verySad, selectedMood: $selectedMood)
             }
         }
-         //Text(self.model.messageMood?.rawValue ?? "no mood")
-//        Button(action: {
-//            self.model.session.sendMessage(["message" : self.messageText], replyHandler: nil) { (error) in
-//                print(error.localizedDescription)
-//            }
-//        }) {
-//        Text("Send Message")t
-//        }
     }
 
 
@@ -55,7 +58,6 @@ struct MoodButton: View {
                     selectedMood = mood
                 }
         }
-        
     }
 }
 

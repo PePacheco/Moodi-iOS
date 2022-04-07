@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct FeelingView: View {
+    @Binding var selectedMood: Mood
     @Binding var selectedFeelings: Set<Feeling>
     
     var body: some View {
         VStack{
 
+            HStack {
+                Text(NSLocalizedString("PickYourFeelings", comment: "") + "?")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .padding(.top, 8)
+                NavigationLink(destination: DaysSummary(humorMood: selectedMood, feelings: selectedFeelings)) {
+                    Image(systemName: "checkmark.circle")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color("callToAction"))
+                }
+                .frame(width: 35, height: 35)
+                .buttonStyle(.plain)
+                
+            }
             
-            Text(NSLocalizedString("PickYourFeelings", comment: "") + "?")
-                .foregroundColor(.white)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
             List {
                 ForEach((Feeling.allCases), id: \.self) { feeling in
                     Button{

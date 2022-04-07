@@ -369,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				DE9FDF0E27FE041F00C025AE /* Views */,
-				B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */,
 				B2CB38EE27FCBFD7006C0F57 /* Moodi_iOSApp.swift */,
 				B2CB38F027FCBFD7006C0F57 /* ComplicationController.swift */,
 				B2CB390327FCC075006C0F57 /* ViewModelWatch.swift */,
@@ -411,6 +410,7 @@
 		DE9FDF0E27FE041F00C025AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2CB38EC27FCBFD7006C0F57 /* ContentView.swift */,
 				DE9FDF0F27FE044900C025AE /* FeelingView.swift */,
 				FD77426227FE25DB00BFC8E9 /* DaysSummary.swift */,
 			);
