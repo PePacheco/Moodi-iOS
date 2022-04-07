@@ -10,7 +10,11 @@ import WatchConnectivity
 
 class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
     var session: WCSession
-    @Published var messageText = ""
+    @Published var messageDate: Date?
+    @Published var messageMood: String?
+    @Published var messageFeelings: [String]?
+    @Published var messageAnswers: [String]?
+    
     init(session: WCSession = .default){
         self.session = session
         super.init()
@@ -31,8 +35,19 @@ class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            self.messageText = message["message"] as? String ?? "Unknown"
+            self.messageDate = message["date"] as? Date
+            self.messageMood = message["mood"] as? String
+            self.messageFeelings = message["feelings"] as? [String]
+            self.messageAnswers = message["answers"] as? [String]
         }
+        let mood = Mood(rawValue: messageMood ?? "")
+        var feelingSet: Set<Feeling> = []
+        var feelings = messageFeelings?.forEach({ string in
+            feelingSet.insert(Feeling(rawValue: string) ?? .relaxed)
+        })
+        //let day = Day(date: Date(), mood: mood ?? .neutral, answers: [], feelings: feelingSet)
+        let _ = DatabaseManager.shared.store(mood: mood ?? .neutral, answers: [], feelings: feelingSet)
+        print("salvou")
     }
     
 }

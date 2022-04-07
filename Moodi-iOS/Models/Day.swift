@@ -16,6 +16,25 @@ enum Mood: String, CaseIterable, Codable {
     
     var id: String { self.rawValue }
     
+    func getMoodFromString(string: String) -> Mood {
+        switch string {
+        case Mood.veryHappy.rawValue:
+            return .veryHappy
+        case Mood.happy.rawValue:
+            return .happy
+        case Mood.neutral.rawValue:
+            return .neutral
+        case Mood.sad.rawValue:
+            return .sad
+        case Mood.verySad.rawValue:
+            return .verySad
+        default:
+            return .neutral
+        }
+    }
+    
+    
+    
     func getMoodImage() -> Image {
         switch self {
         case .veryHappy:
@@ -118,6 +137,37 @@ enum Feeling: String, CaseIterable, Codable {
         case .loving:
             return Color("customPink")
         }
+    }
+    
+    func getFeelingFromString(string: String) -> Feeling {
+        switch string {
+        case Feeling.anxiety.rawValue:
+            return .anxiety
+        case Feeling.angry.rawValue:
+            return .angry
+        case Feeling.insecure.rawValue:
+            return .insecure
+        case Feeling.tired.rawValue:
+            return .tired
+        case Feeling.confident.rawValue:
+            return .confident
+        case Feeling.proud.rawValue:
+            return .proud
+        case Feeling.relaxed.rawValue:
+            return .relaxed
+        case Feeling.loving.rawValue:
+            return .loving
+        default:
+            return .relaxed
+        }
+    }
+    
+    func getFeelingFromArray(strings: [String]) -> Set<Feeling> {
+        var feelings: Set<Feeling> = []
+        for string in strings {
+            feelings.insert(getFeelingFromString(string: string))
+        }
+        return feelings
     }
 }
 
