@@ -25,16 +25,15 @@ struct FeelingView: View {
                         .resizable()
                         .frame(width: 25, height: 25)
                         .foregroundColor(Color("callToAction"))
-                        .onTapGesture {
-                            let day = Day(date: Date(), mood: selectedMood, answers: [], feelings: selectedFeelings)
-                            self.model.session.sendMessage(day.toDic(), replyHandler: nil) { (error) in
-                                print(error.localizedDescription)
-                            }
-                        }
                 }
                 .frame(width: 35, height: 35)
                 .buttonStyle(.plain)
-                
+                .onTapGesture {
+                    let day = Day(date: Date(), mood: selectedMood, answers: [], feelings: selectedFeelings)
+                    self.model.session.sendMessage(day.toDic(), replyHandler: nil) { (error) in
+                        print(error.localizedDescription)
+                    }
+                }
             }
             
             List {
